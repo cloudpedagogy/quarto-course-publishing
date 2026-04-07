@@ -1,0 +1,22 @@
+{% if navigation %}
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        {% if navigation.prev %}
+        <a href="{{ navigation.prev.url }}">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">{{ navigation.prev.title }}</span>
+        </a>
+        {% endif %}
+    </div>
+    <div class="nav-next">
+        {% if navigation.next %}
+        <a href="{{ navigation.next.url }}">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">{{ navigation.next.title }}</span>
+        </a>
+        {% endif %}
+    </div>
+</div>
+```
+{% endif %}

@@ -1,0 +1,109 @@
+---
+title: "Callout Variants"
+id: "mod001-se01-sec06-sp01"
+section_id: "mod001-se01-sec06"
+session_id: "mod001-se01"
+toc: false
+---
+
+
+
+
+
+
+
+
+
+
+
+---
+
+<!-- START_INTERACTIONS -->
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Introduce why this point matters._]
+<!-- editable:end -->
+
+::: {.callout-note}
+**Key Emphasis**
+
+[AUTHOR GUIDE: _Add the emphasized point, warning, or key takeaway here._]
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add interpretation or implications of this point._]
+<!-- editable:end -->
+
+---
+
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Introduce why this point matters._]
+<!-- editable:end -->
+
+::: {.callout-tip}
+**Key Emphasis**
+
+[AUTHOR GUIDE: _Add the emphasized point, warning, or key takeaway here._]
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add interpretation or implications of this point._]
+<!-- editable:end -->
+
+---
+
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Introduce why this point matters._]
+<!-- editable:end -->
+
+::: {.callout-warning}
+**Key Emphasis**
+
+[AUTHOR GUIDE: _Add the emphasized point, warning, or key takeaway here._]
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add interpretation or implications of this point._]
+<!-- editable:end -->
+
+---
+
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Introduce why this point matters._]
+<!-- editable:end -->
+
+::: {.callout-important}
+**Key Emphasis**
+
+[AUTHOR GUIDE: _Add the emphasized point, warning, or key takeaway here._]
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add interpretation or implications of this point._]
+<!-- editable:end -->
+<!-- END_INTERACTIONS -->
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="index.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Variant Showcase</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="mod001-se01-sec06-sp02.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Quiz Variants</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

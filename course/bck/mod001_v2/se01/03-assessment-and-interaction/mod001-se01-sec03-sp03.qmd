@@ -1,0 +1,49 @@
+---
+title: "Page 3 - Overview Page Variant"
+id: "mod001-se01-sec03-sp03"
+section_id: "mod001-se01-sec03"
+session_id: "mod001-se01"
+toc: false
+---
+
+## Overview
+
+_Add a clear overview of the section here._
+
+## Why this matters
+
+_Explain why this topic is important for the learner._
+
+## In this section
+
+_List the key learning points or topics covered._
+
+## How to approach this section
+
+_Provide guidance on how to study this material (e.g. "Watch the video first, then try the exercise")._
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="mod001-se01-sec03-sp02.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Page 2 - Interactive Page</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="mod001-se01-sec03-sp04.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Page 4 - Concept Page Variant</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

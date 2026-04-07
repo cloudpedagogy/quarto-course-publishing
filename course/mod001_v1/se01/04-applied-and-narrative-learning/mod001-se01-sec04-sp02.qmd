@@ -1,0 +1,134 @@
+---
+title: "Page 2 - Application Page Variant"
+id: "mod001-se01-sec04-sp02"
+section_id: "mod001-se01-sec04"
+session_id: "mod001-se01"
+toc: True
+---
+
+
+
+
+
+
+
+
+
+## Context
+
+_Describe the real-world context where this concept is applied._
+
+## Application
+
+_Explain how the concept is used in this specific situation._
+
+## Outcome or implication
+
+_Detail what happened as a result, or what the wider implications are._
+
+## Why this is useful
+
+_Explain why understanding this application helps the learner._
+
+---
+
+
+
+
+
+---
+
+<!-- START_INTERACTIONS -->
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Add an introduction for this two-staged learning interaction._]
+<!-- editable:end -->
+
+::: {.worked-example}
+**Model Example**
+
+<!-- editable:start model_content -->
+[AUTHOR GUIDE: _Add a worked example, solution, or demonstration here._]
+<!-- editable:end -->
+
+::: {.callout-tip collapse="true"}
+**Expert Walkthrough**
+
+<!-- editable:start thinking_process -->
+[AUTHOR GUIDE: _Add an explanation of the underlying thinking or logic behind this model._]
+<!-- editable:end -->
+:::
+:::
+
+---
+
+::: {.now-you-try}
+**Now you try**
+
+<!-- editable:start try_content -->
+[AUTHOR GUIDE: _Provide a similar task or question for the learner to apply the model themselves._]
+<!-- editable:end -->
+:::
+
+<!-- editable:start interaction_outro -->
+::: {.callout-tip}
+**Guidance for Success**
+
+[AUTHOR GUIDE: _Add sample answers or success criteria for this task._]
+:::
+
+[AUTHOR GUIDE: _Add a reflection or next-step prompt._]
+<!-- editable:end -->
+
+---
+
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Provide a short introduction for this deep self-check._]
+<!-- editable:end -->
+
+::: {.self-check data-variant="deep"}
+**Quick Self-Check**
+
+<!-- editable:start body -->
+[AUTHOR GUIDE: _Provide 2-4 questions for the learner to consider._]
+
+- Question 1
+- Question 2
+<!-- editable:end -->
+:::
+
+<!-- editable:start interaction_outro -->
+::: {.callout-tip}
+**Reflection guidance**
+
+<!-- editable:start feedback -->
+[AUTHOR GUIDE: _Add a model answer or reflection points._]
+<!-- editable:end -->
+:::
+<!-- editable:end -->
+<!-- END_INTERACTIONS -->
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="mod001-se01-sec04-sp01.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Page 1 - Case Study Variant</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="mod001-se01-sec04-sp03.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Page 3 - Worked Example Variant</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

@@ -1,0 +1,43 @@
+project:
+  type: website
+
+website:
+  title: ""
+  sidebar:
+    title: "{{ module.title }}"
+    style: "docked"
+    search: true
+    collapse-level: 1
+    page-navigation: true
+    contents:
+      {% for item in sidebar_contents %}
+      - {% if item.contents %}section: "{{ item.text or item.section }}"{% elif item.section %}section: "{{ item.section }}"{% else %}text: "{{ item.text }}"{% endif %}
+        {% if item.href %}href: "{{ item.href }}"{% endif %}
+        {% if item.contents %}
+        contents:
+          {% for sub in item.contents %}
+          - {% if sub.contents %}section: "{{ sub.text or sub.section }}"{% elif sub.section %}section: "{{ sub.section }}"{% else %}text: "{{ sub.text }}"{% endif %}
+            {% if sub.href %}href: "{{ sub.href }}"{% endif %}
+            {% if sub.contents %}
+            contents:
+              {% for nested in sub.contents %}
+              - {% if nested.contents %}section: "{{ nested.text or nested.section }}"{% elif nested.section %}section: "{{ nested.section }}"{% else %}text: "{{ nested.text }}"{% endif %}
+                {% if nested.href %}href: "{{ nested.href }}"{% endif %}
+                {% if nested.contents %}
+                contents:
+                  {% for leaf in nested.contents %}
+                  - text: "{{ leaf.text }}"
+                    href: "{{ leaf.href }}"
+                  {% endfor %}
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true

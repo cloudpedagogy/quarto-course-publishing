@@ -1,0 +1,59 @@
+---
+title: "Worked Example in R"
+id: "BINOMIAL_DISTRIBUTION-se01-sec01-sp02"
+section_id: "binomial_distribution-se01-sec01"
+session_id: "binomial_distribution-se01"
+toc: True
+---
+
+
+
+
+
+
+
+
+
+## Problem or scenario
+
+_Describe the problem, case study, or scenario that will be explored._
+
+## Step-by-step walkthrough
+
+_Break down the process or solution into clear, numbered steps._
+
+## Result
+
+_Show the final result or outcome of the process._
+
+## Key takeaway
+
+_Summarize the most important lesson from this example._
+
+---
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="BINOMIAL_DISTRIBUTION-se01-sec01-sp01.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">What is the Binomial Distribution?</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="BINOMIAL_DISTRIBUTION-se01-sec01-sp03.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Practice Activity</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

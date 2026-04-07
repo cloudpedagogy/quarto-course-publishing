@@ -1,0 +1,49 @@
+---
+title: "Page 2 - Application Page Variant"
+id: "mod001-se01-sec04-sp02"
+section_id: "mod001-se01-sec04"
+session_id: "mod001-se01"
+toc: false
+---
+
+## Context
+
+_Describe the real-world context where this concept is applied._
+
+## Application
+
+_Explain how the concept is used in this specific situation._
+
+## Outcome or implication
+
+_Detail what happened as a result, or what the wider implications are._
+
+## Why this is useful
+
+_Explain why understanding this application helps the learner._
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="mod001-se01-sec04-sp01.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Page 1 - Case Study Variant</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="mod001-se01-sec04-sp03.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Page 3 - Worked Example Variant</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

@@ -1,0 +1,332 @@
+module:
+  code: EPM102
+  title: Introduction to Statistics for Epidemiology
+  description: Introductory statistics module for epidemiology students.
+  default_render_mode: multi_page
+  default_subpage_count: 5
+  id: epm102
+sessions:
+- code: SE01
+  title: Introduction to Statistics for Epidemiology
+  type: standard
+  required: true
+  render_mode: single_page
+  overview: Introduces the role of statistics in epidemiology.
+  learning_objectives:
+  - Define statistics in relation to data and methods
+  - Explain why statistics matters in epidemiology
+  sections:
+  - number: 1
+    title: Sample Estimates and Sample Distributions
+    kind: concept
+    navigation_style: numbered_subpages
+    subpage_count: 5
+    subpages:
+    - title: Population and sample
+      kind: text_page
+      id: epm102-se01-sec01-sp01
+    - title: Sample estimates
+      kind: text_page
+      id: epm102-se01-sec01-sp02
+    - title: Sampling variability
+      kind: text_page
+      id: epm102-se01-sec01-sp03
+    - title: Sample distributions
+      kind: text_page
+      id: epm102-se01-sec01-sp04
+    - title: Why sample distributions matter
+      kind: text_page
+      id: epm102-se01-sec01-sp05
+    id: epm102-se01-sec01
+  - number: 2
+    title: Intro to Statistics Science
+    kind: concept
+    navigation_style: numbered_subpages
+    subpage_count: 3
+    subpages:
+    - title: The Core Data-Methods Paradigm
+      kind: text_page
+      id: epm102-se01-sec02-sp01
+    - title: Descriptive and inferential statistics
+      kind: text_page
+      id: epm102-se01-sec02-sp02
+    - title: Statistics in decision-making
+      kind: text_page
+      id: epm102-se01-sec02-sp03
+    id: epm102-se01-sec02
+  - number: 3
+    title: Statistical Applications
+    kind: applied_case
+    navigation_style: numbered_subpages
+    subpage_count: 5
+    subpages:
+    - title: New Experimental Page
+      kind: text_page
+      id: epm102-se01-sec03-sp01
+    - title: Describing health data
+      kind: text_page
+      id: epm102-se01-sec03-sp02
+    - title: Comparing groups
+      kind: text_page
+      id: epm102-se01-sec03-sp03
+    - title: Interpreting findings
+      kind: text_page
+      id: epm102-se01-sec03-sp04
+    - title: Applied examples
+      kind: text_page
+      id: epm102-se01-sec03-sp05
+    id: epm102-se01-sec03
+  - number: 5
+    title: Summary
+    kind: summary
+    navigation_style: numbered_subpages
+    subpage_count: 7
+    subpages:
+    - title: What is Statistics exactly?
+      kind: text_page
+      id: epm102-se01-sec04-sp01
+    - title: New Test 8 Page
+      kind: text_page
+      id: epm102-se01-sec04-sp02
+    - title: Recap of key concepts
+      kind: summary_page
+      id: epm102-se01-sec04-sp03
+    - title: Why statistics matters
+      kind: summary_page
+      id: epm102-se01-sec04-sp04
+    - title: Samples and distributions recap
+      kind: summary_page
+      id: epm102-se01-sec04-sp05
+    - title: Applications recap
+      kind: summary_page
+      id: epm102-se01-sec04-sp06
+    - title: Final takeaways
+      kind: summary_page
+      id: epm102-se01-sec04-sp07
+    id: epm102-se01-sec04
+  id: epm102-se01
+- code: SE02
+  title: Types of Data, Summary and Data Presentation
+  type: quantitative
+  required: true
+  render_mode: multi_page
+  overview: Introduces data types, summary measures, frequency distributions, and
+    data presentation.
+  learning_objectives:
+  - Distinguish between common types of data
+  - Interpret frequency distributions
+  - Describe common graphical representations
+  - Explain measures of location and spread
+  options:
+    include_prerequisites: true
+    include_maths: true
+    include_quiz: true
+    include_r_code: false
+  sections:
+  - number: 1
+    title: Types of Data, Summary and Presentation
+    kind: title_page
+    pages:
+    - title: Session overview
+      kind: overview
+      id: epm102-se02-sec01-sp01
+    id: epm102-se02-sec01
+  - number: 2
+    title: Introduction
+    kind: overview
+    navigation_style: numbered_subpages
+    subpage_count: 5
+    subpages:
+    - title: Introduction
+      kind: text_page
+      id: epm102-se02-sec02-sp01
+    - title: Why data types matter
+      kind: text_page
+      id: epm102-se02-sec02-sp02
+    - title: Overview of summary methods
+      kind: text_page
+      id: epm102-se02-sec02-sp03
+    - title: Overview of data presentation
+      kind: text_page
+      id: epm102-se02-sec02-sp04
+    - title: Session roadmap
+      kind: text_page
+      id: epm102-se02-sec02-sp05
+    id: epm102-se02-sec02
+  - number: 3
+    title: Types of Data
+    kind: concept
+    navigation_style: numbered_subpages
+    subpage_count: 5
+    subpages:
+    - title: Categorical and numerical data
+      kind: text_page
+      id: epm102-se02-sec03-sp01
+    - title: Discrete and continuous data
+      kind: text_page
+      id: epm102-se02-sec03-sp02
+    - title: Nominal and ordinal data
+      kind: text_page
+      id: epm102-se02-sec03-sp03
+    - title: Examples from epidemiology
+      kind: text_page
+      id: epm102-se02-sec03-sp04
+    - title: Why classification matters
+      kind: text_page
+      id: epm102-se02-sec03-sp05
+    id: epm102-se02-sec03
+  - number: 4
+    title: Frequency Distributions
+    kind: concept
+    navigation_style: numbered_subpages
+    subpage_count: 5
+    subpages:
+    - title: Introduction to frequency distributions
+      kind: text_page
+      id: epm102-se02-sec04-sp01
+    - title: Constructing a frequency table
+      kind: text_page
+      id: epm102-se02-sec04-sp02
+    - title: Relative and cumulative frequency
+      kind: text_page
+      id: epm102-se02-sec04-sp03
+    - title: Interpreting frequency distributions
+      kind: text_page
+      id: epm102-se02-sec04-sp04
+    - title: Worked examples
+      kind: text_page
+      id: epm102-se02-sec04-sp05
+    id: epm102-se02-sec04
+  - number: 5
+    title: Graphing Frequency Distributions
+    kind: applied
+    navigation_style: numbered_subpages
+    subpage_count: 5
+    subpages:
+    - title: Histograms
+      kind: text_page
+      id: epm102-se02-sec05-sp01
+    - title: Bar charts
+      kind: text_page
+      id: epm102-se02-sec05-sp02
+    - title: Pie charts
+      kind: text_page
+      id: epm102-se02-sec05-sp03
+    - title: Comparative graphing
+      kind: text_page
+      id: epm102-se02-sec05-sp04
+    - title: Choosing the right graph
+      kind: text_page
+      id: epm102-se02-sec05-sp05
+    id: epm102-se02-sec05
+  - number: 6
+    title: Measures of Location
+    kind: maths
+    navigation_style: numbered_subpages
+    subpage_count: 5
+    subpages:
+    - title: Mean
+      kind: maths_page
+      id: epm102-se02-sec06-sp01
+    - title: Median
+      kind: maths_page
+      id: epm102-se02-sec06-sp02
+    - title: Mode
+      kind: maths_page
+      id: epm102-se02-sec06-sp03
+    - title: Comparing measures of location
+      kind: maths_page
+      id: epm102-se02-sec06-sp04
+    - title: Worked examples
+      kind: maths_page
+      id: epm102-se02-sec06-sp05
+    id: epm102-se02-sec06
+  - number: 7
+    title: Measures of Spread
+    kind: maths
+    navigation_style: numbered_subpages
+    subpage_count: 5
+    subpages:
+    - title: Range
+      kind: maths_page
+      id: epm102-se02-sec07-sp01
+    - title: Variance
+      kind: maths_page
+      id: epm102-se02-sec07-sp02
+    - title: Interpreting spread
+      kind: maths_page
+      id: epm102-se02-sec07-sp03
+    - title: Comparing datasets using spread
+      kind: maths_page
+      id: epm102-se02-sec07-sp04
+    - title: Worked examples
+      kind: maths_page
+      id: epm102-se02-sec07-sp05
+    id: epm102-se02-sec07
+  - number: 8
+    title: Standard Deviation
+    kind: maths
+    navigation_style: numbered_subpages
+    subpage_count: 5
+    subpages:
+    - title: What standard deviation measures
+      kind: maths_page
+      id: epm102-se02-sec08-sp01
+    - title: Calculating standard deviation
+      kind: maths_page
+      id: epm102-se02-sec08-sp02
+    - title: Interpreting standard deviation
+      kind: maths_page
+      id: epm102-se02-sec08-sp03
+    - title: Standard deviation in context
+      kind: maths_page
+      id: epm102-se02-sec08-sp04
+    - title: Worked examples
+      kind: maths_page
+      id: epm102-se02-sec08-sp05
+    id: epm102-se02-sec08
+  - number: 9
+    title: Revision
+    kind: revision
+    navigation_style: numbered_subpages
+    subpage_count: 5
+    subpages:
+    - title: Revision overview
+      kind: quiz_page
+      id: epm102-se02-sec09-sp01
+    - title: Data types review
+      kind: quiz_page
+      id: epm102-se02-sec09-sp02
+    - title: Frequency distributions review
+      kind: quiz_page
+      id: epm102-se02-sec09-sp03
+    - title: Measures review
+      kind: quiz_page
+      id: epm102-se02-sec09-sp04
+    - title: Final revision activity
+      kind: quiz_page
+      id: epm102-se02-sec09-sp05
+    id: epm102-se02-sec09
+  - number: 10
+    title: Summary
+    kind: summary
+    navigation_style: numbered_subpages
+    subpage_count: 5
+    subpages:
+    - title: Key ideas from the session
+      kind: summary_page
+      id: epm102-se02-sec10-sp01
+    - title: Data types recap
+      kind: summary_page
+      id: epm102-se02-sec10-sp02
+    - title: Frequency distributions recap
+      kind: summary_page
+      id: epm102-se02-sec10-sp03
+    - title: Measures recap
+      kind: summary_page
+      id: epm102-se02-sec10-sp04
+    - title: Final takeaways
+      kind: summary_page
+      id: epm102-se02-sec10-sp05
+    id: epm102-se02-sec10
+  id: epm102-se02

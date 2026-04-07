@@ -1,0 +1,19 @@
+## Overview
+
+{{ overview | default("[AUTHOR GUIDE: _Add a clear overview of the section here._]") }}
+
+## Why this matters
+
+{{ why_matters | default("[AUTHOR GUIDE: _Explain why this topic is important for the learner._]") }}
+
+## In this section
+
+{{ in_section | default("[AUTHOR GUIDE: _List the key learning points or topics covered._]") }}
+
+## How to approach this section
+
+_Provide guidance on how to study this material (e.g. "Watch the video first, then try the exercise")._
+
+---
+
+

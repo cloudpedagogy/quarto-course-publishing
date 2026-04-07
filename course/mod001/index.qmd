@@ -1,0 +1,34 @@
+---
+title: "Demo Module: Pedagogical Page Designs"
+subtitle: "MOD002"
+id: "mod001"
+toc: True
+---
+
+Demonstration module showcasing all available pedagogical page templates.
+
+## Sessions
+
+
+- [SE01: Demo Session: Page Design Showcase](se01/index.qmd)
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="se01/index.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Demo Session: Page Design Showcase</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

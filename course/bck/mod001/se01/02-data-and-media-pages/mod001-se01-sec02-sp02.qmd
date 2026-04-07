@@ -1,0 +1,107 @@
+---
+title: "Video Page"
+id: "mod001-se01-sec02-sp02"
+section_id: "mod001-se01-sec02"
+session_id: "mod001-se01"
+toc: false
+---
+
+
+
+
+
+
+
+
+
+
+
+---
+
+<!-- START_INTERACTIONS -->
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Add an introduction or instructions for viewing this video._]
+<!-- editable:end -->
+
+::: {.video}
+[AUTHOR GUIDE: _Embed the video link or iframe here._]
+:::
+
+---
+
+## Guided Video Analysis
+
+[AUTHOR GUIDE: _Provide 2-3 specific points for the learner to focus on while watching._]
+
+- Observation 1
+- Observation 2
+
+<!-- editable:start interaction_outro -->
+::: {.callout-tip}
+**Reflection and follow-up**
+
+[AUTHOR GUIDE: _Add a brief reflection question or next-step instruction after viewing._]
+:::
+
+[AUTHOR GUIDE: _Add any concluding remarks or transitions here._]
+<!-- editable:end -->
+
+---
+
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Add an introduction for this true false._]
+<!-- editable:end -->
+
+::: {.quiz data-variant="true_false"}
+**Knowledge Quiz**
+
+[AUTHOR GUIDE: _Add questions matching the true_false format here._]
+:::
+
+<!-- editable:start interaction_outro -->
+
+[AUTHOR GUIDE: _Add a brief summary or reflection prompt after completing the assessment._]
+<!-- editable:end -->
+
+---
+
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Frame this open reflection task._]
+<!-- editable:end -->
+
+::: {.reflection data-variant="open"}
+**Personal Reflection**
+
+[AUTHOR GUIDE: _Add a reflection question tailored to the topic._]
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add a closing thought or transition._]
+<!-- editable:end -->
+<!-- END_INTERACTIONS -->
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="mod001-se01-sec02-sp01.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Data Page</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="mod001-se01-sec02-sp03.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Text Page</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

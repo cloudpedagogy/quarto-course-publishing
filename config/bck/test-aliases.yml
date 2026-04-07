@@ -1,0 +1,24 @@
+module:
+  code: TEST-ALIAS
+  title: Alias Resolution Test
+  description: Verifying backward compatibility for interaction names.
+  id: test-alias
+sessions:
+- code: SE01
+  title: Alias Test Session
+  overview: Testing alias resolution for interactions.
+  sections:
+  - number: 1
+    title: Alias Verification
+    kind: standard
+    pages:
+    - title: Alias Test Page
+      kind: methods_page
+      interactions:
+      - type: detailed_explanation
+        target_block: steps
+      - type: quiz
+        position: end
+      id: test-alias-sp01
+    id: test-alias-se01-sec01
+  id: test-alias-se01

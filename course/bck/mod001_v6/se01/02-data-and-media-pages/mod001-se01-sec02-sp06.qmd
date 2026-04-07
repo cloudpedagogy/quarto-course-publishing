@@ -1,0 +1,82 @@
+---
+title: "Discussion Page"
+id: "mod001-se01-sec02-sp06"
+section_id: "mod001-se01-sec02"
+session_id: "mod001-se01"
+toc: false
+---
+
+
+
+
+
+
+
+
+
+
+
+---
+
+<!-- START_INTERACTIONS -->
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Add framing for this comparison or multi-perspective view here._]
+<!-- editable:end -->
+
+::: {.panel-tabset}
+
+## Perspective A
+[AUTHOR GUIDE: _Add content for the first perspective or approach here._]
+
+## Perspective B
+[AUTHOR GUIDE: _Add content for the second perspective or approach here._]
+
+
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add a prompt for the learner to compare these views or decide which applies to their context._]
+<!-- editable:end -->
+
+---
+
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Frame this guided reflection task._]
+<!-- editable:end -->
+
+::: {.reflection data-variant="guided"}
+**Personal Reflection**
+
+[AUTHOR GUIDE: _Add a reflection question tailored to the topic._]
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add a closing thought or transition._]
+<!-- editable:end -->
+<!-- END_INTERACTIONS -->
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="mod001-se01-sec02-sp05.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Case Study</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="mod001-se01-sec02-sp07.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Summary Page</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

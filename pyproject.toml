@@ -1,0 +1,24 @@
+[project]
+name = "quarto-course-generator"
+version = "0.1.0"
+description = "Schema-driven Quarto course publishing system"
+authors = [
+    { name = "Jonathan Wong" }
+]
+dependencies = [
+    "click",
+    "pyyaml",
+    "jinja2",
+    "pydantic",
+    "rich"
+]
+
+[project.scripts]
+coursegen = "course_generator.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"

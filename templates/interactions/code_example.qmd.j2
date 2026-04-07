@@ -1,0 +1,22 @@
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Add framing for this {{ variant | default("python") | upper }} example._]
+<!-- editable:end -->
+
+::: {.code-example}
+**{{ label | default("Code in Action") }}**
+
+```{{ variant | default("python") }}
+<!-- editable:start code -->
+{{ code | default("# Add your code here") }}
+<!-- editable:end -->
+```
+
+**Interpretation:**
+<!-- editable:start interpretation -->
+{{ interpretation | default("[AUTHOR GUIDE: _Explain what this code does._]") }}
+<!-- editable:end -->
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add a follow-up prompt._]
+<!-- editable:end -->

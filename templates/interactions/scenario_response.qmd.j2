@@ -1,0 +1,23 @@
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Add an introduction if appropriate for this scenario response task._]
+<!-- editable:end -->
+
+::: {.scenario-response}
+**{{ label | default("Scenario Challenge") }}**
+
+**Scenario Context:**
+{{ scenario | default("[AUTHOR GUIDE: _Describe a realistic or authentic scenario corresponding to the learning objectives._]") }}
+
+**What would you do?**
+{{ prompt | default("[AUTHOR GUIDE: _Ask the learner to respond or take action in this scenario._]") }}
+:::
+
+<!-- editable:start interaction_outro -->
+::: {.callout-tip}
+**Guidance and Reflection**
+
+{{ guidance | default("[AUTHOR GUIDE: _Add the rationale or trade-offs for different responses._]") }}
+:::
+
+[AUTHOR GUIDE: _Add a brief wrap-up or next-step prompt after the scenario._]
+<!-- editable:end -->

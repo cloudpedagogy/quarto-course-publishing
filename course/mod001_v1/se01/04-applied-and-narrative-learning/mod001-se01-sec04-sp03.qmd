@@ -1,0 +1,127 @@
+---
+title: "Page 3 - Worked Example Variant"
+id: "mod001-se01-sec04-sp03"
+section_id: "mod001-se01-sec04"
+session_id: "mod001-se01"
+toc: True
+---
+
+
+
+
+
+
+
+
+
+## Problem or scenario
+
+_Describe the problem, case study, or scenario that will be explored._
+
+## Step-by-step walkthrough
+
+_Break down the process or solution into clear, numbered steps._
+
+## Result
+
+_Show the final result or outcome of the process._
+
+## Key takeaway
+
+_Summarize the most important lesson from this example._
+
+---
+
+
+
+
+
+---
+
+<!-- START_INTERACTIONS -->
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Prepare the learner for this stepwise sequence._]
+<!-- editable:end -->
+
+::: {.reveal-sequence data-variant="stepwise"}
+**Revealed Insight**
+
+<!-- editable:start content -->
+[AUTHOR GUIDE: _Add the content to be revealed._]
+<!-- editable:end -->
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add a follow-up or reflection prompt._]
+<!-- editable:end -->
+
+---
+
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Add an introduction for this worked calculation or demonstration._]
+<!-- editable:end -->
+
+::: {.worked-calculation}
+**Worked Calculation**
+
+[AUTHOR GUIDE: _Add the step-by-step calculation or demonstration here._]
+:::
+
+<!-- editable:start interaction_outro -->
+::: {.callout-tip}
+**Mathematical Logic**
+
+[AUTHOR GUIDE: _Add an explanation of the logic or reasoning behind each calculation step._]
+:::
+
+[AUTHOR GUIDE: _Add a summary or transitional thought._]
+<!-- editable:end -->
+
+---
+
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Add an introduction for this calculation practice task._]
+<!-- editable:end -->
+
+::: {.try-calculation}
+**Calculation Practice**
+
+[AUTHOR GUIDE: _Add a calculation or problem for the learner to solve themselves._]
+:::
+
+<!-- editable:start interaction_outro -->
+::: {.callout-tip}
+**Model Solution**
+
+[AUTHOR GUIDE: _Add the worked solution and rationale here._]
+:::
+
+[AUTHOR GUIDE: _Add a summary or reflection prompt._]
+<!-- editable:end -->
+<!-- END_INTERACTIONS -->
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="mod001-se01-sec04-sp02.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Page 2 - Application Page Variant</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="mod001-se01-sec04-sp04.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Page 4 - Methods Page Variant</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

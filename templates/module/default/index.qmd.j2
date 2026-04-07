@@ -1,0 +1,17 @@
+---
+title: "{{ module.title }}"
+subtitle: "{{ module.code }}"
+id: "{{ module.id }}"
+toc: {{ toc | default(true) }}
+---
+
+{{ module.description }}
+
+## Sessions
+
+{% for session in sessions %}
+- [{{ session.code }}: {{ session.title }}]({{ session.code.lower() }}/index.qmd) {% if not session.required %}(Optional){% endif %}
+{% endfor %}
+
+
+{{ interactions }}

@@ -1,0 +1,68 @@
+---
+title: "Summary Page"
+id: "mod001-se01-sec03-sp07"
+section_id: "mod001-se01-sec03"
+session_id: "mod001-se01"
+toc: false
+---
+
+
+
+
+
+
+
+
+
+
+
+---
+
+<!-- START_INTERACTIONS -->
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Provide a short introduction for this quick self-check._]
+<!-- editable:end -->
+
+::: {.self-check data-variant="quick"}
+**Quick Self-Check**
+
+[AUTHOR GUIDE: _Provide 2-4 questions for the learner to consider._]
+
+- Question 1
+- Question 2
+:::
+
+<!-- editable:start interaction_outro -->
+::: {.callout-tip}
+**Reflection guidance**
+
+[AUTHOR GUIDE: _Add a model answer or reflection points._]
+:::
+<!-- editable:end -->
+<!-- END_INTERACTIONS -->
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="mod001-se01-sec03-sp06.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Reflection Variant</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="../04-applied-and-narrative-learning/index.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Applied and Narrative Learning</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

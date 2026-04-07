@@ -1,0 +1,89 @@
+---
+title: "Worked Calculation Page"
+id: "mod001-se01-sec05-sp04"
+section_id: "mod001-se01-sec05"
+session_id: "mod001-se01"
+toc: false
+---
+
+
+
+
+
+
+
+
+
+
+
+---
+
+<!-- START_INTERACTIONS -->
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Add an introduction for this worked calculation or demonstration._]
+<!-- editable:end -->
+
+::: {.worked-calculation}
+**Worked Calculation**
+
+[AUTHOR GUIDE: _Add the step-by-step calculation or demonstration here._]
+:::
+
+<!-- editable:start interaction_outro -->
+::: {.callout-tip}
+**Mathematical Logic**
+
+[AUTHOR GUIDE: _Add an explanation of the logic or reasoning behind each calculation step._]
+:::
+
+[AUTHOR GUIDE: _Add a summary or transitional thought._]
+<!-- editable:end -->
+
+---
+
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Add an introduction for this calculation practice task._]
+<!-- editable:end -->
+
+::: {.try-calculation}
+**Calculation Practice**
+
+[AUTHOR GUIDE: _Add a calculation or problem for the learner to solve themselves._]
+:::
+
+<!-- editable:start interaction_outro -->
+::: {.callout-tip}
+**Model Solution**
+
+[AUTHOR GUIDE: _Add the worked solution and rationale here._]
+:::
+
+[AUTHOR GUIDE: _Add a summary or reflection prompt._]
+<!-- editable:end -->
+<!-- END_INTERACTIONS -->
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="mod001-se01-sec05-sp03.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Math Explanation Page</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="mod001-se01-sec05-sp05.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Parameter Exploration Page</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

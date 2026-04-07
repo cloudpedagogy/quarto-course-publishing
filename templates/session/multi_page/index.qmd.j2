@@ -1,0 +1,38 @@
+---
+title: "{{ session.title }}"
+id: "{{ session.id }}"
+toc: {{ toc | default(true) }}
+---
+
+{{ session.overview }}
+
+### Learning Objectives
+<br>
+{% for objective in session.learning_objectives %}
+- {{ objective }}
+
+{% endfor %}
+
+<br>
+
+<br>
+
+{% set first_section = session.sections[0] %}
+{% set first_slug = first_section.title.lower().replace(' ', '-').replace(':', '').replace('?', '').replace(',', '') %}
+{% set first_prefix = "%02d"|format(first_section.number) %}
+{% set first_is_numbered = first_section.navigation_style == "numbered_subpages" %}
+{% set first_needs_folder = first_is_numbered or first_section.pages|length > 1 %}
+
+{% if first_needs_folder %}
+  {% set start_href = first_prefix + "-" + first_slug + "/" + ("01.qmd" if first_is_numbered else "01-" + (first_section.pages[0].title.lower().replace(' ', '-').replace(':', '').replace('?', '').replace(',', '')) + ".qmd") %}
+{% else %}
+  {% set p_title = first_section.pages[0].title if first_section.pages else first_slug %}
+  {% set start_href = first_prefix + "-" + (p_title.lower().replace(' ', '-').replace(':', '').replace('?', '').replace(',', '')) + ".qmd" %}
+{% endif %}
+
+
+{% if navigation %}
+{% endif %}
+
+
+{{ interactions }}

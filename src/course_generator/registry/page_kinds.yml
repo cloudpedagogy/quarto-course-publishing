@@ -1,0 +1,40 @@
+page_kinds:
+  concept_page:
+    label: Concept Page
+    description: A page for definitions, core ideas, and conceptual explanation.
+    template: concept_page.qmd.j2
+
+  worked_example_page:
+    label: Worked Example Page
+    description: A page for step-by-step worked examples and interpretation.
+    template: worked_example_page.qmd.j2
+
+  data_interpretation_page:
+    label: Data Interpretation Page
+    description: A page for interpreting tables, graphs, and epidemiological findings.
+    template: data_interpretation_page.qmd.j2
+
+  methods_page:
+    label: Methods Page
+    description: A page for study designs, methods, and strengths/limitations.
+    template: methods_page.qmd.j2
+
+  practice_page:
+    label: Practice Page
+    description: A page for exercises, tasks, and applied learning.
+    template: practice_page.qmd.j2
+
+  summary_page:
+    label: Summary Page
+    description: A page for recap, consolidation, and key takeaways.
+    template: summary_page.qmd.j2
+
+  video_page:
+    label: Video Page
+    description: A page for embedded video with supporting commentary.
+    template: video_page.qmd.j2
+
+  text_page:
+    label: Text Page
+    description: A standard text page with a content placeholder.
+    template: text_page.qmd.j2

@@ -1,0 +1,19 @@
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+venv/
+.preview/
+.pytest_cache/
+.env*
+
+# generated outputs
+/output/
+**/out/
+**/output/
+**/_site/
+**/.quarto/
+
+# logs / temp
+*.log
+*.tmp

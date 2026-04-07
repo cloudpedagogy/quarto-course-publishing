@@ -1,0 +1,47 @@
+---
+title: "Section 8: Computational and Analytical Extensions"
+id: "mod001-se01-sec08"
+section_id: "mod001-se01-sec08"
+session_id: "mod001-se01"
+toc: True
+---
+
+
+
+
+### In this section
+<br>
+
+- [Page 1 - Code Example and Code Along](mod001-se01-sec08-sp01.qmd)
+
+- [Page 2 - Code Output Interpretation](mod001-se01-sec08-sp02.qmd)
+
+- [Page 3 - Worked and Try Calculation](mod001-se01-sec08-sp03.qmd)
+
+- [Page 4 - Analytical Summary](mod001-se01-sec08-sp04.qmd)
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="../07-page-design-showcase/mod001-se01-sec07-sp07.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Page 7 - Summary Page</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="mod001-se01-sec08-sp01.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Page 1 - Code Example and Code Along</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

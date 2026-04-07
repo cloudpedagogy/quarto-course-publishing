@@ -1,0 +1,59 @@
+---
+title: "Practice Activity"
+id: "BINOMIAL_DISTRIBUTION-se01-sec01-sp03"
+section_id: "binomial_distribution-se01-sec01"
+session_id: "binomial_distribution-se01"
+toc: True
+---
+
+
+
+
+
+
+
+
+
+## Task
+
+_Clearly define the task or exercise for the learner._
+
+## Instructions
+
+_Provide step-by-step instructions on how to complete the activity._
+
+## Output
+
+_Describe what the learner should produce (e.g. "A paragraph summarizing...", "A spreadsheet with...")._
+
+## Optional self-check
+
+_Provide criteria or questions for the learner to check their own work._
+
+---
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="BINOMIAL_DISTRIBUTION-se01-sec01-sp02.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Worked Example in R</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="BINOMIAL_DISTRIBUTION-se01-sec01-sp04.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Summary and Reflection</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

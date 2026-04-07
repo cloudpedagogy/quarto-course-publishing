@@ -1,0 +1,146 @@
+---
+title: "Page 5 - Case Study"
+id: "mod001-se01-sec02-sp05"
+section_id: "mod001-se01-sec02"
+session_id: "mod001-se01"
+toc: false
+---
+
+
+
+
+
+
+
+
+
+## Case context
+
+_Provide the background to the case, including the setting, key people involved, or the initial situation._
+
+---
+
+## The challenge
+
+_Describe the main issue, question, or problem that emerged in this case._
+
+---
+
+## Response or decision
+
+_Detail the actions taken, options considered, or specific decisions made in response to the challenge._
+
+---
+
+## Outcome
+
+_Explain what happened as a result, including any consequences, results, or lessons learned._
+
+---
+
+## Reflect on the case
+
+_Add a prompt for the learner to interpret, critique, or extend the thinking around this specific case._
+
+---
+
+
+
+
+
+---
+
+<!-- START_INTERACTIONS -->
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Add an introduction if appropriate for this scenario response task._]
+<!-- editable:end -->
+
+::: {.scenario-response}
+**Scenario Challenge**
+
+**Scenario Context:**
+[AUTHOR GUIDE: _Describe a realistic or authentic scenario corresponding to the learning objectives._]
+
+**What would you do?**
+[AUTHOR GUIDE: _Ask the learner to respond or take action in this scenario._]
+:::
+
+<!-- editable:start interaction_outro -->
+::: {.callout-tip}
+**Guidance and Reflection**
+
+[AUTHOR GUIDE: _Add the rationale or trade-offs for different responses._]
+:::
+
+[AUTHOR GUIDE: _Add a brief wrap-up or next-step prompt after the scenario._]
+<!-- editable:end -->
+
+---
+
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Add framing for this comparison or multi-perspective view here._]
+<!-- editable:end -->
+
+::: {.panel-tabset}
+
+## Perspective A
+<!-- editable:start tab_1_content -->
+[AUTHOR GUIDE: _Add content for the first perspective or approach here._]
+<!-- editable:end -->
+
+## Perspective B
+<!-- editable:start tab_2_content -->
+[AUTHOR GUIDE: _Add content for the second perspective or approach here._]
+<!-- editable:end -->
+
+
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add a prompt for the learner to compare these views or decide which applies to their context._]
+<!-- editable:end -->
+
+---
+
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Frame this guided reflection task._]
+<!-- editable:end -->
+
+::: {.reflection data-variant="guided"}
+**Personal Reflection**
+
+<!-- editable:start prompt -->
+[AUTHOR GUIDE: _Add a reflection question tailored to the topic._]
+<!-- editable:end -->
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add a closing thought or transition._]
+<!-- editable:end -->
+<!-- END_INTERACTIONS -->
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="mod001-se01-sec02-sp04.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Page 4 - Methods Page</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="mod001-se01-sec02-sp06.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Page 6 - Discussion Page</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

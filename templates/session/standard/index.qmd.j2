@@ -1,0 +1,48 @@
+---
+title: "{{ session.title }}"
+subtitle: "{{ session.code }}"
+toc: {{ toc | default(true) }}
+---
+
+## Overview
+
+{{ session.overview }}
+
+{% if session.learning_objectives %}
+::: {.callout-note}
+## Learning Objectives
+By the end of this session, you will be able to:
+{% for obj in session.learning_objectives %}
+- {{ obj }}
+{% endfor %}
+:::
+{% endif %}
+
+{% if session.options and session.options.include_prerequisites %}
+::: {.callout-important}
+## Prerequisites
+This session assumes knowledge of...
+:::
+{% endif %}
+
+{% for section in session.sections %}
+{% for page in section.pages %}
+{{ '{{' }}< include _sections/{{ "%02d" % section.number }}-{{ page.title.lower().replace(' ', '-').replace(':', '').replace('?', '') }}.qmd >{{ '}}' }}
+{% endfor %}
+{% endfor %}
+
+{% if session.options and session.options.include_quiz %}
+## Practice Quiz
+*Placeholder for quiz content*
+{% endif %}
+
+## Summary
+*Session summary placeholder*
+
+
+
+{% if navigation %}
+{% endif %}
+
+
+{{ interactions }}

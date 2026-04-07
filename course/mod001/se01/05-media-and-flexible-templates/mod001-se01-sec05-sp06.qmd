@@ -1,0 +1,110 @@
+---
+title: "Page 6 - Activity Page Variant"
+id: "mod001-se01-sec05-sp06"
+section_id: "mod001-se01-sec05"
+session_id: "mod001-se01"
+toc: True
+---
+
+
+
+
+
+
+
+
+
+## Task
+
+_Clearly define the task or exercise for the learner._
+
+## Instructions
+
+_Provide step-by-step instructions on how to complete the activity._
+
+## Output
+
+_Describe what the learner should produce (e.g. "A paragraph summarizing...", "A spreadsheet with...")._
+
+## Optional self-check
+
+_Provide criteria or questions for the learner to check their own work._
+
+---
+
+
+
+
+
+---
+
+<!-- START_INTERACTIONS -->
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Provide a short introduction for this quick self-check._]
+<!-- editable:end -->
+
+::: {.self-check data-variant="quick"}
+**Quick Self-Check**
+
+<!-- editable:start body -->
+[AUTHOR GUIDE: _Provide 2-4 questions for the learner to consider._]
+
+- Question 1
+- Question 2
+<!-- editable:end -->
+:::
+
+<!-- editable:start interaction_outro -->
+::: {.callout-tip}
+**Reflection guidance**
+
+<!-- editable:start feedback -->
+[AUTHOR GUIDE: _Add a model answer or reflection points._]
+<!-- editable:end -->
+:::
+<!-- editable:end -->
+
+---
+
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Frame this open reflection task._]
+<!-- editable:end -->
+
+::: {.reflection data-variant="open"}
+**Personal Reflection**
+
+<!-- editable:start prompt -->
+[AUTHOR GUIDE: _Add a reflection question tailored to the topic._]
+<!-- editable:end -->
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add a closing thought or transition._]
+<!-- editable:end -->
+<!-- END_INTERACTIONS -->
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="mod001-se01-sec05-sp05.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Page 5 - Concept Page Variant</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="mod001-se01-sec05-sp07.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Page 7 - Summary Page</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

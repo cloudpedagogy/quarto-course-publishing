@@ -1,0 +1,49 @@
+module:
+  code: BINOMIAL_DISTRIBUTION
+  title: Binomial Distribution
+  description: A demonstration course showing how Word-authored content can be converted and inserted into a structured Quarto course.
+  id: binomial_distribution
+  default_render_mode: multi_page
+  default_navigation_style: numbered_subpages
+  default_subpage_count: 4
+
+sessions:
+  - code: SE01
+    title: Core Concepts and Interpretation
+    id: binomial_distribution-se01
+    type: standard
+    required: true
+    render_mode: multi_page
+    overview: |
+      This session introduces the binomial distribution, its assumptions, interpretation,
+      and application in simple probability problems.
+    learning_objectives:
+      - Explain what the binomial distribution represents
+      - Identify the conditions under which a binomial model is appropriate
+      - Interpret probabilities from a binomial distribution
+      - Use R to calculate binomial probabilities
+
+    sections:
+      - number: 1
+        title: Core Concepts and Interpretation
+        kind: section_overview
+        id: binomial_distribution-se01-sec01
+        navigation_style: numbered_subpages
+        subpage_count: 4
+
+        subpages:
+          - title: What is the Binomial Distribution?
+            id: BINOMIAL_DISTRIBUTION-se01-sec01-sp01
+            kind: concept_page
+
+          - title: Worked Example in R
+            id: BINOMIAL_DISTRIBUTION-se01-sec01-sp02
+            kind: worked_example
+
+          - title: Practice Activity
+            id: BINOMIAL_DISTRIBUTION-se01-sec01-sp03
+            kind: activity_page
+
+          - title: Summary and Reflection
+            id: BINOMIAL_DISTRIBUTION-se01-sec01-sp04
+            kind: summary_page

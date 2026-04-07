@@ -1,0 +1,22 @@
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Add an introduction for this {{ variant | replace("_", " ") | default("quiz") }}._]
+<!-- editable:end -->
+
+::: {.quiz data-variant="{{ variant | default('mcq') }}"}
+**{{ label | default("Knowledge Check") }}**
+
+<!-- editable:start questions -->
+{{ questions | default("[AUTHOR GUIDE: _Add questions matching the " + (variant | default('mcq')) + " format here._]") }}
+<!-- editable:end -->
+:::
+
+<!-- editable:start interaction_outro -->
+{% if feedback %}
+::: {.callout-tip}
+**Feedback and Rationale**
+{{ feedback }}
+:::
+{% endif %}
+
+[AUTHOR GUIDE: _Add a brief summary or reflection prompt after completing the assessment._]
+<!-- editable:end -->

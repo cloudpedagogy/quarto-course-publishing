@@ -1,0 +1,128 @@
+---
+title: "Page 1 - Video Page Variant"
+id: "mod001-se01-sec05-sp01"
+section_id: "mod001-se01-sec05"
+session_id: "mod001-se01"
+toc: True
+---
+
+
+
+
+
+
+
+
+
+## Video
+
+[AUTHOR GUIDE: _Embed the video link or iframe here._]
+
+---
+
+## What to look for
+
+[AUTHOR GUIDE: _Provide 2-3 specific points for the learner to focus on while watching._]
+
+---
+
+## Key ideas
+
+[AUTHOR GUIDE: _Summarize the main concepts presented in the video._]
+
+---
+
+## Follow-up
+
+[AUTHOR GUIDE: _Suggest a next step or related resource after viewing._]
+
+---
+
+
+
+
+
+---
+
+<!-- START_INTERACTIONS -->
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Add an introduction or instructions for viewing this video._]
+<!-- editable:end -->
+
+::: {.video}
+<!-- editable:start content -->
+[AUTHOR GUIDE: _Embed the video link or iframe here._]
+<!-- editable:end -->
+:::
+
+---
+
+## Guided Video Analysis
+
+[AUTHOR GUIDE: _Provide 2-3 specific points for the learner to focus on while watching._]
+
+- Observation 1
+- Observation 2
+
+<!-- editable:start interaction_outro -->
+::: {.callout-tip}
+**Reflection and follow-up**
+
+[AUTHOR GUIDE: _Add a brief reflection question or next-step instruction after viewing._]
+:::
+
+[AUTHOR GUIDE: _Add any concluding remarks or transitions here._]
+<!-- editable:end -->
+
+---
+
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Set the scene for this interpretation task (e.g. 'Look closely at the figure below')._]
+<!-- editable:end -->
+
+::: {.interpretation}
+**Critical Interpretation**
+
+[AUTHOR GUIDE: _Prompt the learner to interpret a specific figure, table, or output._]
+
+**What to consider:**
+- Observation 1
+- Observation 2
+:::
+
+<!-- editable:start interaction_outro -->
+::: {.callout-tip}
+**Expert Guidance**
+
+[AUTHOR GUIDE: _Add guidance or key things that should have been noticed._]
+:::
+
+[AUTHOR GUIDE: _Add a summary or next-step prompt after the interpretation._]
+<!-- editable:end -->
+<!-- END_INTERACTIONS -->
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="index.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Media and Flexible Templates</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="mod001-se01-sec05-sp02.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Page 2 - Interactive Page Variant</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

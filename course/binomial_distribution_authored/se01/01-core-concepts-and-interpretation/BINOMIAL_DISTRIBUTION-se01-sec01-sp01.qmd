@@ -1,0 +1,223 @@
+---
+title: "Binomial Distribution in Epidemiology"
+id: "BINOMIAL_DISTRIBUTION-se01-sec01-sp01"
+section_id: "BINOMIAL_DISTRIBUTION-se01-sec01"
+session_id: "BINOMIAL_DISTRIBUTION-se01"
+toc: false
+---
+
+
+
+
+
+
+
+
+
+## Concept
+
+The **binomial distribution** is a discrete probability distribution that models the number of 'successes' in a series of independent trials. In epidemiology, we frequently use this model to understand the occurrence of a binary outcome (e.g., infected vs. not infected) within a small, specific group of individuals.
+
+### The Four Key Assumptions
+
+For a binomial model to be valid, we must satisfy four criteria:
+1.  **Fixed Number of Trials ($n$):** The total number of observations (e.g., individuals in a study) is decided in advance.
+2.  **Two Possible Outcomes:** Each trial must result in exactly one of two mutually exclusive outcomes (Success/Failure).
+3.  **Constant Probability ($p$):** The probability of 'success' remains the same for every individual in the group.
+4.  **Independence:** The outcome of one individual does not influence the outcome of another.
+
+## Epidemiological Framing
+
+In a public health context, we often treat 'trials' as individual patients or community members. We use this model primarily for small samples because, as sample sizes grow very large, the binomial distribution starts to behave like a normal distribution. For rare outbreaks in small villages or specific hospital wards, the binomial model provides a precise way to calculate the exact probability of seeing a specific number of cases.
+
+## Practical Example
+
+Imagine a small clinic where 10 individuals ($n=10$) are tested for a respiratory virus. Based on historical data, we assume the probability of any single person testing positive is 0.2 ($p=0.2$). We can use the binomial distribution to calculate the probability that **exactly 3** of these 10 people are infected.
+
+## Interpretation Layer
+
+Probabilities from this model represent the likelihood of observing specific outcomes under given assumptions. They help us understand whether a cluster of cases is a likely result of random variation or if it suggests a higher-than-expected risk requiring intervention.
+
+---
+
+### Resources
+
+<div class="resource-list">
+
+<div class="resource-item" style="margin-bottom: 1.5rem;">
+<strong>Binomial Distribution Tutorial (PDF)</strong><br>
+<em>What to look for:</em> Focus on the visualization of how the distribution shifts as the probability $p$ increases. This will help you identify skewed vs. symmetrical distributions in real-world data.
+
+<object data="files/binomial-distribution.pdf" type="application/pdf" width="100%" height="500px" style="border: 1px solid #ddd; border-radius: 4px; margin-top: 10px;">
+<p>It appears you don't have a PDF plugin for this browser. No biggie... you can <a href="files/binomial-distribution.pdf">click here to download the PDF file.</a></p>
+</object>
+<div style="margin-top: 5px; font-size: 0.9em;">
+<a href="files/binomial-distribution.pdf" target="_blank">Open in new tab</a> | <a href="files/binomial-distribution.pdf" download>Download file</a>
+</div>
+</div>
+
+<div class="resource-item" style="margin-bottom: 1.5rem;">
+<strong>Lecture Slides: Probability Models</strong><br>
+<em>What to look for:</em> Review the 'Assumptions in Practice' slide. It provides examples of when independence is violated—such as in highly contagious outbreaks where one case directly causes another.
+
+<div style="margin-top: 5px;">
+<a href="files/binomial-distribution.ppt" target="_blank">Binomial Distribution Slides (PPT)</a>
+</div>
+</div>
+
+</div>
+
+---
+
+<!-- START_INTERACTIONS -->
+
+The binomial model is essential in epidemiology because it allows us to quantify the 'expected' variation in disease occurrence. Without it, we might misinterpret a small cluster of cases as a major outbreak when it could simply be a foreseeable random occurrence.
+
+::: {.callout-important}
+**Why the Binomial Model Matters**
+
+Practitioners use this model to set 'baseline' expectations. If we observe 7 cases in a group of 10 when only 2 were expected, the binomial probability can tell us precisely how rare (or significant) that observation truly is.
+:::
+
+---
+
+Understand the binomial distribution from three different angles:
+
+::: {.panel-tabset}
+
+## Mathematical Definition
+The probability of $k$ successes in $n$ trials is given by:
+$$P(X=k) = \binom{n}{k} p^k (1-p)^{n-k}$$
+where $\binom{n}{k}$ is the binomial coefficient 'n choose k'.
+
+## Epidemiological Interpretation
+In our clinic example, $n$ is the 10 patients, $k$ is the number of positive tests, and $p$ is the underlying infection risk. We are modeling the total 'count' of events in a fixed population.
+
+## Practical Example
+If $n=10$ and $p=0.2$, the most likely outcome is 2 infections. However, there is still a roughly 20% chance of seeing exactly 3 infections due to random chance.
+
+:::
+
+---
+
+The following video demonstrates how the binomial distribution is calculated and visualized.
+
+::: {.video}
+{{< video https://www.youtube.com/watch?v=ATUcJmGxJqs&time_continue=0&source_ve_path=NzY3NTg&embeds_referring_euri=https%3A%2F%2Fwebcal.am.lshtm.ac.uk%2F >}}
+:::
+
+## Watch and Notice:
+1.  **Notice** how the peak of the distribution moves as the 'probability of success' slider is changed.
+2.  **Watch** the calculation of the binomial coefficient—this represents the number of different ways we could observe a specific count of infections.
+3.  **Observe** the difference between the probability of *exactly* $k$ cases versus *at least* $k$ cases.
+
+---
+
+We can use R to calculate these probabilities quickly.
+
+::: {.code-example}
+**Calculating Probability in R**
+
+```r
+# Define the parameters
+n <- 10  # Number of patients
+p <- 0.2 # Probability of infection
+
+# Probability of seeing exactly 3 infected individuals
+dbinom(3, size = n, prob = p)
+```
+
+**Interpretation:**
+The `dbinom` function calculates the probability mass for a specific point. Here, it tells us the exact likelihood of finding 3 positive cases in our group of 10.
+:::
+
+---
+
+::: {.output-analysis}
+**Output Analysis**
+
+The result of the R code above is approximately **0.2013**.
+
+**Interpretation:**
+- There is a **20.1% chance** that exactly 3 people out of 10 will be infected.
+- Even though 3 is more than the 'expected' 2 cases ($10 \times 0.2 = 2$), it is still a very common outcome.
+:::
+
+---
+
+::: {.figure-interpretation}
+**The Probability Mass Function (PMF)**
+
+A binomial distribution plot shows the probability of every possible outcome from 0 to $n$.
+
+**Key things to notice:**
+- The bars are highest at the expected value ($n \times p$).
+- The distribution is skewed to the right when $p$ is small (near 0).
+- The total area of all bars always equals 1.0 (100% of possibilities).
+:::
+
+---
+
+::: {.reveal-sequence data-variant="answer_reveal"}
+**When do the assumptions fail?**
+
+The binomial model breaks down if the trials are not independent. For example, if the respiratory virus is highly contagious and the 10 people in our clinic are all members of the same household, one person's infection significantly increases the next person's risk. In this case, $p$ is not constant, and the outcomes are not independent.
+:::
+
+---
+
+::: {.self-check data-variant="quick"}
+**Quick Self-Check**
+
+In our clinic model ($n=10, p=0.2$), how likely is it that we would observe 8 or more infections?
+
+- Is 8 a 'common' random result?
+- What does a probability near zero suggest about our initial $p=0.2$ assumption?
+:::
+
+::: {.callout-tip}
+**Reflection guidance**
+
+Observing 8 infections out of 10 when the risk is only 20% is extremely unlikely (less than 0.01% chance). If this occurred, we would strongly suspect that our assumption of $p=0.2$ was wrong, or that an active outbreak was occurring within the group.
+:::
+
+---
+
+::: {.interpretation}
+**Thinking about Shape and Symmetry**
+
+Consider the shape of the distribution for 10 people.
+
+**What to consider:**
+- What happens to the symmetry of the plot if the probability of infection becomes exactly $p=0.5$?
+- If $p=0.5$, which outcome (number of cases) will be the most frequent?
+:::
+
+::: {.callout-tip}
+**Expert Guidance**
+
+When $p=0.5$, the binomial distribution becomes perfectly symmetrical. The most frequent outcome would be 5 cases (exactly half of $n$). As $p$ moves away from 0.5 in either direction, the distribution becomes increasingly skewed.
+:::
+
+<!-- END_INTERACTIONS -->
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="index.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Core Concepts and Interpretation</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

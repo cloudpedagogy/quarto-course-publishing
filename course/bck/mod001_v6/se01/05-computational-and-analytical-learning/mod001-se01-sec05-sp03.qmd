@@ -1,0 +1,81 @@
+---
+title: "Math Explanation Page"
+id: "mod001-se01-sec05-sp03"
+section_id: "mod001-se01-sec05"
+session_id: "mod001-se01"
+toc: false
+---
+
+
+
+
+
+
+
+
+
+
+
+---
+
+<!-- START_INTERACTIONS -->
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Add an introduction for this conceptual explanation._]
+<!-- editable:end -->
+
+::: {.math-explanation data-variant="conceptual"}
+**Conceptual Logic**
+
+$$ e = mc^2 $$
+
+**Context:**
+[AUTHOR GUIDE: _Provide a conceptual explanation._]
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add a summary or reflection prompt._]
+<!-- editable:end -->
+
+---
+
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Set the scene for this timeline or chronological sequence._]
+<!-- editable:end -->
+
+::: {.timeline}
+**Developmental Timeline**
+
+[AUTHOR GUIDE: _Add the staged development or sequence of events here._]
+:::
+
+<!-- editable:start interaction_outro -->
+
+[AUTHOR GUIDE: _Add a summary or reflection prompt after the timeline._]
+<!-- editable:end -->
+<!-- END_INTERACTIONS -->
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="mod001-se01-sec05-sp02.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Code Output Page</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="mod001-se01-sec05-sp04.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Worked Calculation Page</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

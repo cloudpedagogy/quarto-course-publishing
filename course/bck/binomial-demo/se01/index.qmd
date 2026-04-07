@@ -1,0 +1,62 @@
+---
+title: "Understanding the Binomial Distribution"
+subtitle: "SE01"
+toc: false
+---
+
+## Overview
+
+A standalone demonstration showing how the Structured Learning Design System can generate a polished, interactive learning page.
+
+
+::: {.callout-note}
+## Learning Objectives
+By the end of this session, you will be able to:
+
+- Explain the binomial distribution in epidemiological terms
+
+- Interpret a simple infection probability scenario
+
+- Explore a visualisation of binomial probabilities
+
+- Reflect on the limits of the model in real epidemiology
+
+:::
+
+
+
+
+
+
+
+
+
+
+## Summary
+*Session summary placeholder*
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="../index.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Binomial Distribution in Epidemiology</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="binomial-demo-se01-sec01-sp01.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Single Page Demonstration</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

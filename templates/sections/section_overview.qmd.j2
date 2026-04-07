@@ -1,0 +1,42 @@
+---
+title: "{% if role == 'section_landing' %}Section {{ section.number }}: {{ section.title }}{% elif page %}{{ page.title }}{% elif navigation_style == 'numbered_subpages' %}Section {{ section.number }} - {{ '%02d' | format(page_num) }}{% else %}{{ page_title or section.title }}{% endif %}"
+id: "{{ page.id if page else section.id }}{% if role == 'content_page' and navigation_style == 'numbered_subpages' and not section.subpages %}-p{{ page_num }}{% endif %}"
+section_id: "{{ section.id }}"
+session_id: "{{ session.id }}"
+toc: {{ toc | default(true) }}
+---
+
+{% if role == 'section_landing' %}
+{% if section.navigation_style == 'numbered_subpages' and not section.subpages %}
+<nav class="numeric-nav">
+{% for n in range(1, total_pages + 1) %}
+<a href="{{ section.id }}-sp{{ '%02d' | format(n) }}.qmd">{{ '%02d' | format(n) }}</a>
+{% endfor %}
+</nav>
+{% else %}
+{% set current_pages = section.subpages if section.subpages else section.pages %}
+### In this section
+<br>
+{% for p in current_pages %}
+- [{{ p.title }}]({{ p.id }}.qmd)
+{% endfor %}
+{% endif %}
+{% endif %}
+
+
+{% if role == 'content_page' %}
+{% if navigation_style == 'numbered_subpages' and not section.subpages %}
+<nav class="numeric-nav">
+{% for n in range(1, total_pages + 1) %}
+<a href="{{ section.id }}-sp{{ '%02d' | format(n) }}.qmd" class="{% if n == page_num %}active{% endif %}">{{ '%02d' | format(n) }}</a>
+{% endfor %}
+</nav>
+{% endif %}
+{% endif %}
+
+
+{{ page_contents }}
+
+{{ resources_content }}
+
+{{ interactions }}

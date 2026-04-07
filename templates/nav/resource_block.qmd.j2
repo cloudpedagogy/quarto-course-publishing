@@ -1,0 +1,25 @@
+{% if resources %}
+
+### Resources
+
+<div class="resource-list">
+{% for res in resources %}
+<div class="resource-item" style="margin-bottom: 1.5rem;">
+<strong>{{ res.title }}</strong><br>
+{% if res.display == 'embed' and res.ext == 'pdf' %}
+<object data="{{ res.path }}" type="application/pdf" width="100%" height="500px" style="border: 1px solid #ddd; border-radius: 4px; margin-top: 10px;">
+<p>It appears you don't have a PDF plugin for this browser. No biggie... you can <a href="{{ res.path }}">click here to download the PDF file.</a></p>
+</object>
+<div style="margin-top: 5px; font-size: 0.9em;">
+<a href="{{ res.path }}" target="_blank">Open in new tab</a> | <a href="{{ res.path }}" download>Download file</a>
+</div>
+{% else %}
+<div style="margin-top: 5px;">
+<a href="{{ res.path }}" {% if res.display == 'link' %}target="_blank"{% endif %}>{{ res.title }} ({{ res.ext | upper }})</a>
+</div>
+{% endif %}
+</div>
+{% endfor %}
+</div>
+
+{% endif %}

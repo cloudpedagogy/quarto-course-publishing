@@ -1,0 +1,15 @@
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Prepare the learner for this {{ variant | replace("_", " ") | default("reveal") }} sequence._]
+<!-- editable:end -->
+
+::: {.reveal-sequence data-variant="{{ variant | default('stepwise') }}"}
+**{{ label | default("Click to reveal") }}**
+
+<!-- editable:start content -->
+{{ content | default("[AUTHOR GUIDE: _Add the content to be revealed._]") }}
+<!-- editable:end -->
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add a follow-up or reflection prompt._]
+<!-- editable:end -->

@@ -1,0 +1,105 @@
+overview_page:
+  overview: '[AUTHOR GUIDE: _Add a clear overview of the section here._]'
+  why_matters: '[AUTHOR GUIDE: _Explain why this topic is important for the learner._]'
+  in_section: '[AUTHOR GUIDE: _List the key learning points or topics covered._]'
+  how_approach: '[AUTHOR GUIDE: _Provide guidance on how to study this material (e.g.
+    ''Watch the video first, then try the exercise'')._]'
+assessment_page:
+  instructions: '[AUTHOR GUIDE: _Clear explanation of what the learner needs to do._]'
+  questions: '[AUTHOR GUIDE: _Set of questions (e.g. MCQs, short answer, applied tasks)._]'
+  submission: '[AUTHOR GUIDE: _How to submit or record responses (e.g. write, upload,
+    discuss)._]'
+  feedback: '[AUTHOR GUIDE: _Optional feedback, model answers, or guidance for self-check._]'
+  criteria: '[AUTHOR GUIDE: _Optional marking criteria or expectations._]'
+case_study:
+  context: '[AUTHOR GUIDE: _Background to the case, including setting, people, or
+    situation._]'
+  challenge: '[AUTHOR GUIDE: _The main issue, question, or problem emerging in the
+    case._]'
+  response: '[AUTHOR GUIDE: _Actions taken, options considered, or decisions made._]'
+  outcome: '[AUTHOR GUIDE: _What happened as a result, including consequences or lessons._]'
+  reflection: '[AUTHOR GUIDE: _Prompt for the learner to interpret, critique, or extend
+    the case._]'
+concept_page:
+  definition: '[AUTHOR GUIDE: _Clear and concise definition of the concept._]'
+  explanation: '[AUTHOR GUIDE: _More detailed explanation or breakdown of the concept''s
+    meaning._]'
+  key_parts: '[AUTHOR GUIDE: _Key components, characteristics, or attributes of the
+    concept._]'
+  relevance: '[AUTHOR GUIDE: _Why this concept is important and how it relates to
+    broader course themes._]'
+data_page:
+  data_source: '[AUTHOR GUIDE: _Brief explanation of where this data comes from and
+    its context._]'
+  key_findings: '[AUTHOR GUIDE: _The primary insights, trends, or observations from
+    the data._]'
+  visualization_notes: '[AUTHOR GUIDE: _Guidance on how to interpret the charts or
+    tables provided._]'
+  interpretation: '[AUTHOR GUIDE: _Deep-dive into what these results mean for the
+    subject area._]'
+discussion_page:
+  discussion_question: '[AUTHOR GUIDE: _Core question or prompt for discussion._]'
+  context: '[AUTHOR GUIDE: _Optional background or framing to support the discussion._]'
+  perspectives: '[AUTHOR GUIDE: _Optional contrasting viewpoints or starting positions._]'
+  participation_guidance: '[AUTHOR GUIDE: _Guidance on how learners should engage
+    (e.g. respond, debate, reflect)._]'
+  extension: '[AUTHOR GUIDE: _Optional follow-up prompt to deepen or extend discussion._]'
+flexible_page:
+  flexible_content: '[AUTHOR GUIDE: _Add your own custom content and learning scaffolds
+    here._]'
+interactive_page:
+  introduction: '[AUTHOR GUIDE: _Brief explanation of the interactive task or tool._]'
+  interactive_element: '[AUTHOR GUIDE: _Replace this with your embedded component
+    or activity placeholder._]'
+  instructions: '[AUTHOR GUIDE: _Guidance on how to use the interaction._]'
+  what_to_notice: '[AUTHOR GUIDE: _Key things learners should pay attention to while
+    interacting._]'
+  follow_up: '[AUTHOR GUIDE: _Optional reflection, interpretation, or next-step prompt
+    after completion._]'
+methods_page:
+  method_overview: '[AUTHOR GUIDE: _Add a clear explanation of what the method, process,
+    or analytical approach is._]'
+  when_to_use: '[AUTHOR GUIDE: _Describe the specific situations or conditions where
+    this method is appropriate._]'
+  steps: '[AUTHOR GUIDE: _Provide a step-by-step breakdown of how to apply the method
+    correctly._]'
+  example: '[AUTHOR GUIDE: _Provide a short illustrative example of the method in
+    use._]'
+  limitations: '[AUTHOR GUIDE: _Detail any key limitations, assumptions, or risks
+    associated with this approach._]'
+reading_page:
+  citation: '[AUTHOR GUIDE: _Full citation for the reading material._]'
+  key_takeaways: '[AUTHOR GUIDE: _Summary of the most important arguments or findings._]'
+  focus_questions: '[AUTHOR GUIDE: _Questions to guide the learner while reading._]'
+  access_details: '[AUTHOR GUIDE: _Details on how to access the material (e.g. link,
+    file, library reference)._]'
+summary_page:
+  summary_overview: '[AUTHOR GUIDE: _Provide a concise summary of the key concepts
+    and session outcomes._]'
+  key_conclusion: '[AUTHOR GUIDE: _The single most important takeaway from this learning
+    session._]'
+  next_steps: '[AUTHOR GUIDE: _Guidance on the next session or related course activities._]'
+text_page:
+  text_content: '[AUTHOR GUIDE: _Add your core pedagogical content and explanations
+    here._]'
+transcript_page:
+  media_context: '[AUTHOR GUIDE: _Briefly explain what this transcript corresponds
+    to (e.g. a specific video or lecture)._]'
+  transcript_body: '[AUTHOR GUIDE: _The full transcript text, potentially formatted
+    with speakers or sections._]'
+  key_timestamps: '[AUTHOR GUIDE: _Optional list of important moments or thematic
+    shifts in the audio/video._]'
+video_page:
+  video_content: '[AUTHOR GUIDE: _Embed the video link or iframe here._]'
+  what_to_look_for: '[AUTHOR GUIDE: _Provide 2-3 specific points for the learner to
+    focus on while watching._]'
+  key_ideas: '[AUTHOR GUIDE: _Summarize the main concepts presented in the video._]'
+  follow_up: '[AUTHOR GUIDE: _Suggest a next step or related resource after viewing._]'
+workflow_page:
+  process_goal: '[AUTHOR GUIDE: _Clearly state what this workflow or process is designed
+    to achieve._]'
+  stages: '[AUTHOR GUIDE: _Break down the workflow into its logical stages or phases._]'
+  visual_representation: '[AUTHOR GUIDE: _Describe or embed a flowchart, diagram,
+    or sequence map._]'
+  common_pitfalls: '[AUTHOR GUIDE: _Identify frequent errors or areas of confusion
+    when applying this workflow._]'

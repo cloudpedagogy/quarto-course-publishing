@@ -1,0 +1,105 @@
+---
+title: "Concept Page"
+id: "mod001-se01-sec01-sp02"
+section_id: "mod001-se01-sec01"
+session_id: "mod001-se01"
+toc: false
+---
+
+
+
+
+
+
+
+
+
+
+
+---
+
+<!-- START_INTERACTIONS -->
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Add framing for this comparison or multi-perspective view here._]
+<!-- editable:end -->
+
+::: {.panel-tabset}
+
+## Perspective A
+[AUTHOR GUIDE: _Add content for the first perspective or approach here._]
+
+## Perspective B
+[AUTHOR GUIDE: _Add content for the second perspective or approach here._]
+
+
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add a prompt for the learner to compare these views or decide which applies to their context._]
+<!-- editable:end -->
+
+---
+
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Prepare the learner for this stepwise sequence._]
+<!-- editable:end -->
+
+::: {.reveal-sequence data-variant="stepwise"}
+**Revealed Insight**
+
+[AUTHOR GUIDE: _Add the content to be revealed._]
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add a follow-up or reflection prompt._]
+<!-- editable:end -->
+
+---
+
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Provide a short introduction for this quick self-check._]
+<!-- editable:end -->
+
+::: {.self-check data-variant="quick"}
+**Quick Self-Check**
+
+[AUTHOR GUIDE: _Provide 2-4 questions for the learner to consider._]
+
+- Question 1
+- Question 2
+:::
+
+<!-- editable:start interaction_outro -->
+::: {.callout-tip}
+**Reflection guidance**
+
+[AUTHOR GUIDE: _Add a model answer or reflection points._]
+:::
+<!-- editable:end -->
+<!-- END_INTERACTIONS -->
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="mod001-se01-sec01-sp01.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Overview Page</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="mod001-se01-sec01-sp03.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Worked Example</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

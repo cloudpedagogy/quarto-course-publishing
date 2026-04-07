@@ -1,0 +1,31 @@
+## Method
+
+{{ method_overview | default("[AUTHOR GUIDE: _Add a clear explanation of what the method, process, or analytical approach is._]") }}
+
+---
+
+## When to use this
+
+{{ when_to_use | default("[AUTHOR GUIDE: _Describe the specific situations or conditions where this method is appropriate._]") }}
+
+---
+
+## Steps
+
+{{ steps | default("[AUTHOR GUIDE: _Provide a step-by-step breakdown of how to apply the method correctly._]") }}
+
+---
+
+## Example
+
+{{ example | default("[AUTHOR GUIDE: _Provide a short illustrative example of the method in use._]") }}
+
+---
+
+## Limitations and considerations
+
+{{ limitations | default("[AUTHOR GUIDE: _Detail any key limitations, assumptions, or risks associated with this approach._]") }}
+
+---
+
+

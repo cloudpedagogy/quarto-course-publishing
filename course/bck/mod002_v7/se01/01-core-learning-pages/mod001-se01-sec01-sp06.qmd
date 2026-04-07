@@ -1,0 +1,115 @@
+---
+title: "Page 6 - Reflection Page"
+id: "mod001-se01-sec01-sp06"
+section_id: "mod001-se01-sec01"
+session_id: "mod001-se01"
+toc: false
+---
+
+
+
+
+
+
+
+
+
+## Reflection prompt
+
+_Add a specific question or prompt to encourage the learner to think deeply about the topic._
+
+## Points to consider
+
+_Provide additional context or sub-questions to guide the reflection._
+
+## Your response
+
+_Encourage the learner to write their thoughts here._
+
+---
+
+
+
+
+
+---
+
+<!-- START_INTERACTIONS -->
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Frame this critical reflection task._]
+<!-- editable:end -->
+
+::: {.reflection data-variant="critical"}
+**Personal Reflection**
+
+<!-- editable:start prompt -->
+[AUTHOR GUIDE: _Add a reflection question tailored to the topic._]
+<!-- editable:end -->
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add a closing thought or transition._]
+<!-- editable:end -->
+
+---
+
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Prepare the learner for this stepwise sequence._]
+<!-- editable:end -->
+
+::: {.reveal-sequence data-variant="stepwise"}
+**Revealed Insight**
+
+<!-- editable:start content -->
+[AUTHOR GUIDE: _Add the content to be revealed._]
+<!-- editable:end -->
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add a follow-up or reflection prompt._]
+<!-- editable:end -->
+
+---
+
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Introduce why this point matters._]
+<!-- editable:end -->
+
+::: {.callout-tip}
+**Key Emphasis**
+
+<!-- editable:start content -->
+[AUTHOR GUIDE: _Add the emphasized point, warning, or key takeaway here._]
+<!-- editable:end -->
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add interpretation or implications of this point._]
+<!-- editable:end -->
+<!-- END_INTERACTIONS -->
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="mod001-se01-sec01-sp05.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Page 5 - Activity Page</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="mod001-se01-sec01-sp07.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Page 7 - Summary Page</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

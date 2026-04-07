@@ -1,0 +1,19 @@
+## Problem or scenario
+
+_Describe the problem, case study, or scenario that will be explored._
+
+## Step-by-step walkthrough
+
+_Break down the process or solution into clear, numbered steps._
+
+## Result
+
+_Show the final result or outcome of the process._
+
+## Key takeaway
+
+_Summarize the most important lesson from this example._
+
+---
+
+

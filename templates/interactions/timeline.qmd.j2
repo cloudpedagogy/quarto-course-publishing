@@ -1,0 +1,20 @@
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Set the scene for this timeline or chronological sequence._]
+<!-- editable:end -->
+
+::: {.timeline}
+**{{ label | default("Developmental Timeline") }}**
+
+{{ timeline_content | default("[AUTHOR GUIDE: _Add the staged development or sequence of events here._]") }}
+:::
+
+<!-- editable:start interaction_outro -->
+{% if significance %}
+::: {.callout-tip}
+**Historical Significance**
+{{ significance }}
+:::
+{% endif %}
+
+[AUTHOR GUIDE: _Add a summary or reflection prompt after the timeline._]
+<!-- editable:end -->

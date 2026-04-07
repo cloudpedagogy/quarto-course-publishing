@@ -1,0 +1,97 @@
+---
+title: "Code Output Page"
+id: "mod001-se01-sec05-sp02"
+section_id: "mod001-se01-sec05"
+session_id: "mod001-se01"
+toc: false
+---
+
+
+
+
+
+
+
+
+
+
+
+---
+
+<!-- START_INTERACTIONS -->
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Set expectations for looking at this code output or result._]
+<!-- editable:end -->
+
+::: {.output-analysis}
+**Output Analysis**
+
+[AUTHOR GUIDE: _Add the code output or result placeholder here._]
+
+**Interpretation:**
+- Observation 1
+- Observation 2
+:::
+
+<!-- editable:start interaction_outro -->
+::: {.callout-tip}
+**Expert Deep-Dive**
+
+[AUTHOR GUIDE: _Add a detailed analysis of what these results mean for the broader context._]
+:::
+
+[AUTHOR GUIDE: _Add a summary or reflection prompt after the output interpretation._]
+<!-- editable:end -->
+
+---
+
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Set the scene for this interpretation task (e.g. 'Look closely at the figure below')._]
+<!-- editable:end -->
+
+::: {.interpretation}
+**Critical Interpretation**
+
+[AUTHOR GUIDE: _Prompt the learner to interpret a specific figure, table, or output._]
+
+**What to consider:**
+- Observation 1
+- Observation 2
+:::
+
+<!-- editable:start interaction_outro -->
+::: {.callout-tip}
+**Expert Guidance**
+
+[AUTHOR GUIDE: _Add guidance or key things that should have been noticed._]
+:::
+
+[AUTHOR GUIDE: _Add a summary or next-step prompt after the interpretation._]
+<!-- editable:end -->
+<!-- END_INTERACTIONS -->
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="mod001-se01-sec05-sp01.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Code Example Page</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="mod001-se01-sec05-sp03.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Math Explanation Page</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

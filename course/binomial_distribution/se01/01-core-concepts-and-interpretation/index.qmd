@@ -1,0 +1,44 @@
+---
+title: "Section 1: Core Concepts and Interpretation"
+id: "binomial_distribution-se01-sec01"
+section_id: "binomial_distribution-se01-sec01"
+session_id: "binomial_distribution-se01"
+toc: True
+---
+
+
+
+
+### In this section
+<br>
+
+- [What is the Binomial Distribution?](BINOMIAL_DISTRIBUTION-se01-sec01-sp01.qmd)
+
+- [Worked Example in R](BINOMIAL_DISTRIBUTION-se01-sec01-sp02.qmd)
+
+- [Practice Activity](BINOMIAL_DISTRIBUTION-se01-sec01-sp03.qmd)
+
+- [Summary and Reflection](BINOMIAL_DISTRIBUTION-se01-sec01-sp04.qmd)
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="../index.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Core Concepts and Interpretation</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="BINOMIAL_DISTRIBUTION-se01-sec01-sp01.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">What is the Binomial Distribution?</span>
+        </a>
+        
+    </div>
+</div>
+```
+

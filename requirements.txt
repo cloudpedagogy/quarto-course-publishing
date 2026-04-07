@@ -1,0 +1,11 @@
+# Core dependencies
+click
+pyyaml
+jinja2
+
+# Data and Utilities
+pydantic
+rich
+
+# Development
+pytest

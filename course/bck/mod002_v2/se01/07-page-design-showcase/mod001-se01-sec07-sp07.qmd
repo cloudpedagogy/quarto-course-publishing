@@ -1,0 +1,151 @@
+---
+title: "Page 7 - Summary Page"
+id: "mod001-se01-sec07-sp07"
+section_id: "mod001-se01-sec07"
+session_id: "mod001-se01"
+toc: false
+---
+
+
+
+
+
+
+
+
+
+## Key points
+
+_Summarize the most important concepts covered in this section._
+
+## Main takeaway
+
+_Provide one clear, overarching message for the learner to remember._
+
+## Before you move on
+
+_Outline any pre-requisites or self-checks needed before starting the next section._
+
+---
+
+## Learning Activities
+
+
+
+---
+
+<!-- START_INTERACTIONS -->
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Introduce why this point matters._]
+<!-- editable:end -->
+
+::: {.callout-important}
+**Key Emphasis**
+
+<!-- editable:start content -->
+[AUTHOR GUIDE: _Add the emphasized point, warning, or key takeaway here._]
+<!-- editable:end -->
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add interpretation or implications of this point._]
+<!-- editable:end -->
+
+---
+
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Add framing for this comparison or multi-perspective view here._]
+<!-- editable:end -->
+
+::: {.panel-tabset}
+
+## Perspective A
+<!-- editable:start tab_1_content -->
+[AUTHOR GUIDE: _Add content for the first perspective or approach here._]
+<!-- editable:end -->
+
+## Perspective B
+<!-- editable:start tab_2_content -->
+[AUTHOR GUIDE: _Add content for the second perspective or approach here._]
+<!-- editable:end -->
+
+
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add a prompt for the learner to compare these views or decide which applies to their context._]
+<!-- editable:end -->
+<!-- END_INTERACTIONS -->
+
+
+
+---
+
+<!-- START_INTERACTIONS -->
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Introduce why this point matters._]
+<!-- editable:end -->
+
+::: {.callout-important}
+**Key Emphasis**
+
+<!-- editable:start content -->
+[AUTHOR GUIDE: _Add the emphasized point, warning, or key takeaway here._]
+<!-- editable:end -->
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add interpretation or implications of this point._]
+<!-- editable:end -->
+
+---
+
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Add framing for this comparison or multi-perspective view here._]
+<!-- editable:end -->
+
+::: {.panel-tabset}
+
+## Perspective A
+<!-- editable:start tab_1_content -->
+[AUTHOR GUIDE: _Add content for the first perspective or approach here._]
+<!-- editable:end -->
+
+## Perspective B
+<!-- editable:start tab_2_content -->
+[AUTHOR GUIDE: _Add content for the second perspective or approach here._]
+<!-- editable:end -->
+
+
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add a prompt for the learner to compare these views or decide which applies to their context._]
+<!-- editable:end -->
+<!-- END_INTERACTIONS -->
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="mod001-se01-sec07-sp06.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Page 6 - Interactive Page</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="../08-computational-and-analytical-extensions/index.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Computational and Analytical Extensions</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

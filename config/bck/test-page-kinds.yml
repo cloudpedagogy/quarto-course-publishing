@@ -1,0 +1,51 @@
+module:
+  code: TEST-KINDS
+  title: Test Page Kinds
+  description: Verifying all pedagogical page kinds
+  id: test-kinds
+  default_render_mode: multi_page
+sessions:
+- code: SE01
+  title: Pedagogical Kinds
+  overview: Testing each page kind scaffold.
+  sections:
+  - number: 1
+    title: Concept & Examples
+    kind: concept
+    subpages:
+    - title: Concept Page Test
+      kind: concept_page
+      id: test-kinds-se01-sec01-sp01
+    - title: Worked Example Test
+      kind: worked_example_page
+      id: test-kinds-se01-sec01-sp02
+    id: test-kinds-se01-sec01
+  - number: 2
+    title: Data & Methods
+    kind: context
+    subpages:
+    - title: Data Interpretation Test
+      kind: data_interpretation_page
+      id: test-kinds-se01-sec02-sp01
+    - title: Methods Page Test
+      kind: methods_page
+      id: test-kinds-se01-sec02-sp02
+    id: test-kinds-se01-sec02
+  - number: 3
+    title: Practice & Summary
+    kind: tasks
+    subpages:
+    - title: Practice Page Test
+      kind: practice_page
+      id: test-kinds-se01-sec03-sp01
+    - title: Summary Page Test
+      kind: summary_page
+      id: test-kinds-se01-sec03-sp02
+    - title: Video Page Test
+      kind: video_page
+      id: test-kinds-se01-sec03-sp03
+    - title: Default Text Page Test
+      kind: text_page
+      id: test-kinds-se01-sec03-sp04
+    id: test-kinds-se01-sec03
+  id: test-kinds-se01

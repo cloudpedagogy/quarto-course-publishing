@@ -1,0 +1,99 @@
+---
+title: "Page 4 - Analytical Summary"
+id: "mod001-se01-sec08-sp04"
+section_id: "mod001-se01-sec08"
+session_id: "mod001-se01"
+toc: false
+---
+
+
+
+
+
+
+
+
+
+## Key points
+
+_Summarize the most important concepts covered in this section._
+
+## Main takeaway
+
+_Provide one clear, overarching message for the learner to remember._
+
+## Before you move on
+
+_Outline any pre-requisites or self-checks needed before starting the next section._
+
+---
+
+
+
+---
+
+<!-- START_INTERACTIONS -->
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Introduce why this point matters._]
+<!-- editable:end -->
+
+::: {.callout-important}
+**Key Emphasis**
+
+<!-- editable:start content -->
+[AUTHOR GUIDE: _Add the emphasized point, warning, or key takeaway here._]
+<!-- editable:end -->
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add interpretation or implications of this point._]
+<!-- editable:end -->
+
+---
+
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Provide a short introduction for this deep self-check._]
+<!-- editable:end -->
+
+::: {.self-check data-variant="deep"}
+**Quick Self-Check**
+
+<!-- editable:start body -->
+[AUTHOR GUIDE: _Provide 2-4 questions for the learner to consider._]
+
+- Question 1
+- Question 2
+<!-- editable:end -->
+:::
+
+<!-- editable:start interaction_outro -->
+::: {.callout-tip}
+**Reflection guidance**
+
+<!-- editable:start feedback -->
+[AUTHOR GUIDE: _Add a model answer or reflection points._]
+<!-- editable:end -->
+:::
+<!-- editable:end -->
+<!-- END_INTERACTIONS -->
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="mod001-se01-sec08-sp03.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Page 3 - Worked and Try Calculation</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

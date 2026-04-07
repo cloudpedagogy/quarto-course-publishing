@@ -1,0 +1,53 @@
+---
+title: "Section 5: Media and Flexible Templates"
+id: "mod001-se01-sec05"
+section_id: "mod001-se01-sec05"
+session_id: "mod001-se01"
+toc: false
+---
+
+
+
+
+### In this section
+<br>
+
+- [Page 1 - Video Page Variant](mod001-se01-sec05-sp01.qmd)
+
+- [Page 2 - Interactive Page Variant](mod001-se01-sec05-sp02.qmd)
+
+- [Page 3 - Text Page Variant](mod001-se01-sec05-sp03.qmd)
+
+- [Page 4 - Overview Page Variant](mod001-se01-sec05-sp04.qmd)
+
+- [Page 5 - Concept Page Variant](mod001-se01-sec05-sp05.qmd)
+
+- [Page 6 - Activity Page Variant](mod001-se01-sec05-sp06.qmd)
+
+- [Page 7 - Summary Page](mod001-se01-sec05-sp07.qmd)
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="../04-applied-and-narrative-learning/mod001-se01-sec04-sp07.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Page 7 - Summary Page</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="mod001-se01-sec05-sp01.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Page 1 - Video Page Variant</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

@@ -1,0 +1,87 @@
+---
+title: "Page 3 - Text Page Variant"
+id: "mod001-se01-sec05-sp03"
+section_id: "mod001-se01-sec05"
+session_id: "mod001-se01"
+toc: True
+---
+
+
+
+
+
+
+
+
+
+_Add your primary content here. Use headings, lists, and images as needed._
+
+---
+
+
+
+
+
+---
+
+<!-- START_INTERACTIONS -->
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Introduce why this point matters._]
+<!-- editable:end -->
+
+::: {.callout-note}
+**Key Emphasis**
+
+<!-- editable:start content -->
+[AUTHOR GUIDE: _Add the emphasized point, warning, or key takeaway here._]
+<!-- editable:end -->
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add interpretation or implications of this point._]
+<!-- editable:end -->
+
+---
+
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Add an introduction or instructions for this accordion-based explanation here._]
+<!-- editable:end -->
+
+::: {.accordion}
+**Detailed Explanation**
+
+<!-- editable:start content -->
+[AUTHOR GUIDE: _Add the detailed content or explanation that should be hidden until clicked._]
+<!-- editable:end -->
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add a summary or reflection prompt after the accordion here._]
+<!-- editable:end -->
+<!-- END_INTERACTIONS -->
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="mod001-se01-sec05-sp02.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Page 2 - Interactive Page Variant</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="mod001-se01-sec05-sp04.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Page 4 - Overview Page Variant</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

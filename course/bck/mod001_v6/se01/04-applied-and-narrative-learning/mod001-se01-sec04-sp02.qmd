@@ -1,0 +1,87 @@
+---
+title: "Application Variant"
+id: "mod001-se01-sec04-sp02"
+section_id: "mod001-se01-sec04"
+session_id: "mod001-se01"
+toc: false
+---
+
+
+
+
+
+
+
+
+
+
+
+---
+
+<!-- START_INTERACTIONS -->
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Add an introduction if appropriate for this scenario response task._]
+<!-- editable:end -->
+
+::: {.scenario-response}
+**Scenario Challenge**
+
+**Scenario Context:**
+[AUTHOR GUIDE: _Describe a realistic or authentic scenario corresponding to the learning objectives._]
+
+**What would you do?**
+[AUTHOR GUIDE: _Ask the learner to respond or take action in this scenario._]
+:::
+
+<!-- editable:start interaction_outro -->
+::: {.callout-tip}
+**Guidance and Reflection**
+
+[AUTHOR GUIDE: _Add the rationale or trade-offs for different responses._]
+:::
+
+[AUTHOR GUIDE: _Add a brief wrap-up or next-step prompt after the scenario._]
+<!-- editable:end -->
+
+---
+
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Introduce why this point matters._]
+<!-- editable:end -->
+
+::: {.callout-tip}
+**Key Emphasis**
+
+[AUTHOR GUIDE: _Add the emphasized point, warning, or key takeaway here._]
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add interpretation or implications of this point._]
+<!-- editable:end -->
+<!-- END_INTERACTIONS -->
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="mod001-se01-sec04-sp01.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Case Study Variant</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="mod001-se01-sec04-sp03.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Worked Example Variant</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

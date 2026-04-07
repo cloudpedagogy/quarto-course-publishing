@@ -1,0 +1,151 @@
+---
+title: "Page 5 - Concept Page Variant"
+id: "mod001-se01-sec05-sp05"
+section_id: "mod001-se01-sec05"
+session_id: "mod001-se01"
+toc: false
+---
+
+
+
+
+
+
+
+
+
+## Concept
+
+_Add a clear explanation of the key idea, concept, or definition here._
+
+## Example
+
+_Provide an example to illustrate the concept._
+
+## Why it matters
+
+_Explain the importance or practical application of this concept._
+
+---
+
+## Learning Activities
+
+
+
+---
+
+<!-- START_INTERACTIONS -->
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Add framing for this comparison or multi-perspective view here._]
+<!-- editable:end -->
+
+::: {.panel-tabset}
+
+## Perspective A
+<!-- editable:start tab_1_content -->
+[AUTHOR GUIDE: _Add content for the first perspective or approach here._]
+<!-- editable:end -->
+
+## Perspective B
+<!-- editable:start tab_2_content -->
+[AUTHOR GUIDE: _Add content for the second perspective or approach here._]
+<!-- editable:end -->
+
+
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add a prompt for the learner to compare these views or decide which applies to their context._]
+<!-- editable:end -->
+
+---
+
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Prepare the learner for this answer reveal sequence._]
+<!-- editable:end -->
+
+::: {.reveal-sequence data-variant="answer_reveal"}
+**Revealed Insight**
+
+<!-- editable:start content -->
+[AUTHOR GUIDE: _Add the content to be revealed._]
+<!-- editable:end -->
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add a follow-up or reflection prompt._]
+<!-- editable:end -->
+<!-- END_INTERACTIONS -->
+
+
+
+---
+
+<!-- START_INTERACTIONS -->
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Add framing for this comparison or multi-perspective view here._]
+<!-- editable:end -->
+
+::: {.panel-tabset}
+
+## Perspective A
+<!-- editable:start tab_1_content -->
+[AUTHOR GUIDE: _Add content for the first perspective or approach here._]
+<!-- editable:end -->
+
+## Perspective B
+<!-- editable:start tab_2_content -->
+[AUTHOR GUIDE: _Add content for the second perspective or approach here._]
+<!-- editable:end -->
+
+
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add a prompt for the learner to compare these views or decide which applies to their context._]
+<!-- editable:end -->
+
+---
+
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Prepare the learner for this answer reveal sequence._]
+<!-- editable:end -->
+
+::: {.reveal-sequence data-variant="answer_reveal"}
+**Revealed Insight**
+
+<!-- editable:start content -->
+[AUTHOR GUIDE: _Add the content to be revealed._]
+<!-- editable:end -->
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add a follow-up or reflection prompt._]
+<!-- editable:end -->
+<!-- END_INTERACTIONS -->
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="mod001-se01-sec05-sp04.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Page 4 - Overview Page Variant</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="mod001-se01-sec05-sp06.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Page 6 - Activity Page Variant</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

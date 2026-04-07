@@ -1,0 +1,53 @@
+---
+title: "Section 1: Core Learning Pages"
+id: "mod001-se01-sec01"
+section_id: "mod001-se01-sec01"
+session_id: "mod001-se01"
+toc: false
+---
+
+
+
+
+### In this section
+<br>
+
+- [Overview Page](mod001-se01-sec01-sp01.qmd)
+
+- [Concept Page](mod001-se01-sec01-sp02.qmd)
+
+- [Worked Example](mod001-se01-sec01-sp03.qmd)
+
+- [Application Page](mod001-se01-sec01-sp04.qmd)
+
+- [Activity Page](mod001-se01-sec01-sp05.qmd)
+
+- [Reflection Page](mod001-se01-sec01-sp06.qmd)
+
+- [Summary Page](mod001-se01-sec01-sp07.qmd)
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="../index.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Demo Session: Page Design and Interaction Showcase</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="mod001-se01-sec01-sp01.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Overview Page</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

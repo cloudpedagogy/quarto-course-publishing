@@ -1,0 +1,24 @@
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Provide a short introduction for this {{ variant | default("quick") }} self-check._]
+<!-- editable:end -->
+
+::: {.self-check data-variant="{{ variant | default('quick') }}"}
+**{{ label | default("Quick self-check") }}**
+
+<!-- editable:start body -->
+[AUTHOR GUIDE: _Provide 2-4 questions for the learner to consider._]
+
+- {{ q1 | default("Question 1") }}
+- {{ q2 | default("Question 2") }}
+<!-- editable:end -->
+:::
+
+<!-- editable:start interaction_outro -->
+::: {.callout-tip}
+**Reflection guidance**
+
+<!-- editable:start feedback -->
+{{ feedback | default("[AUTHOR GUIDE: _Add a model answer or reflection points._]") }}
+<!-- editable:end -->
+:::
+<!-- editable:end -->

@@ -1,0 +1,45 @@
+---
+title: "Page 5 - Concept Page Variant"
+id: "mod001-se01-sec05-sp05"
+section_id: "mod001-se01-sec05"
+session_id: "mod001-se01"
+toc: false
+---
+
+## Concept
+
+_Add a clear explanation of the key idea, concept, or definition here._
+
+## Example
+
+_Provide an example to illustrate the concept._
+
+## Why it matters
+
+_Explain the importance or practical application of this concept._
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="mod001-se01-sec05-sp04.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Page 4 - Overview Page Variant</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="mod001-se01-sec05-sp06.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Page 6 - Activity Page Variant</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

@@ -1,0 +1,37 @@
+interactions:
+  tabs:
+    label: Tabs
+    description: Tabbed content scaffold
+    variants:
+      explanation_example:
+        template: tabs.qmd.j2
+        default_tabs:
+          - label: Explanation
+          - label: Example
+      theory_practice_reflection:
+        template: tabs.qmd.j2
+        default_tabs:
+          - label: Theory
+          - label: Practice
+          - label: Reflection
+      audience_views:
+        template: tabs.qmd.j2
+        default_tabs:
+          - label: Student
+          - label: Tutor
+          - label: Reviewer
+
+  reveal:
+    label: Reveal
+    description: Collapsible content block
+    variants:
+      worked_solution:
+        template: reveal.qmd.j2
+
+  quiz:
+    label: Quiz
+    description: Quiz scaffold
+    variants:
+      quick_check:
+        template: quiz.qmd.j2
+        question_count: 3

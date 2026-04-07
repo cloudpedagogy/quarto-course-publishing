@@ -1,0 +1,130 @@
+# Pedagogical Interaction Registry (Simplified Ordered Sequence v2)
+# Maps interaction types to templates and defines variant rules for v1 styles.
+
+interactions:
+  # --- Core explanation and structuring ---
+  accordion_explanation:
+    template: accordion_explanation.qmd.j2
+    label: "Detailed Explanation"
+
+  compare_tabs:
+    template: compare_tabs.qmd.j2
+    label: "Comparative View"
+
+  reveal_sequence:
+    template: reveal_sequence.qmd.j2
+    label: "Revealed Insight"
+
+  callout_emphasis:
+    template: callout_emphasis.qmd.j2
+    label: "Key Emphasis"
+
+  step_sequence:
+    template: step_sequence.qmd.j2
+    label: "Procedural Steps"
+
+  # --- Media, data, and visual learning ---
+  guided_video:
+    template: guided_video.qmd.j2
+    label: "Guided Video Analysis"
+
+  annotated_figure:
+    template: annotated_figure.qmd.j2
+    label: "Figure Interpretation"
+
+  # --- Learning checks and reinforcement ---
+  self_check:
+    template: self_check.qmd.j2
+    label: "Quick Self-Check"
+
+  quiz_check:
+    template: quiz_check.qmd.j2
+    label: "Knowledge Quiz"
+
+  interpretation_prompt:
+    template: interpretation_prompt.qmd.j2
+    label: "Critical Interpretation"
+
+  reflection_prompt:
+    template: reflection_prompt.qmd.j2
+    label: "Personal Reflection"
+
+  # --- Applied thinking and decision-making ---
+  decision_checkpoint:
+    template: decision_checkpoint.qmd.j2
+    label: "Decision Moment"
+
+  scenario_response:
+    template: scenario_response.qmd.j2
+    label: "Scenario Challenge"
+
+  worked_then_try:
+    template: worked_then_try.qmd.j2
+    label: "Model & Apply"
+
+  # --- Computational and analytical learning ---
+  code_example:
+    template: code_example.qmd.j2
+    label: "Code in Action"
+
+  code_along:
+    template: code_along.qmd.j2
+    label: "Structured Code-Along"
+
+  code_output_interpretation:
+    template: code_output_interpretation.qmd.j2
+    label: "Output Analysis"
+
+  worked_calculation:
+    template: worked_calculation.qmd.j2
+    label: "Worked Calculation"
+
+  try_calculation:
+    template: try_calculation.qmd.j2
+    label: "Calculation Practice"
+
+  math_explanation:
+    template: math_explanation.qmd.j2
+    label: "Conceptual Logic"
+
+  parameter_exploration:
+    template: parameter_exploration.qmd.j2
+    label: "Interactive Exploration"
+
+  timeline:
+    template: timeline.qmd.j2
+    label: "Developmental Timeline"
+
+# --- Interaction Variant Registry (v1) ---
+interaction_variants:
+  callout_emphasis:
+    default: note
+    allowed: [note, tip, warning, important]
+
+  quiz_check:
+    default: mcq
+    allowed: [mcq, true_false, short_answer]
+
+  self_check:
+    default: quick
+    allowed: [quick, deep]
+
+  reflection_prompt:
+    default: guided
+    allowed: [guided, open, critical]
+
+  reveal_sequence:
+    default: stepwise
+    allowed: [stepwise, answer_reveal]
+
+  code_example:
+    default: python
+    allowed: [python, r, sql, bash]
+
+  code_along:
+    default: python
+    allowed: [python, r, sql, bash]
+
+  math_explanation:
+    default: conceptual
+    allowed: [conceptual, formula_focus, applied]

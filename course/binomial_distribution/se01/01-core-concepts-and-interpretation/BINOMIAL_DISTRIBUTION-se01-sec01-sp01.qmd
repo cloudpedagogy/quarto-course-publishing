@@ -1,0 +1,107 @@
+---
+title: "What is the Binomial Distribution?"
+id: "BINOMIAL_DISTRIBUTION-se01-sec01-sp01"
+section_id: "binomial_distribution-se01-sec01"
+session_id: "binomial_distribution-se01"
+toc: True
+---
+<!-- IMPORT_START -->
+
+## Explanation
+
+The binomial distribution models the number of successes observed in a fixed number of independent trials when each trial has two possible outcomes and the probability of success remains constant.
+
+## Conditions
+
+- There is a fixed number of trials.
+
+- Each trial is independent of the others.
+
+- Each trial has two possible outcomes, usually described as success or failure.
+
+- The probability of success is the same on every trial.
+
+## Why it Matters
+
+The binomial distribution is widely used in public health and statistics to model outcomes such as positive test results, treatment success, and vaccination uptake across a defined group.
+
+::: {.panel-tabset}
+## Definition
+The binomial distribution models the number of successes across repeated independent trials.
+
+## Example
+A coin is tossed 10 times and the number of heads is counted.
+
+## Interpretation
+The model helps us estimate how likely different numbers of successes are within a fixed number of trials.
+
+:::
+
+<!-- IMPORT_END -->
+## Concept
+
+_Add a clear explanation of the key idea, concept, or definition here._
+
+## Example
+
+_Provide an example to illustrate the concept._
+
+## Why it matters
+
+_Explain the importance or practical application of this concept._
+### Resources
+
+<div class="resource-list">
+
+<div class="resource-item" style="margin-bottom: 1.5rem;">
+  <strong>Binomial Distribution (PDF)</strong><br>
+  
+  
+  <object data="files/binomial-distribution.pdf" type="application/pdf" width="100%" height="500px" style="border: 1px solid #ddd; border-radius: 4px; margin-top: 10px;">
+    <p>It appears you don't have a PDF plugin for this browser. No biggie... you can <a href="files/binomial-distribution.pdf">click here to download the PDF file.</a></p>
+  </object>
+  <div style="margin-top: 5px; font-size: 0.9em;">
+    <a href="files/binomial-distribution.pdf" target="_blank">Open in new tab</a> | <a href="files/binomial-distribution.pdf" download>Download file</a>
+  </div>
+  
+</div>
+
+<div class="resource-item" style="margin-bottom: 1.5rem;">
+  <strong>Binomial Distribution Slides</strong><br>
+  
+  
+  <div style="margin-top: 5px;">
+    <a href="files/binomial-distribution.ppt" target="_blank">Binomial Distribution Slides (PPT)</a>
+  </div>
+  
+</div>
+
+</div>
+
+---
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="index.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Core Concepts and Interpretation</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="BINOMIAL_DISTRIBUTION-se01-sec01-sp02.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Worked Example in R</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

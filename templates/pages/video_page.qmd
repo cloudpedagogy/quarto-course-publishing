@@ -1,0 +1,25 @@
+## Video
+
+{{ video_content | default("[AUTHOR GUIDE: _Embed the video link or iframe here._]") }}
+
+---
+
+## What to look for
+
+{{ what_to_notice | default("[AUTHOR GUIDE: _Provide 2-3 specific points for the learner to focus on while watching._]") }}
+
+---
+
+## Key ideas
+
+{{ key_ideas | default("[AUTHOR GUIDE: _Summarize the main concepts presented in the video._]") }}
+
+---
+
+## Follow-up
+
+{{ follow_up | default("[AUTHOR GUIDE: _Suggest a next step or related resource after viewing._]") }}
+
+---
+
+

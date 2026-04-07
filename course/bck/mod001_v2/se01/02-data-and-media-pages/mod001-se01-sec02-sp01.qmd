@@ -1,0 +1,49 @@
+---
+title: "Page 1 - Data Page"
+id: "mod001-se01-sec02-sp01"
+section_id: "mod001-se01-sec02"
+session_id: "mod001-se01"
+toc: false
+---
+
+## Data or visual
+
+_Insert your table, graph, or visualization here._
+
+## What to notice
+
+_Call out specific features, trends, or anomalies the learner should observe._
+
+## Interpretation
+
+_Explain what the data means and how it should be interpreted._
+
+## Why it matters
+
+_Explain the importance of being able to interpret this specific data._
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="index.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Data and Media Pages</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="mod001-se01-sec02-sp02.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Page 2 - Video Page</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

@@ -1,0 +1,34 @@
+project:
+  type: website
+
+website:
+  title: ""
+  sidebar:
+    title: "Alias Resolution Test"
+    style: "docked"
+    search: true
+    collapse-level: 1
+    page-navigation: true
+    contents:
+      
+      - text: "Home"
+        href: "index.qmd"
+        
+      
+      - section: "SE01: Alias Test Session"
+        href: "se01/index.qmd"
+        
+        contents:
+          
+          - text: "Section 1: Alias Verification"
+            href: "se01/test-alias-sp01.qmd"
+            
+          
+        
+      
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true

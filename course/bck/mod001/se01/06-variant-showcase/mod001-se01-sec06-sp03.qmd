@@ -1,0 +1,93 @@
+---
+title: "Reflection Variants"
+id: "mod001-se01-sec06-sp03"
+section_id: "mod001-se01-sec06"
+session_id: "mod001-se01"
+toc: false
+---
+
+
+
+
+
+
+
+
+
+
+
+---
+
+<!-- START_INTERACTIONS -->
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Frame this guided reflection task._]
+<!-- editable:end -->
+
+::: {.reflection data-variant="guided"}
+**Personal Reflection**
+
+[AUTHOR GUIDE: _Add a reflection question tailored to the topic._]
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add a closing thought or transition._]
+<!-- editable:end -->
+
+---
+
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Frame this open reflection task._]
+<!-- editable:end -->
+
+::: {.reflection data-variant="open"}
+**Personal Reflection**
+
+[AUTHOR GUIDE: _Add a reflection question tailored to the topic._]
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add a closing thought or transition._]
+<!-- editable:end -->
+
+---
+
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Frame this critical reflection task._]
+<!-- editable:end -->
+
+::: {.reflection data-variant="critical"}
+**Personal Reflection**
+
+[AUTHOR GUIDE: _Add a reflection question tailored to the topic._]
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add a closing thought or transition._]
+<!-- editable:end -->
+<!-- END_INTERACTIONS -->
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="mod001-se01-sec06-sp02.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Quiz Variants</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="mod001-se01-sec06-sp04.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Self-Check Variants</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

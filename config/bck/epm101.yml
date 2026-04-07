@@ -1,0 +1,15 @@
+module:
+  code: EPM102
+  title: Example Module
+  description: Example description
+  default_render_mode: multi_page
+
+sessions:
+  - code: SE01
+    title: Example Session
+    sections:
+      - number: 1
+        title: Example Section
+        subpages:
+          - title: Example Page
+            kind: text_page

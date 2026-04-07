@@ -1,0 +1,15 @@
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Frame this {{ variant | default("guided") }} reflection task._]
+<!-- editable:end -->
+
+::: {.reflection data-variant="{{ variant | default('guided') }}"}
+**{{ label | default("Personal Reflection") }}**
+
+<!-- editable:start prompt -->
+{{ prompt | default("[AUTHOR GUIDE: _Add a reflection question tailored to the topic._]") }}
+<!-- editable:end -->
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add a closing thought or transition._]
+<!-- editable:end -->

@@ -1,0 +1,34 @@
+project:
+  type: website
+
+website:
+  title: ""
+  sidebar:
+    title: "Interaction Showcase (Simplified)"
+    style: "docked"
+    search: true
+    collapse-level: 1
+    page-navigation: true
+    contents:
+      
+      - text: "Home"
+        href: "index.qmd"
+        
+      
+      - section: "SE01: Ordered Sequence Interaction Showcase"
+        href: "se01/index.qmd"
+        
+        contents:
+          
+          - text: "Section 1: Ordered Interactions"
+            href: "se01/demo-it-se01-sp01.qmd"
+            
+          
+        
+      
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true

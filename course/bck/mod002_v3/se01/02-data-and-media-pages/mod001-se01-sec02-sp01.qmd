@@ -1,0 +1,145 @@
+---
+title: "Page 1 - Data Page"
+id: "mod001-se01-sec02-sp01"
+section_id: "mod001-se01-sec02"
+session_id: "mod001-se01"
+toc: false
+---
+
+
+
+
+
+
+
+
+
+## Data or visual
+
+_Insert your table, graph, or visualization here._
+
+## What to notice
+
+_Call out specific features, trends, or anomalies the learner should observe._
+
+## Interpretation
+
+_Explain what the data means and how it should be interpreted._
+
+## Why it matters
+
+_Explain the importance of being able to interpret this specific data._
+
+---
+
+
+
+---
+
+<!-- START_INTERACTIONS -->
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Frame this figure or chart and its importance._]
+<!-- editable:end -->
+
+::: {.figure-interpretation}
+**Figure Interpretation**
+
+<!-- editable:start content -->
+[AUTHOR GUIDE: _The figure block below is enhanced with this guided analysis._]
+<!-- editable:end -->
+
+**Key things to notice:**
+<!-- editable:start observations -->
+- Key observation 1
+- Key observation 2
+<!-- editable:end -->
+:::
+
+<!-- editable:start interaction_outro -->
+::: {.callout-tip}
+**Deep-dive interpretation**
+
+[AUTHOR GUIDE: _Add a detailed interpretation or analysis of what this figure shows._]
+:::
+
+[AUTHOR GUIDE: _Add a summary or reflection prompt._]
+<!-- editable:end -->
+
+---
+
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Set the scene for this interpretation task (e.g. 'Look closely at the figure below')._]
+<!-- editable:end -->
+
+::: {.interpretation}
+**Critical Interpretation**
+
+[AUTHOR GUIDE: _Prompt the learner to interpret a specific figure, table, or output._]
+
+**What to consider:**
+- Observation 1
+- Observation 2
+:::
+
+<!-- editable:start interaction_outro -->
+::: {.callout-tip}
+**Expert Guidance**
+
+[AUTHOR GUIDE: _Add guidance or key things that should have been noticed._]
+:::
+
+[AUTHOR GUIDE: _Add a summary or next-step prompt after the interpretation._]
+<!-- editable:end -->
+
+---
+
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Add framing or instructions for this parameter exploration tool._]
+<!-- editable:end -->
+
+::: {.parameter-exploration}
+**Interactive Exploration**
+
+[AUTHOR GUIDE: _Replace this with your interactive simulation or activity container._]
+
+**What to notice:**
+- Variable A influence
+- Variable B influence
+:::
+
+<!-- editable:start interaction_outro -->
+::: {.callout-tip}
+**Expert Interpretation**
+
+[AUTHOR GUIDE: _Add a detailed interpretation or analysis of how these variables interact._]
+:::
+
+[AUTHOR GUIDE: _Add a wrap-up or next-step prompt._]
+<!-- editable:end -->
+<!-- END_INTERACTIONS -->
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="index.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Data and Media Pages</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="mod001-se01-sec02-sp02.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Page 2 - Video Page</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

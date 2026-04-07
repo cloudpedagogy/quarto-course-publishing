@@ -1,0 +1,95 @@
+---
+title: "Worked Example"
+id: "mod001-se01-sec01-sp03"
+section_id: "mod001-se01-sec01"
+session_id: "mod001-se01"
+toc: false
+---
+
+
+
+
+
+
+
+
+
+
+
+---
+
+<!-- START_INTERACTIONS -->
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Provide an overview of the sequence or process the learner is about to follow._]
+<!-- editable:end -->
+
+::: {.step-sequence}
+[AUTHOR GUIDE: _Add the numbered steps or procedural stages here._]
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add a summary or next-step prompt after the sequence._]
+<!-- editable:end -->
+
+---
+
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Add an introduction for this two-staged learning interaction._]
+<!-- editable:end -->
+
+::: {.worked-example}
+**Model Example**
+
+[AUTHOR GUIDE: _Add a worked example, solution, or demonstration here._]
+
+::: {.callout-tip collapse="true"}
+**Expert Walkthrough**
+
+[AUTHOR GUIDE: _Add an explanation of the underlying thinking or logic behind this model._]
+:::
+:::
+
+---
+
+::: {.now-you-try}
+**Now you try**
+
+[AUTHOR GUIDE: _Provide a similar task or question for the learner to apply the model themselves._]
+:::
+
+<!-- editable:start interaction_outro -->
+::: {.callout-tip}
+**Guidance for Success**
+
+[AUTHOR GUIDE: _Add sample answers or success criteria for this task._]
+:::
+
+[AUTHOR GUIDE: _Add a reflection or next-step prompt._]
+<!-- editable:end -->
+<!-- END_INTERACTIONS -->
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="mod001-se01-sec01-sp02.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Concept Page</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="mod001-se01-sec01-sp04.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Application Page</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

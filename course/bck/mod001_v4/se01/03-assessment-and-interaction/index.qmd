@@ -1,0 +1,53 @@
+---
+title: "Section 3: Assessment and Interaction"
+id: "mod001-se01-sec03"
+section_id: "mod001-se01-sec03"
+session_id: "mod001-se01"
+toc: false
+---
+
+
+
+
+### In this section
+<br>
+
+- [Assessment Page](mod001-se01-sec03-sp01.qmd)
+
+- [Interactive Page](mod001-se01-sec03-sp02.qmd)
+
+- [Overview Variant](mod001-se01-sec03-sp03.qmd)
+
+- [Concept Variant](mod001-se01-sec03-sp04.qmd)
+
+- [Activity Variant](mod001-se01-sec03-sp05.qmd)
+
+- [Reflection Variant](mod001-se01-sec03-sp06.qmd)
+
+- [Summary Page](mod001-se01-sec03-sp07.qmd)
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="../02-data-and-media-pages/mod001-se01-sec02-sp07.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Summary Page</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="mod001-se01-sec03-sp01.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Assessment Page</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

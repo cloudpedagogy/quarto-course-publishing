@@ -1,0 +1,41 @@
+project:
+  type: website
+
+website:
+  title: ""
+  sidebar:
+    title: "Binomial Distribution in Epidemiology"
+    style: "docked"
+    search: true
+    collapse-level: 1
+    page-navigation: true
+    contents:
+      
+      - text: "Home"
+        href: "index.qmd"
+        
+      
+      - section: "SE01: Binomial Distribution in Epidemiology"
+        href: "se01/index.qmd"
+        
+        contents:
+          
+          - section: "Section 1: Binomial Distribution in Epidemiology"
+            href: "se01/01-binomial-distribution-in-epidemiology/index.qmd"
+            
+            contents:
+              
+              - text: "Binomial Distribution in Epidemiology"
+                href: "se01/01-binomial-distribution-in-epidemiology/BINOMIAL_DISTRIBUTION-se01-sec01-sp01.qmd"
+                
+              
+            
+          
+        
+      
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true

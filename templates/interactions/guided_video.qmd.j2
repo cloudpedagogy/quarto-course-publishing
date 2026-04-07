@@ -1,0 +1,32 @@
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Add an introduction or instructions for viewing this video._]
+<!-- editable:end -->
+
+::: {.video}
+{% if video_url %}
+{{'{{<'}} video {{ video_url }} {{'>}}'}}
+{% else %}
+<!-- editable:start content -->
+{{ content | default("[AUTHOR GUIDE: _Embed the video link or iframe here._]") }}
+<!-- editable:end -->
+{% endif %}
+:::
+
+---
+
+## {{ label | default("What to look for") }}
+
+[AUTHOR GUIDE: _Provide 2-3 specific points for the learner to focus on while watching._]
+
+- {{ point_1 | default("Observation 1") }}
+- {{ point_2 | default("Observation 2") }}
+
+<!-- editable:start interaction_outro -->
+::: {.callout-tip}
+**Reflection and follow-up**
+
+{{ follow_up | default("[AUTHOR GUIDE: _Add a brief reflection question or next-step instruction after viewing._]") }}
+:::
+
+[AUTHOR GUIDE: _Add any concluding remarks or transitions here._]
+<!-- editable:end -->

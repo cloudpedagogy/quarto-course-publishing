@@ -1,0 +1,53 @@
+project:
+  type: website
+
+website:
+  title: ""
+  sidebar:
+    title: "Binomial Distribution"
+    style: "docked"
+    search: true
+    collapse-level: 1
+    page-navigation: true
+    contents:
+      
+      - text: "Home"
+        href: "index.qmd"
+        
+      
+      - section: "SE01: Core Concepts and Interpretation"
+        href: "se01/index.qmd"
+        
+        contents:
+          
+          - section: "Section 1: Core Concepts and Interpretation"
+            href: "se01/01-core-concepts-and-interpretation/index.qmd"
+            
+            contents:
+              
+              - text: "What is the Binomial Distribution?"
+                href: "se01/01-core-concepts-and-interpretation/BINOMIAL_DISTRIBUTION-se01-sec01-sp01.qmd"
+                
+              
+              - text: "Worked Example in R"
+                href: "se01/01-core-concepts-and-interpretation/BINOMIAL_DISTRIBUTION-se01-sec01-sp02.qmd"
+                
+              
+              - text: "Practice Activity"
+                href: "se01/01-core-concepts-and-interpretation/BINOMIAL_DISTRIBUTION-se01-sec01-sp03.qmd"
+                
+              
+              - text: "Summary and Reflection"
+                href: "se01/01-core-concepts-and-interpretation/BINOMIAL_DISTRIBUTION-se01-sec01-sp04.qmd"
+                
+              
+            
+          
+        
+      
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true

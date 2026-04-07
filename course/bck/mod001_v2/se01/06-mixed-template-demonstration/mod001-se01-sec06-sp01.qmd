@@ -1,0 +1,45 @@
+---
+title: "Page 1 - Reflection Page Variant"
+id: "mod001-se01-sec06-sp01"
+section_id: "mod001-se01-sec06"
+session_id: "mod001-se01"
+toc: false
+---
+
+## Reflection prompt
+
+_Add a specific question or prompt to encourage the learner to think deeply about the topic._
+
+## Points to consider
+
+_Provide additional context or sub-questions to guide the reflection._
+
+## Your response
+
+_Encourage the learner to write their thoughts here._
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="index.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Mixed Template Demonstration</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="mod001-se01-sec06-sp02.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Page 2 - Data Page Variant</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

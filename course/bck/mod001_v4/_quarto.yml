@@ -1,0 +1,161 @@
+project:
+  type: website
+
+website:
+  title: ""
+  sidebar:
+    title: "Demo Module: Pedagogical Page Designs and Interactions"
+    style: "docked"
+    search: true
+    collapse-level: 1
+    page-navigation: true
+    contents:
+      
+      - text: "Home"
+        href: "index.qmd"
+        
+      
+      - section: "SE01: Demo Session: Page Design and Interaction Showcase"
+        href: "se01/index.qmd"
+        
+        contents:
+          
+          - section: "Section 1: Core Learning Pages"
+            href: "se01/01-core-learning-pages/index.qmd"
+            
+            contents:
+              
+              - text: "Overview Page"
+                href: "se01/01-core-learning-pages/mod001-se01-sec01-sp01.qmd"
+                
+              
+              - text: "Concept Page"
+                href: "se01/01-core-learning-pages/mod001-se01-sec01-sp02.qmd"
+                
+              
+              - text: "Worked Example"
+                href: "se01/01-core-learning-pages/mod001-se01-sec01-sp03.qmd"
+                
+              
+              - text: "Application Page"
+                href: "se01/01-core-learning-pages/mod001-se01-sec01-sp04.qmd"
+                
+              
+              - text: "Activity Page"
+                href: "se01/01-core-learning-pages/mod001-se01-sec01-sp05.qmd"
+                
+              
+              - text: "Reflection Page"
+                href: "se01/01-core-learning-pages/mod001-se01-sec01-sp06.qmd"
+                
+              
+              - text: "Summary Page"
+                href: "se01/01-core-learning-pages/mod001-se01-sec01-sp07.qmd"
+                
+              
+            
+          
+          - section: "Section 2: Data and Media Pages"
+            href: "se01/02-data-and-media-pages/index.qmd"
+            
+            contents:
+              
+              - text: "Data Page"
+                href: "se01/02-data-and-media-pages/mod001-se01-sec02-sp01.qmd"
+                
+              
+              - text: "Video Page"
+                href: "se01/02-data-and-media-pages/mod001-se01-sec02-sp02.qmd"
+                
+              
+              - text: "Text Page"
+                href: "se01/02-data-and-media-pages/mod001-se01-sec02-sp03.qmd"
+                
+              
+              - text: "Methods Page"
+                href: "se01/02-data-and-media-pages/mod001-se01-sec02-sp04.qmd"
+                
+              
+              - text: "Case Study"
+                href: "se01/02-data-and-media-pages/mod001-se01-sec02-sp05.qmd"
+                
+              
+              - text: "Discussion Page"
+                href: "se01/02-data-and-media-pages/mod001-se01-sec02-sp06.qmd"
+                
+              
+              - text: "Summary Page"
+                href: "se01/02-data-and-media-pages/mod001-se01-sec02-sp07.qmd"
+                
+              
+            
+          
+          - section: "Section 3: Assessment and Interaction"
+            href: "se01/03-assessment-and-interaction/index.qmd"
+            
+            contents:
+              
+              - text: "Assessment Page"
+                href: "se01/03-assessment-and-interaction/mod001-se01-sec03-sp01.qmd"
+                
+              
+              - text: "Interactive Page"
+                href: "se01/03-assessment-and-interaction/mod001-se01-sec03-sp02.qmd"
+                
+              
+              - text: "Overview Variant"
+                href: "se01/03-assessment-and-interaction/mod001-se01-sec03-sp03.qmd"
+                
+              
+              - text: "Concept Variant"
+                href: "se01/03-assessment-and-interaction/mod001-se01-sec03-sp04.qmd"
+                
+              
+              - text: "Activity Variant"
+                href: "se01/03-assessment-and-interaction/mod001-se01-sec03-sp05.qmd"
+                
+              
+              - text: "Reflection Variant"
+                href: "se01/03-assessment-and-interaction/mod001-se01-sec03-sp06.qmd"
+                
+              
+              - text: "Summary Page"
+                href: "se01/03-assessment-and-interaction/mod001-se01-sec03-sp07.qmd"
+                
+              
+            
+          
+          - section: "Section 6: Computational and Analytical Learning"
+            href: "se01/06-computational-and-analytical-learning/index.qmd"
+            
+            contents:
+              
+              - text: "Methods Variant (Code)"
+                href: "se01/06-computational-and-analytical-learning/mod001-se01-sec06-sp04.qmd"
+                
+              
+              - text: "Text Variant (Math)"
+                href: "se01/06-computational-and-analytical-learning/mod001-se01-sec06-sp06.qmd"
+                
+              
+            
+          
+          - section: "Section 7: Page Design Showcase"
+            href: "se01/07-page-design-showcase/index.qmd"
+            
+            contents:
+              
+              - text: "Worked Example"
+                href: "se01/07-page-design-showcase/mod001-se01-sec07-sp03.qmd"
+                
+              
+            
+          
+        
+      
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true

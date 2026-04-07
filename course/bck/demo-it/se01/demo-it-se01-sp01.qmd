@@ -1,0 +1,97 @@
+---
+title: "Sequential Interaction Demo"
+id: "demo-it-se01-sp01"
+section_id: "demo-it-se01-sec01"
+session_id: "demo-it-se01"
+toc: false
+---
+
+
+
+
+
+
+
+
+
+
+
+---
+
+<!-- START_INTERACTIONS -->
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Add an introduction or instructions for this accordion-based explanation here._]
+<!-- editable:end -->
+
+::: {.accordion}
+**Dynamic Explanation**
+
+[AUTHOR GUIDE: _Add the detailed content or explanation that should be hidden until clicked._]
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add a summary or reflection prompt after the accordion here._]
+<!-- editable:end -->
+
+---
+
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Introduce why this point matters._]
+<!-- editable:end -->
+
+::: {.callout-important}
+**Strategic Note**
+
+[AUTHOR GUIDE: _Add the emphasized point, warning, or key takeaway here._]
+:::
+
+<!-- editable:start interaction_outro -->
+[AUTHOR GUIDE: _Add interpretation or implications of this point._]
+<!-- editable:end -->
+
+---
+
+<!-- editable:start interaction_intro -->
+[AUTHOR GUIDE: _Provide a short introduction or instruction for this self-check exercise._]
+<!-- editable:end -->
+
+::: {.self-check}
+**Knowledge Reinforcement**
+
+[AUTHOR GUIDE: _Provide 2-4 short, low-stakes questions for the learner to consider before moving forward._]
+
+- Question 1: What is the most important takeaway from this concept?
+- Question 2: How does this apply to your own practice or research?
+:::
+
+<!-- editable:start interaction_outro -->
+::: {.callout-tip}
+**Reflection guidance**
+
+[AUTHOR GUIDE: _Add a model answer, reflection points, or guidance on what a good response looks like._]
+:::
+
+[AUTHOR GUIDE: _Add a brief wrap-up or next-step prompt after the self-check._]
+<!-- editable:end -->
+<!-- END_INTERACTIONS -->
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="index.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Ordered Sequence Interaction Showcase</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->
