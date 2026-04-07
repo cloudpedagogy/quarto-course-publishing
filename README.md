@@ -3,7 +3,10 @@
 A schema-driven publishing system for generating flexible, pedagogically structured course websites and materials from configuration files.
 
 > [!IMPORTANT]
-> **Authoritative Guide**: Please refer to [USER_GUIDE.md](USER_GUIDE.md) for detailed instructions on the Architect/Publish/Preview workflow.
+> **Authoritative Guides**: 
+> - [INSTRUCTIONS.md](INSTRUCTIONS.md): Operational guide for setup, authoring, and publishing.
+> - [PROJECT_SPEC.md](PROJECT_SPEC.md): Technical specification and architectural deep-dive.
+> - [USER_GUIDE.md](USER_GUIDE.md): Master workflow guide for course authors.
 
 ## Features
 
