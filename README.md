@@ -6,9 +6,10 @@ The system combines structured curriculum design (YAML) with accessible content 
 
 > [!IMPORTANT]
 > **Authoritative Guides**: 
+> - [QUICK_START_GUIDE.md](QUICK_START_GUIDE.md): Get up and running in minutes (recommended starting point)
 > - [INSTRUCTIONS.md](INSTRUCTIONS.md): Operational guide for setup, authoring, and publishing.
-> - [PROJECT_SPEC.md](PROJECT_SPEC.md): Technical specification and architectural deep-dive.
 > - [USER_GUIDE.md](USER_GUIDE.md): Master workflow guide for course authors.
+> - [PROJECT_SPEC.md](PROJECT_SPEC.md): Technical specification and architectural deep-dive.
 
 ---
 
