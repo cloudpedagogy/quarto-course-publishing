@@ -1,177 +1,206 @@
-# Course Author’s Guide: Mastering the Generation Workflow
+# Course Author’s Guide: Word-First Publishing Workflow
 
-Welcome! This guide explains how to use the **Pedagogical Course Generator** to build structured, professional Quarto course websites. This system follows a **"Scaffold-First"** philosophy: you define the architecture in YAML, and the system builds the "bones" while you write the "flesh."
+Welcome! This guide explains how to use the **Quarto Course Publishing System** to build structured, professional course websites.
 
----
+This system follows a **Word-first, scaffold-driven philosophy**:
 
-## 🏗️ 1. Overview: The Scaffold-First Philosophy
-
-*   **The Blueprint (`config/course.yml`)**: This is where you define the structure (Modules, Sessions, Pages).
-*   **The Source (`course/{module_id}/`)**: This is where you write your teaching content in `.qmd` files.
-*   **The Output (`output/{module_id}/`)**: This is the final website that students see.
+- YAML defines the structure (the “bones”)
+- Word defines the content (the “flesh”)
+- The system transforms both into a complete course
 
 ---
 
-## 🚀 2. The Workflow (3 Simple Steps)
+## 🧠 1. Overview: The Word-First Model
 
-The system uses three primary commands executed via the CLI:
+| Layer | Purpose |
+|------|--------|
+| YAML (`config/course.yml`) | Defines structure |
+| Word (`imports/.../docx/`) | Author content |
+| QMD (`course/`) | Generated + injected |
+| HTML (`output/`) | Final course |
 
-### Step 1: BUILD (Architect Phase)
-Use this command whenever you change the **structure** of your course (add pages, reorder sections, or change interaction types).
+👉 **You primarily write in Word — not in QMD**
+
+---
+
+## 🚀 2. Core Workflow
+
+```bash
+build → import-word → render
+```
+
+---
+
+### Step 1: BUILD (Structure)
+
+Run when changing course structure:
+
 ```bash
 PYTHONPATH=src python3 -m course_generator.cli build config/course.yml
 ```
-*   **Behaviour**: It detects changes in your YAML and updates the `.qmd` files. It is **Non-Destructive** (your writing is safe!). **Versioning is active by default**—if the folder exists, the system automatically creates a new version (e.g., `_v1`).
 
-### Step 2: PREVIEW (Iterative Writing)
-Use this while writing content on a single page to get instant feedback.
+This:
+- creates/updates `.qmd` files
+- syncs navigation
+- preserves existing content
+
+---
+
+### Step 2: IMPORT-WORD (Content)
+
+Run after editing Word documents:
+
 ```bash
-PYTHONPATH=src python3 -m course_generator.cli preview config/course.yml --path course/mod001/se01/page.qmd
+PYTHONPATH=src python3 -m course_generator.cli import-word config/course.yml
 ```
-*   **Simple Rule**: This renders **one single page** for rapid testing. It does **not** affect your published website or update any navigation links. The results appear in a local `.preview/` folder.
 
-### Step 3: RENDER (Publishing Phase)
-Use this when you are ready to publish the full course website.
+This:
+- converts Word → Markdown
+- parses structured interactions
+- injects content into QMD
+
+---
+
+### Step 3: RENDER (Publish)
+
 ```bash
 PYTHONPATH=src python3 -m course_generator.cli render config/course.yml
 ```
-*   **Behaviour**: It renders every page, generates navigation, and places the final site in `output/{id}/`. **Versioning is active by default** to ensure you always have a backup of your previous site.
 
----
+This generates the final website in:
 
-## 📂 3. Folder Structure
-
-*   `config/`: Store your course YAML blueprints here.
-*   `course/{module_id}/`: **This is your workspace.** Edit the `.qmd` files here.
-*   `output/{module_id}/`: The finished website. **Do not edit files here.**
-*   `templates/`: The pedagogical "DNA" of your course (Pages and Interactions).
-
----
-
-## ✍️ 4. Editing Content (.qmd)
-
-When you open a page in `course/`, you will see two types of areas:
-
-### The Page Body
-This is the main area where you write your lesson. Anything outside special markers is **yours** and will never be touched by the system.
-
-### Interaction Zones
-These are pedagogical blocks (like Quizzes or Accordions) wrapped in system markers. 
-*   **Safety Rule**: Only edit text inside `<!-- editable:start -->` and `<!-- editable:end -->` tags.
-*   **Example**:
-    ```markdown
-    <!-- editable:start content -->
-    YOUR TEACHING CONTENT GOES HERE.
-    <!-- editable:end -->
-    ```
-
----
-
-## 🛠️ 5. Editing Structure (course.yml)
-
-The `course.yml` file uses a simple hierarchy:
-1.  **Module**: Global code and title.
-2.  **Session**: High-level groups (e.g., Week 1).
-3.  **Section**: Pedagogical units (e.g., Introduction).
-4.  **Page**: Individual learning pages.
-
-### Page Types: When to Use Them
-Choose from 15+ specialized scaffolds based on your pedagogical goal:
-*   `overview_page`: **Section Introductions**. Use this to frame the module and explain "Why this matters."
-*   `concept_page`: **Core Theory**. The primary space for teaching concepts and definitions.
-*   `worked_example`: **Demonstrations**. Show a model solution or expert walkthrough.
-*   `activity_page`: **Active Practice**. Scaffolds for student tasks and instructions.
-*   `methods_page`: **Technical Processes**. Use for "How-to" guides, lab protocols, or coding steps.
-
----
-
-🧩 6. Interactions & Variants
-
-Interactions are **ordered pedagogical blocks** that appear exactly in the sequence you define in the YAML.
-
-```yaml
-interactions:
-  - type: callout_emphasis
-    variant: warning
-    label: "Critical Tip"
-  - type: self_check
-    variant: deep
+```text
+output/{module_id}/
 ```
 
-### Core Interaction Types
-*   `callout_emphasis`: **Highlight Keys.** Use for tips, warnings, or "Stop & Think" moments.
-*   `self_check`: **Quick Recall.** Low-stakes questions to help learners check their understanding.
-*   `quiz_check`: **Knowledge Checks.** Formative assessment with feedback/rationale.
-*   `compare_tabs`: **Multiple Perspectives.** Compare two different approaches or theories side-by-side.
-*   `reveal_sequence`: **Step-by-Step Insight.** Hide answers or complex explanations until the learner is ready.
-*   `scenario_response`: **Applied Logic.** Challenge learners to apply theory to a real-world situation.
+---
 
-### Supported Variants (v1)
-Variants allow you to change the **style** or **format** of a block without changing its content.
-*   `callout_emphasis`: `note`, `tip`, `warning`, `important`.
-*   `quiz_check`: `mcq`, `true_false`, `short_answer`.
-*   `reflection_prompt`: `guided`, `open`, `critical`.
+## ✍️ 3. Writing in Word
+
+### Structured Authoring
+
+Write content using patterns like:
+
+```text
+Tabs
+Interpretation :: Explanation
+Assumptions :: Notes
+
+Quiz
+Question :: What is VE?
+Option :: A
+Option :: B
+Answer :: A
+```
 
 ---
 
-## 🔄 7. Smart Interaction Sync (Non-Destructive)
+### Supported Interaction Types
 
-The system is built for **Real Academic Authoring**. It understands the difference between the "bones" of the course (system-managed) and the "flesh" (your teaching content).
-
-### How it Works (Under the Hood)
-When you run the `build` command, the system performs a surgical three-step update:
-1.  **Extract**: It scans your existing `.qmd` files and safely extracts any text you've written inside "Interaction Zones."
-2.  **Rebuild**: It discards the old template container and builds a fresh one based on the latest YAML (applying new styles or variants).
-3.  **Reinsert**: It perfectly re-injects your extracted writing back into the brand-new containers.
-
-### Reassurance for Real-World Changes
-*   **Reordering**: If you move an interaction up or down in the YAML, your text simply "moves" with it to the new position.
-*   **Changing Variants**: If you change a `callout_emphasis` from a `note` to a `warning`, the system updates the visual box style but **perfectly preserves your writing** inside.
-*   **Adding/Removing**: New interactions are added as stubs; removed interactions are safely backed up in the `_archive/` folder. **We never delete your work.**
-
-> [!IMPORTANT]
-> **Safety First**: Your content is safe *as long as you do not delete* the `<!-- editable:start -->` markers. These tags are the maps the system uses to find and protect your writing.
+- Tabs
+- Callout
+- Quiz
+- Reveal
+- SelfCheck
+- Definition
+- R Code
+- Image / File / Table
 
 ---
 
-## 🛠️ 8. Common Tasks
+## 📦 4. Using Resources
 
-### Adding a New Page
-1.  Open your `course.yml` blueprint.
-2.  Add a new entry under the `subpages:` list in the desired section.
-3.  Run the **Build** command.
-4.  **Result**: A new `.qmd` file appears in your course folder, pre-formatted and ready for writing.
+Place files in:
 
-### Moving or Reordering Pages
-1.  Rearrange the pages in your `course.yml` file.
-2.  Run the **Build** command.
-3.  **Result**: The system automatically renames the files to match the new order and updates their internal identity tags.
+```text
+resources/
+  pdf/
+  data/
+  images/
+```
 
-### Deleting a Page
-1.  Remove the page entry from your `course.yml`.
-2.  Run the **Build** command.
-3.  **Result**: The file is removed from your active workspace and safely moved to an `_archive/` folder.
+Reference in Word:
 
-### Adding an Interaction
-1.  In `course.yml`, add a new `type:` under the page's `interactions:` list.
-2.  Run the **Build** command.
-3.  **Result**: A new pedagogical block appears on your page with `[AUTHOR GUIDE:]` markers explaining how to fill it in.
+```text
+File :: resources/pdf/report.pdf
+Label :: Download report
+```
 
 ---
 
-## ⚠️ 9. Safety & Best Practices
+## 🧩 5. YAML Structure
 
-1.  **Do Not Delete Markers**: Never delete `<!-- START_INTERACTIONS -->` or `<!-- editable:... -->` tags. These are the safety guards that allow the system to protect your content.
-2.  **YAML for Structure**: Any changes to page order, titles, or site structure **must** be done in the `course.yml` first.
-3.  **Do Not Move Files Manually**: Moving or renaming `.qmd` files using your computer's file explorer will break the link with the blueprint. Always let the `build` command handle file relocation.
+YAML defines:
+
+- Modules
+- Sessions
+- Sections
+- Pages
+
+Example:
+
+```yaml
+pages:
+  - id: page1
+    kind: concept_page
+    source_docx: imports/.../docx/file.docx
+```
 
 ---
 
-## 🩺 10. Troubleshooting
+## 🔄 6. Content Injection
 
-*   **YAML Error**: "expected <block end>." Check your indentation. YAML is very sensitive to spaces—always use exactly two spaces per level.
-*   **Missing Content**: Ensure you haven't deleted the `<!-- editable -->` markers. If content is missing after a build, check the `_archive/` folder.
-*   **Broken Links**: Run a full **Render** to refresh the site navigation and cross-links.
+Content is inserted into QMD using:
+
+```html
+<!-- IMPORT_START -->
+<!-- IMPORT_END -->
+```
+
+This allows:
+- safe updates
+- repeated imports
+- no duplication
 
 ---
-**Happy Authoring!** Your content is safe, and your structure is stable.
+
+## ⚠️ 7. Key Rules
+
+- Do NOT edit `output/`
+- Do NOT manually edit imported content
+- Always rerun `import-word` after Word changes
+- Keep Word formatting simple
+
+---
+
+## 🩺 8. Troubleshooting
+
+### Broken links
+- Check `resources/`
+- Re-run import + render
+
+### R code errors
+- Caused by formatting → auto-fixed in import
+
+### Missing content
+- Check `.bak` files
+
+---
+
+## 🎯 Final Tip
+
+Think of the system as:
+
+```text
+Design → Write → Transform → Publish
+```
+
+Not:
+
+```text
+Edit HTML directly
+```
+
+---
+
+**Happy authoring — your structure is stable, and your content is safe.**

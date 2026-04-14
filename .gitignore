@@ -17,3 +17,4 @@ venv/
 # logs / temp
 *.log
 *.tmp
+*.bak

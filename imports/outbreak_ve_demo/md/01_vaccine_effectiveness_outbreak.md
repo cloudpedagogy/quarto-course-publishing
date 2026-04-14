@@ -1,0 +1,142 @@
+# Estimating Vaccine Effectiveness in an Outbreak
+
+An outbreak of **measles**, a highly contagious viral disease, occurred in a semi-urban community with mixed vaccination coverage. Measles is one of the most transmissible infectious diseases, with a basic reproduction number (R₀) often estimated between 12 and 18.
+
+Public health teams initiated an outbreak investigation to:
+
+- identify confirmed and suspected cases
+
+- determine vaccination status
+
+- assess transmission patterns
+
+- estimate the **real-world effectiveness of the vaccine**
+
+For an overview of measles epidemiology, see:\
+<https://www.who.int/news-room/fact-sheets/detail/measles>
+
+## Understanding Vaccine Effectiveness
+
+Vaccine effectiveness (VE) refers to how well a vaccine performs in real-world conditions, outside controlled clinical trials.
+
+Unlike vaccine efficacy, effectiveness reflects:
+
+- population diversity
+
+- variation in exposure
+
+- real-world healthcare access
+
+- behavioural factors
+
+👉 Learn more:\
+<https://www.who.int/news-room/feature-stories/detail/vaccine-efficacy-effectiveness-and-protection>
+
+## Why This Matters in Public Health
+
+Estimating vaccine effectiveness is essential for:
+
+- evaluating vaccination programmes
+
+- identifying vulnerable populations
+
+- informing outbreak response
+
+- guiding policy decisions
+
+For further reading:\
+<https://pmc.ncbi.nlm.nih.gov/articles/PMC6734418/>
+
+##  Key Concept
+
+Callout :: important\
+Text :: Vaccine effectiveness measures the reduction in disease risk among vaccinated individuals compared to unvaccinated individuals in real-world conditions.
+
+## Definition
+
+Definition\
+Term :: Relative Risk\
+Meaning :: The ratio of the probability of disease occurring in the vaccinated group compared to the unvaccinated group.
+
+## Observed Data
+
+The following table summarises the number of cases and non-cases among vaccinated and unvaccinated individuals during the outbreak.
+
+  --------------------------------------------------------
+  **Group**      **Cases (a, c)**   **Non-cases (b, d)**
+  -------------- ------------------ ----------------------
+  Vaccinated     4                  96
+
+  Unvaccinated   20                 80
+  --------------------------------------------------------
+
+Table: Summary of outbreak cases by vaccination status
+
+## Formula for Vaccine Effectiveness
+
+Vaccine effectiveness is calculated as:
+
+VE = (1 − Relative Risk) × 100
+
+## Step-by-Step Calculation
+
+Reveal\
+Step 1 :: Calculate risk in the vaccinated group: 5 / 500 = 0.01\
+Step 2 :: Calculate risk in the unvaccinated group: 25 / 500 = 0.05\
+Step 3 :: Relative Risk = 0.01 / 0.05 = 0.2\
+Step 4 :: VE = (1 − 0.2) × 100 = 80%
+
+## Pause and Reflect
+
+SelfCheck\
+Question :: Why might vaccine effectiveness differ between populations?\
+Answer :: Differences in exposure, population structure, healthcare access, and underlying health conditions can influence estimates.
+
+## Visualising the Results
+
+R Code\
+group \<- c(\"Vaccinated\", \"Unvaccinated\")\
+cases \<- c(5, 25)\
+population \<- c(500, 500)
+
+risk \<- cases / population
+
+barplot(risk, names.arg = group, col = c(\"steelblue\", \"tomato\"),\
+main = \"Risk of Infection by Vaccination Status\")
+
+## Interpreting the Results
+
+Tabs\
+Interpretation :: An 80% vaccine effectiveness means vaccinated individuals have substantially lower risk compared to unvaccinated individuals.\
+Assumptions :: The calculation assumes both groups are comparable and equally exposed.\
+Limitations :: Confounding factors such as age, immunity, or healthcare access may influence results.
+
+## Epidemic Curve
+
+Image :: resources/images/epidemic-curve.png\
+Alt :: Epidemic curve showing number of measles cases over time by vaccination status\
+Caption :: Figure 1. Epidemic curve comparing vaccinated and unvaccinated groups.\
+Width :: 70%
+
+## Outbreak Report
+
+File :: resources/pdf/outbreak-report.pdf\
+Display :: embed\
+Label :: View full outbreak investigation report
+
+## Download Dataset
+
+File :: resources/data/outbreak-dataset.zip\
+Label :: Download full dataset
+
+## Key Takeaway
+
+Callout :: tip\
+Text :: Vaccination significantly reduces the likelihood of infection and severe disease, even if it does not eliminate risk entirely.
+
+## Further Reading
+
+References\
+WHO Measles Fact Sheet :: <https://www.who.int/news-room/fact-sheets/detail/measles>\
+Vaccine Effectiveness Overview :: <https://www.who.int/news-room/feature-stories/detail/vaccine-efficacy-effectiveness-and-protection>\
+Measles Vaccine Impact Study :: <https://pmc.ncbi.nlm.nih.gov/articles/PMC6734418/>

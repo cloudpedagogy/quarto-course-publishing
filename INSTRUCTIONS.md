@@ -1,93 +1,217 @@
 # Operational Instructions: Quarto Course Publishing
 
-This guide provides step-by-step instructions for setting up, authoring, and publishing courses using the publishing system.
+This guide provides step-by-step instructions for setting up, authoring, and publishing courses using the system.
+
+---
+
+## 🚀 0. Quick Start (First Run)
+
+Follow this sequence for a new course:
+
+1. Define structure in `config/course.yml`
+2. Add Word files to:
+   ```
+   imports/{course_id}/docx/
+   ```
+3. Link Word files in YAML using `source_docx`
+4. Run:
+   ```bash
+   PYTHONPATH=src python3 -m course_generator.cli build config/course.yml
+   PYTHONPATH=src python3 -m course_generator.cli import-word config/course.yml
+   PYTHONPATH=src python3 -m course_generator.cli render config/course.yml
+   ```
+5. Open:
+   ```
+   output/{course_id}/index.html
+   ```
+
+---
 
 ## 1. Environment Setup
 
-### 1.1. Prerequisites
-- **Python 3.10+**
-- **Quarto CLI** (v1.3+)
-- **Pandoc** (for Word import feature)
+### 1.1 Prerequisites
 
-### 1.2. Installation
+- **Python 3.10+**
+- **Quarto CLI (v1.3+)**
+- **Pandoc** (required for Word import)
+
+### 1.2 Installation
+
 ```bash
-# Clone the repository
 git clone <remote-url>
 cd lshtm-quarto-publishing
 
-# Install dependencies
 pip install -r requirements.txt
-
-# Install the package in editable mode
 pip install -e .
 ```
 
 ---
 
-## 2. The CLI Workflow
+## 2. Core Workflow
 
-The system provides three main commands via the `course_generator.cli` module.
+```bash
+build → import-word → render
+```
 
-### BUILD (Structural Phase)
-Run this when you change `config/course.yml` (e.g., adding pages, reordering).
+---
+
+### 2.1 BUILD (Structure Phase)
+
 ```bash
 PYTHONPATH=src python3 -m course_generator.cli build config/course.yml
 ```
-- **Syncing**: This command matches YAML IDs to existing files and updates metadata/navigation while preserving your written content.
 
-### PREVIEW (Writing Phase)
-Run this for rapid feedback on a single page.
+- Generates QMD scaffolds
+- Syncs structure
+- Preserves content
+
+---
+
+### 2.2 IMPORT-WORD (Content Phase)
+
 ```bash
-PYTHONPATH=src python3 -m course_generator.cli preview config/course.yml --path course/mod/se/page.qmd
+PYTHONPATH=src python3 -m course_generator.cli import-word config/course.yml
 ```
-- Output is generated in a local `.preview/` folder.
 
-### RENDER (Publishing Phase)
-Run this to generate the entire website.
+- Converts DOCX → Markdown
+- Parses interactions
+- Injects into QMD
+
+---
+
+### 2.3 RENDER (Publishing Phase)
+
 ```bash
 PYTHONPATH=src python3 -m course_generator.cli render config/course.yml
 ```
-- Output is placed in `output/{module_id}/`.
 
----
-
-## 3. Authoring Guide
-
-### 3.1. Writing in Interaction Zones
-The system allows you to write anywhere in the `.qmd` file. However, for structured blocks (like Quizzes), you must write inside the "Interaction Zones":
-
-```markdown
-<!-- editable:start content -->
-*   Question: What is 2+2?
-*   Answer: 4
-<!-- editable:end -->
+Output:
+```
+output/{module_id}/
 ```
 
-### 3.2. Page Kinds
-When defining a page in `course.yml`, set the `kind` field to use a specific scaffold:
-- `concept_page`: Theory and definitions.
-- `worked_example`: Step-by-step models.
-- `methods_page`: Protocols and labs.
-- `activity_page`: Student tasks.
-
-### 3.3. Interaction Variants
-Change the style of a block by updating the `variant` in YAML:
-- `callout_emphasis`: `note`, `tip`, `warning`, `important`.
-- `quiz_check`: `mcq`, `true_false`.
-
 ---
 
-## 4. Word Content Import (Experimental)
-To import content from a Word document into an existing course structure:
-1. Ensure your `.qmd` file has `<!-- IMPORT_START -->` markers.
-2. Run the import command:
+### Optional: PREVIEW
+
 ```bash
-PYTHONPATH=src python3 -m course_generator.cli import-word config/course.yml --docx path/to/content.docx --target course/path/to/page.qmd
+PYTHONPATH=src python3 -m course_generator.cli preview config/course.yml --path path/to/page.qmd
 ```
 
 ---
 
-## 5. Troubleshooting
-- **YAML Validation Failed**: Ensure IDs are unique and no required fields (title, kind) are missing.
-- **Content Lost**: Check the `_archive/` folder in the project root. The system moves orphaned content there instead of deleting it.
-- **Broken Sidebar**: Run a full `render` command to refresh the Quarto navigation.
+## 3. Authoring Model
+
+### 3.1 Where to Write
+
+| Layer | Responsibility |
+|------|----------------|
+| YAML | Structure |
+| Word | Content |
+| QMD | Generated |
+
+---
+
+### 3.2 Linking Word Files (Important)
+
+In YAML:
+
+```yaml
+source_docx: imports/{course_id}/docx/file.docx
+```
+
+---
+
+### 3.3 Word Authoring
+
+```text
+Tabs
+Interpretation :: ...
+
+Quiz
+Question :: ...
+Answer :: ...
+```
+
+---
+
+### 3.4 Import Markers
+
+```html
+<!-- IMPORT_START -->
+<!-- IMPORT_END -->
+```
+
+---
+
+## 4. Resource Handling
+
+### Structure
+
+```
+resources/
+  pdf/
+  data/
+  images/
+```
+
+### Usage
+
+```text
+File :: resources/pdf/file.pdf
+Label :: Download file
+```
+
+### Behaviour
+
+- Copied into course + output
+- Paths rewritten automatically
+
+---
+
+## 5. Recovery & Safety
+
+If something breaks:
+
+- Delete `output/` → rerun render
+- Re-run `import-word`
+- Check `.bak` files
+- Check `imports/md/`
+
+---
+
+## 6. Troubleshooting
+
+### Broken links
+- Check resources exist
+- Re-run import + render
+
+### R errors
+- Caused by escaping
+- Auto-fixed during import
+
+### YAML errors
+- Check indentation
+
+---
+
+## 7. Key Rules
+
+- Do NOT edit `output/`
+- Always re-run import after Word changes
+- Keep Word simple
+
+---
+
+## 8. System Requirements Check (Recommended)
+
+Ensure tools are available:
+
+```bash
+quarto --version
+pandoc --version
+```
+
+---
+
+**End of Operational Guide**

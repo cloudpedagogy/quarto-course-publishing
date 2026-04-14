@@ -2,16 +2,13 @@ from typing import List, Optional, Dict
 from pydantic import BaseModel, Field
 from enum import Enum
 
-
 class RenderMode(str, Enum):
     SINGLE_PAGE = "single_page"
     MULTI_PAGE = "multi_page"
 
-
 class NavigationStyle(str, Enum):
     DEFAULT = "default"
     NUMBERED_SUBPAGES = "numbered_subpages"
-
 
 class Resource(BaseModel):
     title: str
@@ -19,16 +16,13 @@ class Resource(BaseModel):
     output_file: str
     display: str
 
-
 class Page(BaseModel):
     id: Optional[str] = None
     title: str
     kind: str
     description: Optional[str] = None
-    source_docx: Optional[str] = None
     resources: List[Resource] = Field(default_factory=list)
     interactions: List[Dict] = Field(default_factory=list)
-
 
 class Section(BaseModel):
     id: Optional[str] = None
@@ -55,13 +49,11 @@ class Section(BaseModel):
                     f"does not match actual subpages length ({len(self.subpages)})"
                 )
 
-
 class SessionOptions(BaseModel):
     include_prerequisites: bool = False
     include_maths: bool = False
     include_quiz: bool = False
     include_r_code: bool = False
-
 
 class Session(BaseModel):
     id: Optional[str] = None
@@ -76,7 +68,6 @@ class Session(BaseModel):
     interactions: List[Dict] = Field(default_factory=list)
     options: Optional[SessionOptions] = None
 
-
 class Module(BaseModel):
     id: Optional[str] = None
     code: str
@@ -86,7 +77,6 @@ class Module(BaseModel):
     default_subpage_count: int = 7
     interactions: List[Dict] = Field(default_factory=list)
     metadata: Optional[Dict] = None
-
 
 class CourseConfig(BaseModel):
     module: Module
