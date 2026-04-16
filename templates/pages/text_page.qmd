@@ -1,5 +1,3 @@
-_Add your primary content here. Use headings, lists, and images as needed._
-
----
-
+<!-- Standard workflow: content imported from Word -->
+<!-- Advanced users may edit directly -->
 

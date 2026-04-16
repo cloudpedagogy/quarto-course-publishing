@@ -30,13 +30,15 @@ VE = (1 − Relative Risk) × 100
 
 ## Working Through the Calculation
 
-::: {.callout-note collapse='true'}
+<details>
+<summary><strong>Show steps</strong></summary>
 
-Step 1 :: Identify the number of cases and total population in each group
-Step 2 :: Calculate risk in each group
-Step 3 :: Divide risks to obtain relative risk
-Step 4 :: Convert to vaccine effectiveness
-:::
+- Step 1 :: Identify the number of cases and total population in each group
+- Step 2 :: Calculate risk in each group
+- Step 3 :: Divide risks to obtain relative risk
+- Step 4 :: Convert to vaccine effectiveness
+
+</details>
 
 ## Applying to Our Example
 
@@ -55,9 +57,8 @@ Because VE is derived directly from relative risk
 :::
 
 <!-- IMPORT_END -->
-_Add your primary content here. Use headings, lists, and images as needed._
-
----
+<!-- Standard workflow: content imported from Word -->
+<!-- Advanced users may edit directly -->
 
 <!-- START_NAVIGATION -->
 

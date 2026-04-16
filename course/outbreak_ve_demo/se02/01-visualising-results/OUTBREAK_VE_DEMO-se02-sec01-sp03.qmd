@@ -65,9 +65,8 @@ Visualisation supports faster and clearer interpretation of complex data
 :::
 
 <!-- IMPORT_END -->
-_Add your primary content here. Use headings, lists, and images as needed._
-
----
+<!-- Standard workflow: content imported from Word -->
+<!-- Advanced users may edit directly -->
 
 <!-- START_NAVIGATION -->
 

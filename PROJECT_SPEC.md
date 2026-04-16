@@ -1,31 +1,31 @@
-# Project Specification: Quarto Course Publishing System
+# Project Specification: Quarto Course Publishing System (Updated)
 
 ## 1. Executive Summary
 
-The Quarto Course Publishing System is a **Word-first, YAML-structured publishing engine** designed to generate structured, pedagogically rich course websites using Quarto.
+The Quarto Course Publishing System is a **Word-first, YAML-structured publishing engine** for generating structured, pedagogically rich course websites.
 
-The system follows a dual-authoring model:
+The system now follows a **clear primary model**:
 
-- **YAML defines structure**
-- **Word defines content**
+- **YAML defines structure (authoritative)**
+- **Word defines content (primary authoring interface)**
+- **QMD acts as an internal render container**
+- **Quarto produces the final HTML output**
 
-Content authored in Microsoft Word is transformed via Pandoc into Markdown, parsed into structured interactions, and injected into Quarto (`.qmd`) files before final rendering.
-
-This enables scalable, consistent, and non-destructive course production.
+> Direct QMD editing is supported only as an advanced fallback, not a primary workflow.
 
 ---
 
 ## 2. Technical Stack
 
 - **Languages**: Python 3.10+
-- **Markup**: Quarto (.qmd), Markdown (GFM)
+- **Markup**: Quarto (.qmd), Markdown
 - **Templating**: Jinja2
-- **Data Validation**: Pydantic
-- **CLI Framework**: Click
+- **Validation**: Pydantic
+- **CLI**: Click
 - **External Tools**:
-  - Pandoc (DOCX → Markdown conversion)
-  - Quarto (rendering engine)
-- **Infrastructure**: Git (version control and collaboration)
+  - Pandoc (DOCX → Markdown)
+  - Quarto (rendering)
+- **Infrastructure**: Git
 
 ---
 
@@ -33,34 +33,33 @@ This enables scalable, consistent, and non-destructive course production.
 
 ### 3.1 Hierarchy Model
 
-The system follows a strict pedagogical hierarchy:
+The system follows a pedagogical hierarchy:
 
-1. **Module** — Top-level course container  
-2. **Session** — High-level grouping (e.g. week or theme)  
-3. **Section** — Unit of learning  
-4. **Page** — Atomic learning object  
+1. Module  
+2. Session  
+3. Section  
+4. Page  
+
+Each **page is the atomic learning unit**.
 
 ---
 
 ### 3.2 System Components
 
 - **Generator**
-  - Builds course structure from YAML
-  - Manages navigation and file sync
-
-- **InteractionResolver**
-  - Renders interaction templates (YAML-driven)
+  - Builds structure from YAML
+  - Syncs navigation and QMD files
 
 - **PageKindResolver**
-  - Applies layout templates
+  - Applies page scaffolds (`templates/pages/*.qmd`)
 
 - **TemplateManager**
-  - Handles Jinja2 rendering
+  - Handles layout templates (`.qmd.j2`)
 
 - **WordImporter (`import_word.py`)**
-  - Converts DOCX → Markdown via Pandoc
-  - Parses structured interaction syntax
-  - Injects content into QMD files
+  - Converts DOCX → Markdown (Pandoc)
+  - Parses Word directives
+  - Injects content into QMD
 
 ---
 
@@ -69,26 +68,53 @@ The system follows a strict pedagogical hierarchy:
 ```
 Word (.docx)
    ↓
-Pandoc → Markdown (imports/md/)
+Pandoc → Markdown
    ↓
-Interaction Parsing (import_word.py)
+Directive Parsing
    ↓
-Injection into QMD (course/)
+Injection into QMD
    ↓
-Quarto Render → HTML (output/)
+Quarto Render → HTML
 ```
 
 Key properties:
 
-- **Idempotent** — safe repeated imports
-- **Non-destructive** — preserves authored content
-- **Transparent** — intermediate Markdown retained
+- **Idempotent** (safe re-import)
+- **Non-destructive**
+- **Word-first authoring**
 
 ---
 
 ## 4. Key Features
 
-### 4.1 Non-Destructive Sync
+### 4.1 Word-First Authoring
+
+Content is written in Word using structured directives:
+
+- Callout  
+- Quiz  
+- Tabs  
+- Reveal  
+- SelfCheck  
+- Media (Image, File, Video)
+
+---
+
+### 4.2 Directive-Based Interaction System
+
+Interactions are defined in Word using:
+
+```
+Directive :: value
+```
+
+These are parsed into structured Quarto output.
+
+> YAML-based interaction definitions are now deprecated for end users and retained only as internal design references.
+
+---
+
+### 4.3 Idempotent Content Injection
 
 Uses markers:
 
@@ -97,83 +123,60 @@ Uses markers:
 <!-- IMPORT_END -->
 ```
 
-to safely replace imported content without duplication.
+Ensures:
+- safe updates
+- no duplication
+- repeatable imports
 
 ---
 
-### 4.2 Word-Based Authoring
+### 4.4 Template System
 
-Content is authored in Word using structured patterns:
+Two layers:
 
-- Tabs  
-- Quiz  
-- Callout  
-- Reveal  
-- SelfCheck  
-
-These are parsed into Quarto-compatible structures.
+- **Wrapper templates** (`.qmd.j2`) → layout and navigation
+- **Page scaffolds** (`templates/pages/*.qmd`) → content structure
 
 ---
 
-### 4.3 Dual Interaction System
+### 4.5 Resource Management
 
-- YAML-defined interactions (template-driven)
-- Word-parsed interactions (content-driven)
+Assets are stored in:
 
----
+```
+resources/
+  images/
+  pdf/
+  data/
+```
 
-### 4.4 Resource Propagation
-
-Static assets are managed across:
-
-- global `resources/`
-- course-level `resources/`
-- output-level `resources/`
-
-Files are copied and linked automatically.
-
----
-
-### 4.5 Pedagogical Interaction Kit
-
-Supports 20+ interaction types including:
-
-- Assessment (quiz, self-check)
-- Engagement (tabs, reveal)
-- Information design (callouts, tables)
+Automatically copied and linked into output.
 
 ---
 
 ## 5. Data Schema (YAML)
 
-Validated using Pydantic.
+YAML defines:
 
-Key fields:
+- structure (modules, sessions, pages)
+- page types (`kind`)
+- source Word documents (`source_docx`)
 
-- `id` — unique identifier  
-- `kind` — page template  
-- `interactions` — pedagogical blocks  
-- `source_docx` — Word source file  
-- `render_mode` — output mode  
+YAML does **not define content or interactions**.
 
 ---
 
 ## 6. Project Structure
 
 ```
-.
-├── config/                      # YAML course definitions
-├── course/                      # QMD authoring layer
-├── imports/
-│   ├── docx/                   # Word sources
-│   └── md/                     # Intermediate Markdown
-├── resources/                  # Static assets
-├── output/                     # Rendered site
-├── docs/                       # Internal docs
-├── src/                        # Core logic
-├── templates/                  # Jinja templates
-├── tests/                      # Tests
-└── PROJECT_SPEC.md
+config/        → YAML structure
+imports/       → Word + Markdown
+course/        → generated QMD
+output/        → rendered site
+resources/     → static assets
+templates/     → layouts and scaffolds
+src/           → system logic
+docs/          → documentation
 ```
 
 ---
@@ -181,29 +184,43 @@ Key fields:
 ## 7. Design Principles
 
 - **Separation of concerns** (structure vs content)
-- **Idempotency** (safe reprocessing)
-- **Transparency** (visible intermediate steps)
-- **Extensibility** (modular interactions)
-- **Local-first** (no backend dependency)
+- **Word-first usability**
+- **Idempotent processing**
+- **Transparency**
+- **Local-first execution**
+- **Pedagogical alignment**
 
 ---
 
 ## 8. Output
 
-Final output is a static Quarto-generated HTML site:
+Produces a static Quarto HTML course:
 
-- Fully navigable
-- Resource-linked
-- Interaction-enabled
+- structured navigation
+- embedded media
+- interactive components
 
 ---
 
-## 9. Summary
+## 9. Current System Position
 
-The system is not just a generator, but a **structured publishing pipeline** that transforms:
+The system is best understood as:
 
-→ Curriculum design (YAML)  
+> A structured publishing pipeline where:
+> - YAML defines curriculum architecture
+> - Word defines teaching content
+> - The system compiles both into a consistent course
+
+---
+
+## 10. Summary
+
+The Quarto Course Publishing System transforms:
+
+→ Curriculum structure (YAML)  
 → Authored content (Word)  
 → Interactive course delivery (Quarto)
 
-into a unified, scalable workflow.
+into a unified, scalable, and maintainable workflow.
+
+> The primary focus is now **stability, clarity, and institutional usability**, rather than feature expansion.

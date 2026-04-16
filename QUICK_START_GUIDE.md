@@ -1,49 +1,38 @@
-# 🚀 Quick Start Guide
+# 🚀 Quick Start Guide (Word-First Workflow)
 
-This guide helps you get up and running with the **Quarto Course Publishing System** in minutes.
+## Purpose
+
+This guide explains the workflow for building a course using YAML and Word.
+
+> For a copy-paste setup, see README.md
 
 ---
 
-## 🧠 What You Are Doing
+## What You Will Do
 
-You will:
-
-1. Define a course structure in YAML
-2. Add content in Word documents
+1. Define structure in YAML  
+2. Write content in Word  
 3. Run three commands:
-   ```
-   build → import-word → render
-   ```
-4. Open your generated course website
+   build → import-word → render  
+4. Open your course website  
 
 ---
 
-## ⚙️ Prerequisites
+## Prerequisites
 
-Make sure you have installed:
-
-- Python 3.10+
-- Quarto CLI (`quarto --version`)
-- Pandoc (`pandoc --version`)
-
-Install Python dependencies:
-
-```bash
-pip install -r requirements.txt
-pip install -e .
-```
+→ See PREREQUISITES.md
 
 ---
 
-## 📁 Step 1 — Create Course Structure (YAML)
+## Step 1 — Define Structure (YAML)
 
-Edit or create:
+Edit:
 
 ```
 config/course.yml
 ```
 
-Minimal example:
+Example:
 
 ```yaml
 module:
@@ -65,29 +54,19 @@ sessions:
 
 ---
 
-## 📄 Step 2 — Add Word Content
+## Step 2 — Add Word Content
 
-Create folder:
+Create:
 
 ```
 imports/demo_course/docx/
 ```
 
-Add a Word file:
+Add `welcome.docx` with content like:
 
 ```
-welcome.docx
-```
-
-Example content inside Word:
-
-```
-Callout :: important
-Text :: This is an important concept.
-
-Tabs
-Overview :: This is the overview.
-Details :: This is more detail.
+Callout :: note
+Text :: Welcome to the course.
 
 Quiz
 Question :: What is 2 + 2?
@@ -98,48 +77,31 @@ Answer :: 4
 
 ---
 
-## 🏗️ Step 3 — Build Structure
+## Step 3 — Build
 
 ```bash
 PYTHONPATH=src python3 -m course_generator.cli build config/course.yml
 ```
 
-This creates `.qmd` files in:
-
-```
-course/demo_course/
-```
-
 ---
 
-## 📥 Step 4 — Import Word Content
+## Step 4 — Import Word
 
 ```bash
 PYTHONPATH=src python3 -m course_generator.cli import-word config/course.yml
 ```
 
-This:
-- converts Word → Markdown
-- parses interactions
-- injects content into QMD files
-
 ---
 
-## 🌐 Step 5 — Render Website
+## Step 5 — Render
 
 ```bash
 PYTHONPATH=src python3 -m course_generator.cli render config/course.yml
 ```
 
-Output is generated in:
-
-```
-output/demo_course/
-```
-
 ---
 
-## 👀 Step 6 — View Your Course
+## Step 6 — View
 
 Open:
 
@@ -149,56 +111,40 @@ output/demo_course/index.html
 
 ---
 
-## 📦 Adding Resources (Optional)
+## When to Run Each Step
 
-Place files in:
-
-```
-resources/pdf/
-resources/data/
-resources/images/
-```
-
-Use in Word:
-
-```
-File :: resources/pdf/example.pdf
-Label :: Download file
-```
+- build → when YAML structure changes  
+- import-word → when Word content changes  
+- render → to generate or refresh the site  
 
 ---
 
-## ⚠️ Key Rules
+## Key Rules
 
 - Do NOT edit `output/`
-- Always edit Word or YAML
-- Always re-run `import-word` after Word changes
+- Always edit YAML or Word
+- Re-run import-word after Word changes
 
 ---
 
-## 🧩 Workflow Summary
+## Workflow Summary
 
 ```
-Edit YAML → build
-Edit Word → import-word
-Render → view site
+Structure → build
+Content → import-word
+Publish → render
 ```
 
 ---
 
-## 🧠 If Something Goes Wrong
+## If Something Goes Wrong
 
-- Re-run `import-word`
-- Re-run `render`
-- Check Word formatting
-- Check YAML structure
+- Re-run import-word and render  
+- Check YAML paths  
+- Check Word directive syntax (::)
 
 ---
 
-## ✅ You’re Ready
+## Summary
 
-You now have a fully working pipeline:
-
-👉 YAML + Word → Quarto → Website
-
-Happy building!
+> YAML defines structure, Word defines content, system generates the course.

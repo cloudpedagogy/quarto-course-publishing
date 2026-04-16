@@ -4,7 +4,6 @@ import subprocess
 from pathlib import Path
 import click
 import re
-from urllib.parse import urlparse, parse_qs
 from ..core.config_loader import ConfigLoader
 
 IMPORT_START = "<!-- IMPORT_START -->"
@@ -39,8 +38,6 @@ def normalize_metadata_blocks(content: str) -> str:
         "Image ::",
         "File ::",
         "Quiz",
-        "YouTubeEmbed ::",
-        "PanoptoEmbed ::",
     ]
 
     directive_fields = [
@@ -56,7 +53,6 @@ def normalize_metadata_blocks(content: str) -> str:
         "Width ::",
         "Display ::",
         "Label ::",
-        "Caption ::",
     ]
 
     lines = content.split("\n")
@@ -187,166 +183,8 @@ def is_interaction_header(line: str) -> bool:
             r"^(?:#+\s*)?Callout\s*::",
             r"^(?:#+\s*)?Image\s*::",
             r"^(?:#+\s*)?File\s*::",
-            r"^(?:#+\s*)?YouTubeEmbed\s*::",
-            r"^(?:#+\s*)?PanoptoEmbed\s*::",
         ]
     )
-
-
-def extract_youtube_id(url: str) -> str | None:
-    """Extract a YouTube video ID from common YouTube URL formats."""
-    url = url.strip()
-
-    if "youtu.be/" in url:
-        return url.split("youtu.be/")[-1].split("?")[0]
-
-    if "youtube.com" in url:
-        parsed = urlparse(url)
-        return parse_qs(parsed.query).get("v", [None])[0]
-
-    return None
-
-
-def extract_panopto_id(url: str) -> str | None:
-    """Extract the Panopto video/session id from a Panopto Viewer URL."""
-    match = re.search(r"[?&]id=([a-zA-Z0-9\-]+)", url)
-    return match.group(1) if match else None
-
-
-def render_youtube_iframe(url: str) -> str:
-    """Render a standard YouTube embed iframe from a URL."""
-    video_id = extract_youtube_id(url)
-    if not video_id:
-        return f"<!-- Invalid YouTube URL: {url} -->"
-
-    return (
-        f'<iframe width="560" height="315" '
-        f'src="https://www.youtube.com/embed/{video_id}" '
-        f'title="YouTube video player" frameborder="0" '
-        f'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" '
-        f'referrerpolicy="strict-origin-when-cross-origin" '
-        f'allowfullscreen></iframe>'
-    )
-
-
-def render_panopto_iframe(url: str) -> str:
-    """Render a Panopto embed iframe from a Panopto Viewer URL."""
-    video_id = extract_panopto_id(url)
-    if not video_id:
-        return f"<!-- Invalid Panopto URL: {url} -->"
-
-    parsed = urlparse(url)
-    embed_url = f"{parsed.scheme}://{parsed.netloc}/Panopto/Pages/Embed.aspx?id={video_id}"
-
-    return (
-        f'<iframe src="{embed_url}" width="720" height="405" '
-        f'frameborder="0" allowfullscreen></iframe>'
-    )
-
-
-def validate_import_content(content: str, page_id: str = "", project_root: Path | None = None) -> list[str]:
-    """
-    Lightweight validation for common authoring mistakes.
-    Returns warnings only; does not block import.
-    """
-    warnings = []
-    lines = content.split("\n")
-    project_root = project_root or Path(".")
-
-    quiz_open = False
-    quiz_start_line = None
-    quiz_has_question = False
-    quiz_option_count = 0
-    quiz_has_answer = False
-
-    for idx, raw_line in enumerate(lines, start=1):
-        line = raw_line.strip()
-
-        if not line:
-            continue
-
-        malformed_match = re.match(
-            r"^(YouTubeEmbed|PanoptoEmbed|Image|File|Callout|Question|Option|Answer|Caption|Alt|Width|Display|Label)\s*:\s+\S+",
-            line,
-            re.IGNORECASE,
-        )
-        if malformed_match:
-            warnings.append(f"{page_id} line {idx}: possible directive syntax error. Use '::' not ':'.")
-
-        if re.match(r"^(?:#+\s*)?Quiz\s*$", line, re.IGNORECASE):
-            if quiz_open:
-                if not quiz_has_question:
-                    warnings.append(f"{page_id} line {idx}: previous Quiz block missing Question ::")
-                if quiz_option_count < 2:
-                    warnings.append(f"{page_id} line {idx}: previous Quiz block has fewer than 2 Option :: lines")
-                if not quiz_has_answer:
-                    warnings.append(f"{page_id} line {idx}: previous Quiz block missing Answer ::")
-
-            quiz_open = True
-            quiz_start_line = idx
-            quiz_has_question = False
-            quiz_option_count = 0
-            quiz_has_answer = False
-            continue
-
-        if quiz_open and (is_markdown_heading(raw_line) or is_interaction_header(raw_line)):
-            if not quiz_has_question:
-                warnings.append(f"{page_id} line {quiz_start_line}: Quiz block missing Question ::")
-            if quiz_option_count < 2:
-                warnings.append(f"{page_id} line {quiz_start_line}: Quiz block has fewer than 2 Option :: lines")
-            if not quiz_has_answer:
-                warnings.append(f"{page_id} line {quiz_start_line}: Quiz block missing Answer ::")
-            quiz_open = False
-            quiz_start_line = None
-
-        if quiz_open:
-            if re.match(r"^Question\s*::\s*(.+)$", line, re.IGNORECASE):
-                quiz_has_question = True
-            elif re.match(r"^Option\s*::\s*(.+)$", line, re.IGNORECASE):
-                quiz_option_count += 1
-            elif re.match(r"^Answer\s*::\s*(.+)$", line, re.IGNORECASE):
-                quiz_has_answer = True
-
-        yt_match = re.match(r"^(?:#+\s*)?YouTubeEmbed\s*::\s*(.+)$", line, re.IGNORECASE)
-        if yt_match:
-            url = yt_match.group(1).strip()
-            if not extract_youtube_id(url):
-                warnings.append(f"{page_id} line {idx}: invalid YouTube URL")
-
-        pan_match = re.match(r"^(?:#+\s*)?PanoptoEmbed\s*::\s*(.+)$", line, re.IGNORECASE)
-        if pan_match:
-            url = pan_match.group(1).strip()
-            if not extract_panopto_id(url):
-                warnings.append(f"{page_id} line {idx}: invalid Panopto URL")
-
-        img_match = re.match(r"^(?:#+\s*)?Image\s*::\s*(.+)$", line, re.IGNORECASE)
-        if img_match:
-            raw_path = img_match.group(1).strip().replace("\\", "/")
-            if raw_path.startswith("resources/") and not (project_root / raw_path).exists():
-                warnings.append(f"{page_id} line {idx}: image path not found: {raw_path}")
-
-        file_match = re.match(r"^(?:#+\s*)?File\s*::\s*(.+)$", line, re.IGNORECASE)
-        if file_match:
-            raw_path = file_match.group(1).strip().replace("\\", "/")
-            if raw_path.startswith("resources/") and not (project_root / raw_path).exists():
-                warnings.append(f"{page_id} line {idx}: file path not found: {raw_path}")
-
-    if quiz_open:
-        if not quiz_has_question:
-            warnings.append(f"{page_id} line {quiz_start_line}: Quiz block missing Question ::")
-        if quiz_option_count < 2:
-            warnings.append(f"{page_id} line {quiz_start_line}: Quiz block has fewer than 2 Option :: lines")
-        if not quiz_has_answer:
-            warnings.append(f"{page_id} line {quiz_start_line}: Quiz block missing Answer ::")
-
-    return warnings
-
-
-def print_validation_warnings(warnings: list[str]):
-    if warnings:
-        click.echo(click.style("Validation warnings:", fg="yellow"))
-        for warning in warnings:
-            click.echo(click.style(f"  - {warning}", fg="yellow"))
 
 
 def parse_r_code(content: str) -> tuple[str, int]:
@@ -844,43 +682,6 @@ def parse_files(content: str, qmd_path: Path, course_dir: Path) -> tuple[str, in
     return "\n".join(new_lines), count
 
 
-def parse_embeds(content: str) -> tuple[str, int]:
-    """
-    Parse simple single-line embed directives:
-
-    YouTubeEmbed :: <url>
-    PanoptoEmbed :: <url>
-    """
-    lines = content.split("\n")
-    new_lines = []
-    count = 0
-
-    for line in lines:
-        stripped = line.strip()
-
-        yt_match = re.match(r"^(?:#+\s*)?YouTubeEmbed\s*::\s*(.+)$", stripped, re.IGNORECASE)
-        pan_match = re.match(r"^(?:#+\s*)?PanoptoEmbed\s*::\s*(.+)$", stripped, re.IGNORECASE)
-
-        if yt_match:
-            url = yt_match.group(1).strip()
-            new_lines.append(render_youtube_iframe(url))
-            new_lines.append("")
-            count += 1
-        elif pan_match:
-            url = pan_match.group(1).strip()
-            new_lines.append(render_panopto_iframe(url))
-            new_lines.append("")
-            count += 1
-        else:
-            new_lines.append(line)
-
-    if count > 0:
-        click.echo(click.style("Detected video embeds", fg="blue"))
-        click.echo(f"  Rendering {count} YouTube/Panopto embeds")
-
-    return "\n".join(new_lines), count
-
-
 def parse_interactions(content: str, qmd_path: Path, course_dir: Path) -> str:
     """Coordinator function for parsing supported interaction types."""
     total_interactions = 0
@@ -910,9 +711,6 @@ def parse_interactions(content: str, qmd_path: Path, course_dir: Path) -> str:
     total_interactions += count
 
     content, count = parse_files(content, qmd_path, course_dir)
-    total_interactions += count
-
-    content, count = parse_embeds(content)
     total_interactions += count
 
     if total_interactions == 0:
@@ -1042,12 +840,6 @@ def run_import(config_path: str):
             click.echo(f"Converting {docx_path.name} to Markdown for page {page.id}")
             convert_docx_to_md(docx_path, md_path)
             click.echo(f"  Saved to {md_path}")
-
-            with open(md_path, "r") as f:
-                raw_md = f.read()
-
-            warnings = validate_import_content(raw_md, page.id, project_root=Path("."))
-            print_validation_warnings(warnings)
 
             target_path = _find_target_qmd(course_dir, page.id)
             if target_path:

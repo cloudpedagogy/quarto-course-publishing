@@ -49,14 +49,9 @@ For further reading:\
 
 ##  Key Concept
 
-Callout :: important\
+Callout :: important
+
 Text :: Vaccine effectiveness measures the reduction in disease risk among vaccinated individuals compared to unvaccinated individuals in real-world conditions.
-
-## Definition
-
-Definition\
-Term :: Relative Risk\
-Meaning :: The ratio of the probability of disease occurring in the vaccinated group compared to the unvaccinated group.
 
 ## Observed Data
 
@@ -91,6 +86,14 @@ Step 4 :: VE = (1 − 0.2) × 100 = 80%
 SelfCheck\
 Question :: Why might vaccine effectiveness differ between populations?\
 Answer :: Differences in exposure, population structure, healthcare access, and underlying health conditions can influence estimates.
+
+## Youtube
+
+YouTubeEmbed :: https://www.youtube.com/watch?v=yt3e8Ng0mf0
+
+## Panopto
+
+PanoptoEmbed :: https://lshtm.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=d19ba573-9ad1-480b-95db-b3ed01014aab
 
 ## Visualising the Results
 
@@ -129,6 +132,24 @@ Label :: View full outbreak investigation report
 File :: resources/data/outbreak-dataset.zip\
 Label :: Download full dataset
 
+## Quiz
+
+Question :: Based on the outbreak data, what does a vaccine effectiveness of 80% mean in practice?
+
+Option :: Vaccinated individuals have zero risk of infection
+
+Option :: Vaccinated individuals have an 80% lower risk of infection than unvaccinated individuals
+
+Option :: 80% of vaccinated individuals will not become infected
+
+Option :: The vaccine prevents 80 cases in every outbreak regardless of context
+
+Answer :: Vaccinated individuals have an 80% lower risk of infection than unvaccinated individuals
+
+Explanation :: Vaccine effectiveness compares the risk of disease in vaccinated and unvaccinated groups under real-world conditions. An 80% VE means the vaccinated group experienced substantially lower risk, not that infection risk was eliminated entirely.
+
+## 
+
 ## Key Takeaway
 
 Callout :: tip\
@@ -136,7 +157,6 @@ Text :: Vaccination significantly reduces the likelihood of infection and severe
 
 ## Further Reading
 
-References\
-WHO Measles Fact Sheet :: <https://www.who.int/news-room/fact-sheets/detail/measles>\
-Vaccine Effectiveness Overview :: <https://www.who.int/news-room/feature-stories/detail/vaccine-efficacy-effectiveness-and-protection>\
-Measles Vaccine Impact Study :: <https://pmc.ncbi.nlm.nih.gov/articles/PMC6734418/>
+WHO Measles Fact Sheet : <https://www.who.int/news-room/fact-sheets/detail/measles>\
+Vaccine Effectiveness Overview : <https://www.who.int/news-room/feature-stories/detail/vaccine-efficacy-effectiveness-and-protection>\
+Measles Vaccine Impact Study : <https://pmc.ncbi.nlm.nih.gov/articles/PMC6734418/>

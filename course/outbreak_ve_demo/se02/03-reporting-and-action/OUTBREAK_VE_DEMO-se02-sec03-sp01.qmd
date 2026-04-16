@@ -22,6 +22,8 @@ Public health analysis must ultimately inform decisions. This requires clear and
 
 ## Reviewing the Outbreak Report
 
+<iframe src="../../resources/pdf/outbreak-report.pdf" width="100%" height="600" loading="lazy"></iframe>
+
 [View outbreak report](../../resources/pdf/outbreak-report.pdf)
 
 ## Accessing the Data
@@ -70,9 +72,8 @@ Evidence only has impact when it is clearly communicated and understood
 :::
 
 <!-- IMPORT_END -->
-_Add your primary content here. Use headings, lists, and images as needed._
-
----
+<!-- Standard workflow: content imported from Word -->
+<!-- Advanced users may edit directly -->
 
 <!-- START_NAVIGATION -->
 

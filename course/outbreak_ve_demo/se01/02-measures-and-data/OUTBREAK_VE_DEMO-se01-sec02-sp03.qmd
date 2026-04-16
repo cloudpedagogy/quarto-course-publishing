@@ -34,19 +34,18 @@ Typical outbreak datasets include:
 
 ## Key Epidemiological Measures
 
-**Attack Rate**
+Definition\
+Term :: Attack Rate\
+Meaning :: The proportion of individuals who develop disease in a population over a defined time period
 
-The proportion of individuals who develop disease in a population over a defined time period
-
-**Relative Risk**
-
-A comparison of the probability of disease between two groups
+Definition\
+Term :: Relative Risk\
+Meaning :: A comparison of the probability of disease between two groups
 
 ## Exploring the Dataset
 
-**Table:** Table 1. Distribution of cases by vaccination status
-
-[Open table source](../../resources/data/ve-data.csv)
+Table :: resources/data/ve-data.csv\
+Caption :: Table 1. Distribution of cases by vaccination status
 
 ## How to Read This Table
 
@@ -78,9 +77,8 @@ Epidemiological analysis depends on comparing proportions, not raw counts
 :::
 
 <!-- IMPORT_END -->
-_Add your primary content here. Use headings, lists, and images as needed._
-
----
+<!-- Standard workflow: content imported from Word -->
+<!-- Advanced users may edit directly -->
 
 <!-- START_NAVIGATION -->
 

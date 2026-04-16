@@ -30,7 +30,7 @@ A vaccine effectiveness of 80% indicates a reduction in risk, not complete prote
 
 ::: {.panel-tabset}
 ## Meaning
-Indicates reduced probability of infection
+Indicates reduced probability of infection\
 
 ## Assumptions
 Groups must be comparable
@@ -41,12 +41,14 @@ External factors may influence results
 :::
 ## Avoiding Common Errors
 
-::: {.callout-note collapse='true'}
+<details>
+<summary><strong>Show steps</strong></summary>
 
-Step 1 :: VE does not mean 80% are protected
-Step 2 :: VE does not apply equally to all individuals
-Step 3 :: VE depends on context and exposure
-:::
+- Step 1 :: VE does not mean 80% are protected
+- Step 2 :: VE does not apply equally to all individuals
+- Step 3 :: VE depends on context and exposure
+
+</details>
 
 ## Critical Reflection
 
@@ -65,9 +67,8 @@ Interpretation requires understanding both the calculation and its assumptions
 :::
 
 <!-- IMPORT_END -->
-_Add your primary content here. Use headings, lists, and images as needed._
-
----
+<!-- Standard workflow: content imported from Word -->
+<!-- Advanced users may edit directly -->
 
 <!-- START_NAVIGATION -->
 
