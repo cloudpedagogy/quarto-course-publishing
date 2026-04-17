@@ -47,9 +47,37 @@ cd <your-repo-folder>
 
 ---
 
-### 2. Install Python dependencies
+### 2. Set up Python environment (Recommended)
+
+It is recommended to use a virtual environment to avoid affecting your system Python.
+
+See [PREREQUISITES.md](PREREQUISITES.md) for full details.
+
+#### macOS / Linux
 
 ```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+---
+
+#### Windows (Command Prompt)
+
+```cmd
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+---
+
+#### Windows (PowerShell)
+
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 ```
 

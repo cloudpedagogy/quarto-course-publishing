@@ -24,15 +24,65 @@ python --version
 
 ---
 
-### Install project dependencies
+## 🔒 Recommended: Use a Virtual Environment
 
-From the repository root:
+It is strongly recommended to run this project inside a virtual environment.
+
+This keeps dependencies isolated and prevents conflicts with other software on your machine.
+
+If anything goes wrong, you can simply delete the `.venv` folder and start again.
+
+---
+
+### Create and activate a virtual environment
+
+#### macOS / Linux
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+---
+
+#### Windows (Command Prompt)
+
+```cmd
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+---
+
+#### Windows (PowerShell)
+
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+```
+
+---
+
+### Deactivate environment
+
+```bash
+deactivate
+```
+
+---
+
+## Alternative (Not Recommended)
+
+You can install dependencies globally:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-> Note: `pip install -e .` is optional and only required if you want simplified CLI commands.
+However, this may affect other Python projects on your system.
 
 ---
 
@@ -118,6 +168,11 @@ The system depends on:
 - Pandoc (Word → Markdown conversion)
 - Quarto (final rendering)
 
+Recommended setup:
+
+- Use a virtual environment (`.venv`) for isolation and safety
+- Run commands from the project root directory
+
 Additional note:
 
-- `PYTHONPATH=src` is required when running commands without installing the package.
+- `PYTHONPATH=src` is required when running commands without installing the package
