@@ -1,0 +1,44 @@
+---
+title: "Epidemic Curve"
+id: "OUTBREAK_VE_DEMO-se02-sec01-sp02"
+section_id: "OUTBREAK_VE_DEMO-se02-sec01"
+session_id: "OUTBREAK_VE_DEMO-se02"
+toc: True
+---
+
+
+
+
+
+
+
+
+
+<!-- Standard workflow: content imported from Word -->
+<!-- Advanced users may edit directly -->
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="OUTBREAK_VE_DEMO-se02-sec01-sp01.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Risk by Vaccination Status</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="OUTBREAK_VE_DEMO-se02-sec01-sp03.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Using R for Public Health Visualisation</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

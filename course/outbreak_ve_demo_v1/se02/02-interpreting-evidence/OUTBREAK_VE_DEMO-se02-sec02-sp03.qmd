@@ -1,0 +1,44 @@
+---
+title: "Common Misinterpretations"
+id: "OUTBREAK_VE_DEMO-se02-sec02-sp03"
+section_id: "OUTBREAK_VE_DEMO-se02-sec02"
+session_id: "OUTBREAK_VE_DEMO-se02"
+toc: True
+---
+
+
+
+
+
+
+
+
+
+<!-- Standard workflow: content imported from Word -->
+<!-- Advanced users may edit directly -->
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="OUTBREAK_VE_DEMO-se02-sec02-sp02.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Assumptions and Limitations</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="../03-reporting-and-action/index.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Reporting and Action</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

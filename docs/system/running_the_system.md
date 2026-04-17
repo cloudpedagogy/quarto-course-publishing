@@ -2,7 +2,7 @@
 
 > ⚠️ This guide explains how to **run the system** (build, import, render).
 >
-> If you are writing course content, start here instead:
+> If you are writing course content, start here instead:  
 > → Author Pack (Word-Based Authoring Guide)
 
 ---
@@ -17,10 +17,10 @@ It focuses on **running and managing the system**, not writing content.
 
 ## System Model (Quick Reference)
 
-- YAML → structure
-- Word → content
-- QMD → generated container
-- HTML → final output
+- YAML → structure  
+- Word → content  
+- QMD → generated container  
+- HTML → final output  
 
 ---
 
@@ -30,20 +30,41 @@ It focuses on **running and managing the system**, not writing content.
 build → import-word → render
 ```
 
+The commands below use a YAML configuration file (e.g. `config/outbreak_ve_demo.yml`).
+
+---
+
+## When to run each command
+
+- Run `build` only when you change the course structure (YAML)  
+- Run `import-word` when you update Word content  
+- Run `render` to generate the final site  
+
+### Typical workflows
+
+**First time setup**  
+build → import-word → render  
+
+**After editing Word content**  
+import-word → render  
+
+**After changing structure**  
+build → import-word → render  
+
 ---
 
 ## Step 1 — BUILD (Structure)
 
-Run when you change course structure:
+Run only when you change the course structure (YAML):
 
 ```bash
-PYTHONPATH=src python3 -m course_generator.cli build config/course.yml
+PYTHONPATH=src python3 -m course_generator.cli build config/outbreak_ve_demo.yml
 ```
 
 This:
-- creates or updates QMD files
-- synchronises navigation
-- preserves existing content
+- creates or updates QMD files  
+- synchronises navigation  
+- preserves existing content  
 
 ---
 
@@ -52,26 +73,26 @@ This:
 Run after editing Word documents:
 
 ```bash
-PYTHONPATH=src python3 -m course_generator.cli import-word config/course.yml
+PYTHONPATH=src python3 -m course_generator.cli import-word config/outbreak_ve_demo.yml
 ```
 
 This:
-- converts Word → Markdown (via Pandoc)
-- parses directives (Quiz, Tabs, etc.)
-- injects content into QMD between markers
+- converts Word → Markdown (via Pandoc)  
+- parses directives  
+- injects content into QMD  
 
 ---
 
 ## Step 3 — RENDER (Publish)
 
 ```bash
-PYTHONPATH=src python3 -m course_generator.cli render config/course.yml
+PYTHONPATH=src python3 -m course_generator.cli render config/outbreak_ve_demo.yml
 ```
 
 This generates the final course site in:
 
 ```
-output/{course_id}/
+output/outbreak_ve_demo/
 ```
 
 ---
@@ -85,96 +106,31 @@ Content is inserted into QMD using:
 <!-- IMPORT_END -->
 ```
 
-This ensures:
-- safe updates
-- idempotent imports
-- no duplication
-
 ---
 
-## File Structure (Key Locations)
+## File Structure
 
 ```
-config/          → course structure (YAML)
-imports/         → Word documents
-course/          → generated QMD files
-output/          → final HTML output
-resources/       → images, PDFs, etc.
+config/ → YAML  
+imports/ → Word  
+course/ → QMD  
+output/ → HTML  
+resources/ → assets  
 ```
 
 ---
 
 ## Key Rules
 
-- Do NOT edit files in `output/`
-- Do NOT manually edit imported content inside QMD
-- Always re-run `import-word` after updating Word files
-- Keep Word formatting simple
-
----
-
-## Using Resources
-
-Store files in:
-
-```
-resources/
-  images/
-  pdf/
-  data/
-```
-
-Reference in Word using:
-
-```
-File :: resources/pdf/example.pdf
-Label :: Download file
-```
-
----
-
-## Troubleshooting
-
-### Missing or incorrect content
-- Re-run: build → import-word → render
-
-### Broken links or missing files
-- Check `resources/` paths
-- Ensure files exist
-
-### Import warnings
-- Check terminal output
-- Look for directive syntax issues (use `::` not `:`)
-
----
-
-## Clean Rebuild (if needed)
-
-```bash
-rm -rf course/<course_id>
-rm -rf output/<course_id>
-
-PYTHONPATH=src python3 -m course_generator.cli build config/course.yml
-PYTHONPATH=src python3 -m course_generator.cli import-word config/course.yml
-PYTHONPATH=src python3 -m course_generator.cli render config/course.yml
-```
+- Do NOT edit `output/`  
+- Do NOT edit imported QMD content  
+- Always re-run `import-word` after Word updates  
 
 ---
 
 ## Summary
 
-> Structure in YAML, content in Word, system handles transformation.
-
-Your role here is to:
-- run the pipeline
-- verify outputs
-- troubleshoot when needed
-
----
-
-## Final Note
-
-Think of this as a **publishing pipeline**, not an editing environment:
+Structure in YAML, content in Word, system handles transformation.
 
 ```
 Design → Write → Import → Render → Publish

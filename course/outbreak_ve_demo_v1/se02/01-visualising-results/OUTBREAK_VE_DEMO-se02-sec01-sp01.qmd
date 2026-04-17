@@ -1,0 +1,44 @@
+---
+title: "Risk by Vaccination Status"
+id: "OUTBREAK_VE_DEMO-se02-sec01-sp01"
+section_id: "OUTBREAK_VE_DEMO-se02-sec01"
+session_id: "OUTBREAK_VE_DEMO-se02"
+toc: True
+---
+
+
+
+
+
+
+
+
+
+<!-- Standard workflow: content imported from Word -->
+<!-- Advanced users may edit directly -->
+
+<!-- START_NAVIGATION -->
+
+
+```{=html}
+<div class="custom-page-navigation">
+    <div class="nav-prev">
+        
+        <a href="index.qmd">
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">Visualising Results</span>
+        </a>
+        
+    </div>
+    <div class="nav-next">
+        
+        <a href="OUTBREAK_VE_DEMO-se02-sec01-sp02.qmd">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">Epidemic Curve</span>
+        </a>
+        
+    </div>
+</div>
+```
+
+<!-- END_NAVIGATION -->

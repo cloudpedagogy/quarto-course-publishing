@@ -3,9 +3,9 @@
 A Word-first, YAML-structured publishing system for generating pedagogically structured course websites using Quarto.
 
 The system combines:
-- YAML for curriculum structure
-- Word for content authoring
-- Quarto for final rendering
+- YAML for curriculum structure  
+- Word for content authoring  
+- Quarto for final rendering  
 
 ---
 
@@ -13,28 +13,28 @@ The system combines:
 
 Choose your path:
 
-### I want to create course content
+### I want to create course content  
 → [Author Pack](docs/author_pack/quarto_authoring_pack.md)
 
-### I want to get something running quickly
+### I want to get something running quickly  
 → [Quick Start Guide](QUICK_START_GUIDE.md)
 
-### I want to run the system (build, import, render)
+### I want to run the system (build, import, render)  
 → [Running the System](RUNNING_THE_SYSTEM.md)
 
-### I want to understand the system design
+### I want to understand the system design  
 → [Project Specification](PROJECT_SPEC.md)
 
-### I need to install dependencies
+### I need to install dependencies  
 → [Prerequisites](PREREQUISITES.md)
 
 ---
 
-## ⚡ Quick Setup (Copy & Run)
+## Quick Setup (Copy and Run)
 
 Follow these steps to get the system running from scratch.
 
-> Run all commands from the project root folder (where `config/` and `src/` are located).
+Run all commands from the project root folder (where `config/` and `src/` are located).
 
 ---
 
@@ -47,7 +47,7 @@ cd <your-repo-folder>
 
 ---
 
-### 2. Set up Python environment (Recommended)
+### 2. Set up Python environment (recommended)
 
 It is recommended to use a virtual environment to avoid affecting your system Python.
 
@@ -61,8 +61,6 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
----
-
 #### Windows (Command Prompt)
 
 ```cmd
@@ -70,8 +68,6 @@ python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
 ```
-
----
 
 #### Windows (PowerShell)
 
@@ -98,34 +94,34 @@ If anything is missing, see:
 
 ### 4. Run the pipeline
 
+For the demo, use the configuration file:
+
+`config/outbreak_ve_demo.yml`
+
 #### macOS / Linux
 
 ```bash
-PYTHONPATH=src python3 -m course_generator.cli build config/course.yml
-PYTHONPATH=src python3 -m course_generator.cli import-word config/course.yml
-PYTHONPATH=src python3 -m course_generator.cli render config/course.yml
+PYTHONPATH=src python3 -m course_generator.cli build config/outbreak_ve_demo.yml
+PYTHONPATH=src python3 -m course_generator.cli import-word config/outbreak_ve_demo.yml
+PYTHONPATH=src python3 -m course_generator.cli render config/outbreak_ve_demo.yml
 ```
-
----
 
 #### Windows (Command Prompt)
 
 ```cmd
 set PYTHONPATH=src
-python -m course_generator.cli build config/course.yml
-python -m course_generator.cli import-word config/course.yml
-python -m course_generator.cli render config/course.yml
+python -m course_generator.cli build config/outbreak_ve_demo.yml
+python -m course_generator.cli import-word config/outbreak_ve_demo.yml
+python -m course_generator.cli render config/outbreak_ve_demo.yml
 ```
-
----
 
 #### Windows (PowerShell)
 
 ```powershell
 $env:PYTHONPATH="src"
-python -m course_generator.cli build config/course.yml
-python -m course_generator.cli import-word config/course.yml
-python -m course_generator.cli render config/course.yml
+python -m course_generator.cli build config/outbreak_ve_demo.yml
+python -m course_generator.cli import-word config/outbreak_ve_demo.yml
+python -m course_generator.cli render config/outbreak_ve_demo.yml
 ```
 
 ---
@@ -133,7 +129,7 @@ python -m course_generator.cli render config/course.yml
 ### 5. Open your course
 
 ```
-output/<course_id>/index.html
+output/outbreak_ve_demo/index.html
 ```
 
 ---
@@ -157,9 +153,22 @@ This system follows a clear separation of concerns:
 build → import-word → render
 ```
 
-- build → create/update structure  
+- build → create or update structure  
 - import-word → inject content  
 - render → generate website  
+
+The commands use a YAML configuration file (e.g. `config/outbreak_ve_demo.yml`).
+
+### Typical usage
+
+- First run:  
+  build → import-word → render  
+
+- After editing Word:  
+  import-word → render  
+
+- After changing structure:  
+  build → import-word → render  
 
 ---
 
@@ -182,14 +191,14 @@ These are parsed and rendered automatically.
 ## Project Structure
 
 ```text
-config/        → YAML structure
-imports/       → Word + Markdown
-course/        → generated QMD
-output/        → final site
-resources/     → assets
-templates/     → layouts
-src/           → system logic
-docs/          → user-facing guides
+config/        → YAML structure  
+imports/       → Word + Markdown  
+course/        → generated QMD  
+output/        → final site  
+resources/     → assets  
+templates/     → layouts  
+src/           → system logic  
+docs/          → user-facing guides  
 ```
 
 ---
@@ -212,15 +221,15 @@ Quarto Render → HTML
 
 ## Key Rules
 
-- Do NOT edit `output/`
-- Edit only YAML or Word
-- Always rerun `import-word` after content changes
+- Do NOT edit `output/`  
+- Edit only YAML or Word  
+- Always rerun `import-word` after content changes  
 
 ---
 
 ## Design Philosophy
 
-- Word = semantic intent
-- YAML = structure
-- Python = transformation
-- Quarto = presentation
+- Word = semantic intent  
+- YAML = structure  
+- Python = transformation  
+- Quarto = presentation  
