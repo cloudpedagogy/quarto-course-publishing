@@ -97,15 +97,38 @@ PanoptoEmbed :: https://lshtm.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=d19b
 
 ## Visualising the Results
 
-R Code\
-group \<- c(\"Vaccinated\", \"Unvaccinated\")\
-cases \<- c(5, 25)\
+R Code
+
+Alt :: Bar chart showing risk of infection for vaccinated and unvaccinated groups.
+
+Caption :: Risk of Infection by Vaccination Status
+
+group \<- c(\"Vaccinated\", \"Unvaccinated\")
+
+cases \<- c(5, 25)
+
 population \<- c(500, 500)
 
 risk \<- cases / population
 
+barplot(risk, names.arg = group, col = c(\"steelblue\", \"tomato\"),
+
+main = \"Risk of Infection by Vaccination Status\")
+
+END R Code
+
+## R Code Only
+
+R Example
+
+group \<- c(\"Vaccinated\", \"Unvaccinated\")\
+cases \<- c(5, 25)\
+population \<- c(500, 500)\
+risk \<- cases / population\
 barplot(risk, names.arg = group, col = c(\"steelblue\", \"tomato\"),\
 main = \"Risk of Infection by Vaccination Status\")
+
+END R Example
 
 ## Interpreting the Results
 

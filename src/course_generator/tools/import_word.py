@@ -35,6 +35,9 @@ def normalize_metadata_blocks(content: str) -> str:
         "Reveal",
         "SelfCheck",
         "R Code",
+        "END R Code",
+        "R Example",
+        "END R Example",
         "Tabs",
         "Image ::",
         "File ::",
@@ -87,13 +90,6 @@ def normalize_metadata_blocks(content: str) -> str:
 def normalize_math_blocks(content: str) -> str:
     """
     Unescape display-math delimiters that Pandoc may emit as literal text.
-
-    Converts lines that contain only:
-        \\$\\$
-    into:
-        $$
-
-    This is intentionally conservative and only rewrites standalone delimiter lines.
     """
     normalized_lines = []
 
@@ -110,12 +106,12 @@ def normalize_math_blocks(content: str) -> str:
 
 def clean_r_code(code: str) -> str:
     """
-    Clean R code conservatively after Pandoc conversion.
+    Clean R code after Pandoc conversion.
 
-    This only fixes common conversion artifacts:
-    - trailing Pandoc soft-break backslashes
-    - escaped assignment / comparison markers
-    - escaped double quotes
+    Fixes:
+    - trailing backslashes
+    - escaped symbols
+    - removes artificial blank lines from Word/Pandoc
     """
     cleaned_lines = []
 
@@ -130,7 +126,8 @@ def clean_r_code(code: str) -> str:
         line = line.replace(r"\<", "<")
         line = line.replace(r"\>", ">")
 
-        cleaned_lines.append(line)
+        if line.strip():  # 🔥 removes blank lines
+            cleaned_lines.append(line)
 
     return "\n".join(cleaned_lines).strip()
 
@@ -180,6 +177,9 @@ def is_interaction_header(line: str) -> bool:
         re.match(pattern, stripped, re.IGNORECASE)
         for pattern in [
             r"^(?:#+\s*)?R Code\s*$",
+            r"^(?:#+\s*)?END R Code\s*$",
+            r"^(?:#+\s*)?R Example\s*$",
+            r"^(?:#+\s*)?END R Example\s*$",
             r"^(?:#+\s*)?Tabs\s*$",
             r"^(?:#+\s*)?Reveal\s*$",
             r"^(?:#+\s*)?Quiz\s*$",
@@ -239,7 +239,7 @@ def render_panopto_iframe(url: str) -> str:
     embed_url = f"{parsed.scheme}://{parsed.netloc}/Panopto/Pages/Embed.aspx?id={video_id}"
 
     return (
-        f'<iframe src="{embed_url}" width="720" height="405" '
+        f'<iframe src="{embed_url}" title="Panopto video player" width="720" height="405" '
         f'frameborder="0" allowfullscreen></iframe>'
     )
 
@@ -349,10 +349,16 @@ def print_validation_warnings(warnings: list[str]):
             click.echo(click.style(f"  - {warning}", fg="yellow"))
 
 
-def parse_r_code(content: str) -> tuple[str, int]:
+def parse_r_example(content: str) -> tuple[str, int]:
     """
-    Detect 'R Code' sections and wrap subsequent lines into standard
-    Quarto fenced code blocks.
+    Detect 'R Example' sections and render them as non-executing
+    display-only R code blocks.
+
+    Preferred syntax:
+
+    R Example
+    <R code>
+    END R Example
     """
     lines = content.split("\n")
     new_lines = []
@@ -364,7 +370,7 @@ def parse_r_code(content: str) -> tuple[str, int]:
     def flush_code_block():
         nonlocal code_lines, new_lines
         cleaned_code = clean_r_code("\n".join(code_lines))
-        new_lines.append("```{r}")
+        new_lines.append("```r")
         if cleaned_code:
             new_lines.append(cleaned_code)
         new_lines.append("```")
@@ -374,7 +380,7 @@ def parse_r_code(content: str) -> tuple[str, int]:
         stripped = line.strip()
 
         if not in_code_block:
-            if re.match(r"^(?:#+\s*)?R Code\s*$", stripped, re.IGNORECASE):
+            if re.match(r"^(?:#+\s*)?R Example\s*$", stripped, re.IGNORECASE):
                 in_code_block = True
                 count += 1
                 code_lines = []
@@ -382,6 +388,98 @@ def parse_r_code(content: str) -> tuple[str, int]:
             else:
                 new_lines.append(line)
         else:
+            if re.match(r"^END\s+R\s+Example\s*$", stripped.strip(), re.IGNORECASE):
+                flush_code_block()
+                in_code_block = False
+                continue
+
+            if is_markdown_heading(line) or (
+                is_interaction_header(line)
+                and not re.match(r"^(?:#+\s*)?R Example\s*$", stripped, re.IGNORECASE)
+            ):
+                flush_code_block()
+                new_lines.append("")
+                new_lines.append(line)
+                in_code_block = False
+            else:
+                if stripped not in ["{r}", "`{r}`", "```{r}", "```", "```r"]:
+                    code_lines.append(line)
+
+    if in_code_block:
+        flush_code_block()
+
+    if count > 0:
+        click.echo(click.style("Detected R example blocks", fg="blue"))
+        click.echo(f"  Rendering {count} non-executing R examples")
+
+    return "\n".join(new_lines), count
+
+
+def parse_r_code(content: str) -> tuple[str, int]:
+    """
+    Detect 'R Code' sections and wrap subsequent lines into executable
+    Quarto fenced R code blocks.
+
+    Preferred syntax:
+
+    R Code
+    Alt :: Description of generated figure
+    Caption :: Visible figure caption
+    <R code>
+    END R Code
+    """
+    lines = content.split("\n")
+    new_lines = []
+    count = 0
+
+    in_code_block = False
+    code_lines = []
+    fig_alt = ""
+    fig_cap = ""
+
+    def escape_chunk_option_text(text: str) -> str:
+        return text.replace("\\", "\\\\").replace('"', '\\"')
+
+    def flush_code_block():
+        nonlocal code_lines, new_lines, fig_alt, fig_cap
+
+        cleaned_code = clean_r_code("\n".join(code_lines))
+
+        new_lines.append("```{r}")
+
+        if fig_alt:
+            new_lines.append(f'#| fig-alt: "{escape_chunk_option_text(fig_alt)}"')
+        if fig_cap:
+            new_lines.append(f'#| fig-cap: "{escape_chunk_option_text(fig_cap)}"')
+
+        if cleaned_code:
+            new_lines.append(cleaned_code)
+
+        new_lines.append("```")
+
+        code_lines = []
+        fig_alt = ""
+        fig_cap = ""
+
+    for line in lines:
+        stripped = line.strip()
+
+        if not in_code_block:
+            if re.match(r"^(?:#+\s*)?R Code\s*$", stripped, re.IGNORECASE):
+                in_code_block = True
+                count += 1
+                code_lines = []
+                fig_alt = ""
+                fig_cap = ""
+                continue
+            else:
+                new_lines.append(line)
+        else:
+            if re.match(r"^(?:#+\s*)?END R Code\s*$", stripped, re.IGNORECASE):
+                flush_code_block()
+                in_code_block = False
+                continue
+
             if is_markdown_heading(line) or (
                 is_interaction_header(line)
                 and not re.match(r"^(?:#+\s*)?R Code\s*$", stripped, re.IGNORECASE)
@@ -391,7 +489,14 @@ def parse_r_code(content: str) -> tuple[str, int]:
                 new_lines.append(line)
                 in_code_block = False
             else:
-                if stripped not in ["{r}", "`{r}`", "```{r}", "```"]:
+                alt_match = re.match(r"^Alt\s*::\s*(.*)$", stripped, re.IGNORECASE)
+                cap_match = re.match(r"^Caption\s*::\s*(.*)$", stripped, re.IGNORECASE)
+
+                if alt_match:
+                    fig_alt = alt_match.group(1).strip()
+                elif cap_match:
+                    fig_cap = cap_match.group(1).strip()
+                elif stripped not in ["{r}", "`{r}`", "```{r}", "```"]:
                     code_lines.append(line)
 
     if in_code_block:
@@ -616,21 +721,6 @@ def parse_reveal(content: str) -> tuple[str, int]:
 def parse_quiz(content: str) -> tuple[str, int]:
     """
     Parse Word-authored Quiz blocks into a static formative quiz UI.
-
-    Expected syntax:
-
-    Quiz
-    Question :: ...
-    Option :: ...
-    Answer :: ...
-    Explanation :: ...
-
-    Output:
-    - Question
-    - Radio-button style options
-    - HTML details block for answer/explanation
-
-    No fenced divs are used, to avoid stray ::: rendering.
     """
     lines = content.split("\n")
     new_lines = []
@@ -827,7 +917,10 @@ def parse_files(content: str, qmd_path: Path, course_dir: Path) -> tuple[str, in
             i += 1
 
         if display == "embed" and path.lower().endswith(".pdf"):
-            new_lines.append(f'<iframe src="{path}" width="100%" height="600" loading="lazy"></iframe>')
+            iframe_title = f"Embedded PDF: {label}" if label else "Embedded PDF document"
+            new_lines.append(
+                f'<iframe src="{path}" title="{iframe_title}" width="100%" height="600" loading="lazy"></iframe>'
+            )
             new_lines.append("")
             new_lines.append(f"[{label}]({path})")
             new_lines.append("")
@@ -889,6 +982,9 @@ def parse_interactions(content: str, qmd_path: Path, course_dir: Path) -> str:
     content = normalize_math_blocks(content)
 
     content, count = parse_tabs(content)
+    total_interactions += count
+
+    content, count = parse_r_example(content)
     total_interactions += count
 
     content, count = parse_r_code(content)
