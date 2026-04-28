@@ -1,20 +1,60 @@
+# macOS
 .DS_Store
+
+# Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Virtual environments
 .venv/
 venv/
-.preview/
-.pytest_cache/
-.env*
 
-# generated outputs
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Quarto / generated outputs
 /output/
+/course/
+_site/
+dist/
+.preview/
+.quarto/
 **/out/
 **/output/
 **/_site/
 **/.quarto/
 
-# logs / temp
+# Logs / temporary files
 *.log
 *.tmp
 *.bak
+
+# Microsoft Office temporary / lock files
+~$*.docx
+~$*.xlsx
+~$*.pptx
+~$*
+
+# R / RStudio
+.Rhistory
+.RData
+.Rproj.user/
+
+# Jupyter / notebook checkpoints
+.ipynb_checkpoints/
+
+# OS / editor files
+Thumbs.db
+.vscode/
+.idea/
+
+# Node, if ever used for preview tooling
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
